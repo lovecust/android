@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<include
+		android:id="@+id/titleBar"
+		layout="@layout/title_bar_subpage"/>
+
+
+	<ScrollView
+		android:id="@+id/scrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/inputHolder"
+		android:layout_below="@+id/titleBar"
+		android:background="#330000">
+
+		<TextView
+			android:id="@+id/tv_messages"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textIsSelectable="true"
+			android:textSize="@dimen/text_normal"/>
+	</ScrollView>
+
+	<LinearLayout
+		android:id="@+id/inputHolder"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minHeight="@dimen/feedback_edittext_height"
+		android:layout_alignParentBottom="true"
+		android:padding="@dimen/span_big"
+		android:gravity="bottom"
+		android:background="#DDDDDD">
+
+		<LinearLayout
+			android:id="@+id/layout_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@drawable/bg_white_round_corner">
+
+			<EditText
+				android:id="@+id/et_text"
+				style="@style/edittext"
+				android:hint="@string/hint_feedback"
+				android:singleLine="false"/>
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/tv_submit"
+			android:padding="@dimen/span_normal"
+			android:layout_marginLeft="@dimen/span_big"
+			android:background="@drawable/text_submit_button_selector"
+			android:text="Submit"
+			android:textColor="#FFFFFF"/>
+	</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/layout_parent">
+
+	<TextView
+		style="@style/text_big"
+		android:layout_gravity="center"
+		android:layout_margin="@dimen/span_big"
+		android:text="Choose A Icon"/>
+
+	<LinearLayout
+		style="@style/layout_horizontal"
+		android:layout_margin="@dimen/span_normal">
+
+		<ImageView
+			android:id="@+id/emoji_happy"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_happy"/>
+
+		<ImageView
+			android:id="@+id/emoji_feeling_bad"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_feeling_bad"/>
+
+		<ImageView
+			android:id="@+id/emoji_doggy"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_doggy"/>
+
+		<ImageView
+			android:id="@+id/emoji_football"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_football"/>
+
+		<ImageView
+			android:id="@+id/emoji_ghost"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_ghost"/>
+
+
+	</LinearLayout>
+
+	<LinearLayout
+		style="@style/layout_horizontal"
+		android:layout_margin="@dimen/span_normal">
+
+		<ImageView
+			android:id="@+id/emoji_glory"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_glory"/>
+
+		<ImageView
+			android:id="@+id/emoji_omg"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_omg"/>
+
+		<ImageView
+			android:id="@+id/emoji_umm"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_umm"/>
+
+		<ImageView
+			android:id="@+id/emoji_thinking"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_thinking"/>
+
+		<ImageView
+			android:id="@+id/emoji_look_down_on"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_look_down_on"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		style="@style/layout_horizontal"
+		android:layout_margin="@dimen/span_normal">
+
+		<ImageView
+			android:id="@+id/emoji_baseball"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_baseball"/>
+
+		<ImageView
+			android:id="@+id/emoji_monkey"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_monkey"/>
+
+		<ImageView
+			android:id="@+id/emoji_reversed_face"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_reversed_face"/>
+
+		<ImageView
+			android:id="@+id/emoji_rocket"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_rocket"/>
+
+		<ImageView
+			android:id="@+id/emoji_angry"
+			style="@style/dialog_selector_icons_icon"
+			android:src="@mipmap/emoji_angry"/>
+
+	</LinearLayout>
+
+
+</LinearLayout>

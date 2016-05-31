@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/bg_dialog">
+
+	<TextView
+		android:id="@+id/textTitle"
+		style="@style/dialog_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Would you like to. ..?"/>
+
+	<LinearLayout
+		android:id="@+id/layoutOptions"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/textTitle">
+
+		<TextView
+			android:id="@+id/textTime6h"
+			style="@style/dialog_time_in_millis_option_textview"
+			android:text="6h"/>
+
+		<TextView
+			android:id="@+id/textTime1h"
+			style="@style/dialog_time_in_millis_option_textview"
+			android:text="1h"/>
+
+		<TextView
+			android:id="@+id/textTime30mins"
+			style="@style/dialog_time_in_millis_option_textview"
+			android:text="30mins"/>
+
+		<TextView
+			android:id="@+id/textTime10mins"
+			style="@style/dialog_time_in_millis_option_textview"
+			android:text="10mins"/>
+
+		<TextView
+			android:id="@+id/textTime1min"
+			style="@style/dialog_time_in_millis_option_textview"
+			android:text="1min"/>
+
+	</LinearLayout>
+
+	<EditText
+		android:id="@+id/et_text"
+		style="@style/dialog_edittext"
+		android:layout_width="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/layoutOptions"
+		android:layout_toLeftOf="@+id/textReadableTime"/>
+
+	<TextView
+		android:id="@+id/textReadableTime"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@+id/et_text"
+		android:textColor="#FF222211"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp"
+		android:layout_marginBottom="3dp"
+		android:text="3mins"/>
+
+	<LinearLayout
+		style="@style/dialog_default_button_holder"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/et_text">
+
+		<Button
+			android:id="@+id/mActionCommit"
+			style="@style/dialog_button"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="确定"/>
+
+		<Button
+			android:id="@+id/mActionCancel"
+			style="@style/dialog_button"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="取消"/>
+	</LinearLayout>
+
+</RelativeLayout>

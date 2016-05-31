@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/bg_dialog">
+
+	<TextView
+		android:id="@+id/textTitle"
+		style="@style/dialog_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Would you like to. ..?"/>
+
+	<TextView
+		android:id="@+id/mTimeIndicator"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/textTitle"
+		android:gravity="center"
+		android:text="12:00"/>
+	<TimePicker
+		android:id="@+id/mTimePicker"
+		android:layout_width="match_parent"
+		android:timePickerMode="spinner"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/mTimeIndicator">
+
+	</TimePicker>
+	<!-- style="@style/dialog_default_edittext"-->
+
+	<LinearLayout
+		style="@style/dialog_default_button_holder"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/mTimePicker">
+
+		<Button
+			android:id="@+id/mActionCommit"
+			style="@style/dialog_button"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="确定"/>
+
+		<Button
+			android:id="@+id/mActionCancel"
+			style="@style/dialog_button"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="取消"/>
+	</LinearLayout>
+
+</RelativeLayout>

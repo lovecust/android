@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--<style name="AppTheme" parent="android:Theme.Material" tools:ignore="NewApi">-->
+	<!--&lt;!&ndash; theme customizations &ndash;&gt;-->
+	<!--&lt;!&ndash; Main theme colors &ndash;&gt;-->
+	<!--&lt;!&ndash;   your app branding color for the app bar &ndash;&gt;-->
+	<!--<item name="android:colorPrimary">@color/primary</item>-->
+	<!--&lt;!&ndash;   darker variant for the status bar and contextual app bars &ndash;&gt;-->
+	<!--<item name="android:colorPrimaryDark">@color/primary_dark</item>-->
+	<!--&lt;!&ndash;   theme UI controls like checkboxes and text fields &ndash;&gt;-->
+	<!--&lt;!&ndash;<item name="android:colorAccent">@color/accent</item>&ndash;&gt;-->
+	<!--</style>-->
+
+	<style name="edittext">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">@dimen/text_normal</item>
+		<item name="android:padding">@dimen/span_normal</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:background">@null</item>
+		<item name="android:singleLine">true</item>
+	</style>
+
+	<style name="button_long" parent="edittext">
+		<item name="android:textColor">@color/white</item>
+		<item name="android:gravity">center</item>
+		<item name="android:background">@drawable/bg_button_selector</item>
+	</style>
+
+	<style name="button" parent="button_long">
+		<item name="android:layout_width">wrap_content</item>
+	</style>
+
+
+	<style name="button_alert" parent="button">
+		<item name="android:textColor">@color/text_alert</item>
+		<item name="android:background">@drawable/bg_toggle_button_selector</item>
+	</style>
+	<!-- this is for global styles -->
+	<style name="text">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:padding">@dimen/text_padding</item>
+		<item name="android:layout_margin">@dimen/text_margin</item>
+		<item name="android:textColor">@color/text</item>
+		<item name="android:textSize">@dimen/text_default</item>
+		<item name="android:singleLine">true</item>
+	</style>
+	<style name="text_big" parent="text">
+		<item name="android:textSize">@dimen/text_normal</item>
+	</style>
+
+	<style name="text_gray" parent="text">
+		<item name="android:textColor">@color/gray</item>
+	</style>
+
+	<style name="text_multiline" parent="text">
+		<item name="android:singleLine">false</item>
+	</style>
+
+	<style name="text_important" parent="text">
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="text_hint" parent="text">
+		<item name="android:textColor">@color/text_description</item>
+		<item name="android:textSize">@dimen/text_smaller</item>
+	</style>
+	<style name="text_hint_multiline" parent="text_hint">
+		<!-- TODO change the name as text_something -->
+		<item name="android:singleLine">false</item>
+	</style>
+
+	<style name="text_item" parent="text">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:padding">@dimen/default_text_item_padding</item>
+	</style>
+
+	<style name="text_title_item" parent="text_item">
+		<item name="android:textSize">@dimen/text_big</item>
+		<item name="android:textColor">@color/app</item>
+	</style>
+
+	<style name="text_console" parent="text_multiline">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:textColor">#FFFFFFFF</item>
+		<item name="android:background">#FF000000</item>
+	</style>
+
+	<style name="text_info" parent="text_item">
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:background">#333300</item>
+		<item name="android:textSize">@dimen/text_small</item>
+	</style>
+
+	<style name="icon">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:background">@drawable/bg_selector</item>
+	</style>
+
+	<style name="layout_horizontal">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:orientation">horizontal</item>
+	</style>
+
+	<style name="layout_vertical" parent="layout_horizontal">
+		<item name="android:orientation">vertical</item>
+	</style>
+
+	<style name="decoration_line">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">1dp</item>
+		<item name="android:layout_marginLeft">5dp</item>
+		<item name="android:layout_marginRight">5dp</item>
+		<item name="android:background">@color/span</item>
+	</style>
+
+	<style name="decoration_span" parent="decoration_line">
+		<item name="android:layout_height">20dp</item>
+		<item name="android:layout_margin">0dp</item>
+		<item name="android:background">@color/span</item>
+	</style>
+
+	<style name="decoration_span_light" parent="decoration_line">
+		<item name="android:layout_height">20dp</item>
+		<item name="android:layout_margin">0dp</item>
+		<item name="android:background">@color/span_light</item>
+	</style>
+
+	<style name="layout_parent">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:orientation">vertical</item>
+		<item name="android:background">@color/bg_app</item>
+	</style>
+
+	<style name="text_button" parent="text">
+		<item name="android:background">@drawable/bg_selector</item>
+		<item name="android:gravity">center</item>
+		<item name="android:padding">12dp</item>
+		<item name="android:textSize">@dimen/text_big</item>
+	</style>
+
+
+	<!-- title bar -->
+	<style name="titlebar">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/title_bar_height</item>
+		<item name="android:background">@color/bg_titlebar</item>
+	</style>
+
+	<style name="title_bar_title_text">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">@dimen/title_bar_height</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:textColor">@color/text_titlebar_title</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:paddingLeft">10dp</item>
+		<item name="android:paddingRight">10dp</item>
+	</style>
+
+	<style name="title_bar_options_text" parent="text">
+		<item name="android:layout_height">@dimen/title_bar_height</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:padding">10dp</item>
+		<item name="android:textColor">@color/text_titlebar_title</item>
+	</style>
+
+
+	<style name="title_bar_options_icon">
+		<item name="android:layout_width">@dimen/title_bar_height</item>
+		<item name="android:layout_height">@dimen/title_bar_height</item>
+		<item name="android:layout_centerVertical">true</item>
+	</style>
+
+
+
+
+
+
+	<style name="setting_item_holder">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/setting_item_height</item>
+		<item name="android:paddingLeft">@dimen/setting_item_padding_left</item>
+		<item name="android:paddingRight">@dimen/setting_item_padding_right</item>
+		<item name="android:background">@drawable/bg_text_selector</item>
+	</style>
+	<style name="setting_item_title" parent="text">
+		<item name="android:layout_centerVertical">true</item>
+	</style>
+	<style name="setting_item_option_text" parent="text">
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:layout_alignParentRight">true</item>
+	</style>
+</resources>

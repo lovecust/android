@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#300"
+              android:orientation="vertical"
+              android:padding="2dp">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:id="@+id/tKeyQ"
+			style="@style/sInputMethod_Keys"
+			android:text="Q"/>
+
+		<TextView
+			android:id="@+id/tKeyW"
+			style="@style/sInputMethod_Keys"
+			android:text="W"/>
+
+		<TextView
+			android:id="@+id/tKeyE"
+			style="@style/sInputMethod_Keys"
+			android:text="E"/>
+
+		<TextView
+			android:id="@+id/tKeyR"
+			style="@style/sInputMethod_Keys"
+			android:text="R"/>
+
+		<TextView
+			android:id="@+id/tKeyT"
+			style="@style/sInputMethod_Keys"
+			android:text="T"/>
+
+		<TextView
+			android:id="@+id/tKeyY"
+			style="@style/sInputMethod_Keys"
+			android:text="Y"/>
+
+		<TextView
+			android:id="@+id/tKeyU"
+			style="@style/sInputMethod_Keys"
+			android:text="U"/>
+
+		<TextView
+			android:id="@+id/tKeyI"
+			style="@style/sInputMethod_Keys"
+			android:text="I"/>
+
+		<TextView
+			android:id="@+id/tKeyO"
+			style="@style/sInputMethod_Keys"
+			android:text="O"/>
+
+		<TextView
+			android:id="@+id/tKeyP"
+			style="@style/sInputMethod_Keys"
+			android:text="P"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp">
+
+		<TextView
+			android:id="@+id/tKeyA"
+			style="@style/sInputMethod_Keys"
+			android:text="A"/>
+
+		<TextView
+			android:id="@+id/tKeyS"
+			style="@style/sInputMethod_Keys"
+			android:text="S"/>
+
+		<TextView
+			android:id="@+id/tKeyD"
+			style="@style/sInputMethod_Keys"
+			android:text="D"/>
+
+		<TextView
+			android:id="@+id/tKeyF"
+			style="@style/sInputMethod_Keys"
+			android:text="F"/>
+
+		<TextView
+			android:id="@+id/tKeyG"
+			style="@style/sInputMethod_Keys"
+			android:text="G"/>
+
+		<TextView
+			android:id="@+id/tKeyH"
+			style="@style/sInputMethod_Keys"
+			android:text="H"/>
+
+		<TextView
+			android:id="@+id/tKeyJ"
+			style="@style/sInputMethod_Keys"
+			android:text="J"/>
+
+		<TextView
+			android:id="@+id/tKeyK"
+			style="@style/sInputMethod_Keys"
+			android:text="K"/>
+
+		<TextView
+			android:id="@+id/tKeyL"
+			style="@style/sInputMethod_Keys"
+			android:text="L"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:id="@+id/tKeyCapitalCase"
+			style="@style/sInputMethod_Keys.Capital_Case"
+			android:text="^"/>
+
+		<TextView
+			android:id="@+id/tKeyZ"
+			style="@style/sInputMethod_Keys"
+			android:text="Z"/>
+
+		<TextView
+			android:id="@+id/tKeyX"
+			style="@style/sInputMethod_Keys"
+			android:text="X"/>
+
+		<TextView
+			android:id="@+id/tKeyC"
+			style="@style/sInputMethod_Keys"
+			android:text="C"/>
+
+		<TextView
+			android:id="@+id/tKeyV"
+			style="@style/sInputMethod_Keys"
+			android:text="V"/>
+
+		<TextView
+			android:id="@+id/tKeyB"
+			style="@style/sInputMethod_Keys"
+			android:text="B"/>
+
+		<TextView
+			android:id="@+id/tKeyN"
+			style="@style/sInputMethod_Keys"
+			android:text="N"/>
+
+		<TextView
+			android:id="@+id/tKeyM"
+			style="@style/sInputMethod_Keys"
+			android:text="M"/>
+
+		<TextView
+			android:id="@+id/tKeyBackspace"
+			style="@style/sInputMethod_Keys.Backspace"
+			android:text="&lt;&lt;"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="4dp">
+
+		<TextView
+			android:id="@+id/tKeyCircle"
+			style="@style/sInputMethod_Keys"
+			android:text="."/>
+
+		<TextView
+			android:id="@+id/tKey0"
+			style="@style/sInputMethod_Keys"
+			android:text="0"/>
+
+		<TextView
+			android:id="@+id/tKey1"
+			style="@style/sInputMethod_Keys"
+			android:text="1"/>
+
+		<TextView
+			android:id="@+id/tKey2"
+			android:visibility="gone"
+			style="@style/sInputMethod_Keys"
+			android:text="2"/>
+
+		<TextView
+			android:id="@+id/tKey3"
+			style="@style/sInputMethod_Keys"
+			android:text="3"
+			android:visibility="gone"/>
+
+		<TextView
+			android:id="@+id/tKeyComma"
+			style="@style/sInputMethod_Keys"
+			android:text=","/>
+
+		<TextView
+			android:id="@+id/tKey4"
+			style="@style/sInputMethod_Keys"
+			android:text="4"
+			android:visibility="gone"/>
+
+		<TextView
+			android:id="@+id/tKey5"
+			style="@style/sInputMethod_Keys"
+			android:text="5"
+			android:visibility="gone"/>
+
+		<TextView
+			android:id="@+id/tKeySpace"
+			style="@style/sInputMethod_Keys.Space"
+			android:text="   "/>
+
+		<TextView
+			android:id="@+id/tKeyPeriod"
+			style="@style/sInputMethod_Keys"
+			android:text="."/>
+
+		<TextView
+			android:id="@+id/tKey6"
+			style="@style/sInputMethod_Keys"
+			android:text="6"
+			android:visibility="gone"/>
+
+		<TextView
+			android:id="@+id/tKey7"
+			android:visibility="gone"
+			style="@style/sInputMethod_Keys"
+			android:text="7"/>
+
+		<TextView
+			android:id="@+id/tKey8"
+			style="@style/sInputMethod_Keys"
+			android:text="8"/>
+
+		<TextView
+			android:id="@+id/tKey9"
+			style="@style/sInputMethod_Keys"
+			android:text="9"/>
+
+		<TextView
+			android:id="@+id/tKeyEnter"
+			style="@style/sInputMethod_Keys"
+			android:text="\\n"/>
+
+	</LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/layout_parent">
+
+	<RelativeLayout
+		style="@style/profile_item_holder"
+		android:layout_height="wrap_content"
+		android:background="@color/bg_app_active"
+		android:onClick="btnProfile">
+
+		<ImageView
+			android:id="@+id/avatar"
+			android:layout_width="80dp"
+			android:layout_height="80dp"
+			android:layout_margin="10dp"
+			android:src="@mipmap/icon_avatar_black"/>
+
+		<TextView
+			android:id="@+id/nick"
+			style="@style/profile_item_text_right"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="false"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/avatar"
+			android:hint="@string/hint_profile_nick"/>
+	</RelativeLayout>
+
+	<TextView
+		style="@style/decoration_span"/>
+
+	<LinearLayout
+		style="@style/layout_vertical"
+		android:layout_height="match_parent">
+
+		<RelativeLayout
+			android:id="@+id/btn_morning_exercise"
+			style="@style/setting_item_holder">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_ecust_morning_exercise"/>
+		</RelativeLayout>
+
+		<TextView
+			android:id="@+id/span_morning_exercise"
+			style="@style/decoration_span"/>
+
+
+		<RelativeLayout
+			android:id="@+id/btn_todo"
+			style="@style/setting_item_holder">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_explore_todo"/>
+		</RelativeLayout>
+
+		<TextView
+			android:id="@+id/span_todo"
+			style="@style/decoration_span"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnSetting">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_setting_setting"/>
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_span"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnFeedback">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_feedback"
+				android:textColor="@color/text_emphasized"/>
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnAbout">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_about"/>
+		</RelativeLayout>
+
+
+		<TextView
+			style="@style/decoration_span"
+			android:layout_height="match_parent"/>
+
+	</LinearLayout>
+
+</LinearLayout>

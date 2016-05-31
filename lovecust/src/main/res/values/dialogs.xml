@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="dialog_holder" parent="layout_vertical">
+		<item name="android:background">@drawable/bg_dialog_holder</item>
+	</style>
+
+	<style name="dialog_title" parent="text">
+		<item name="android:padding">10dp</item>
+		<item name="android:textSize">@dimen/text_normal</item>
+	</style>
+
+	<style name="dialog_default_button_holder">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginTop">@dimen/dialog_button_holder_margin_top</item>
+	</style>
+
+	<style name="dialog_button" parent="text">
+		<item name="android:background">@drawable/bg_dialog_button_selector</item>
+		<item name="android:layout_margin">4dp</item>
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_weight">1</item>
+	</style>
+
+	<style name="dialog_button_commit" parent="dialog_button">
+		<item name="android:text">@string/dialog_commit</item>
+		<item name="android:textColor">@color/app_darker</item>
+	</style>
+
+	<style name="dialog_button_cancel" parent="dialog_button">
+		<item name="android:text">@string/dialog_cancel</item>
+		<item name="android:textColor">#554444</item>
+	</style>
+
+
+	<dimen name="dialog_button_holder_margin_top">10dp</dimen>
+</resources>

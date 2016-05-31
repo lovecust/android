@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			style="@style/home_grid_nav_item_holder"
+			android:onClick="btnEcustClassroom"
+			android:visibility="gone">
+
+			<TextView
+				style="@style/home_grid_nav_item_icon"
+				android:text="@string/home_fragment_nav_icon_room"/>
+
+			<TextView
+				style="@style/text"
+				android:text="@string/title_ecust_classroom"/>
+		</LinearLayout>
+
+		<LinearLayout
+			style="@style/home_grid_nav_item_holder"
+			android:onClick="btnEcustLibrary">
+
+			<TextView
+				style="@style/home_grid_nav_item_icon"
+				android:text="@string/home_fragment_nav_icon_library"/>
+
+			<TextView
+				style="@style/text"
+				android:text="@string/title_ecust_library"/>
+		</LinearLayout>
+
+		<LinearLayout
+			style="@style/home_grid_nav_item_holder"
+			android:onClick="btnEcustCalendar">
+
+			<TextView
+				style="@style/home_grid_nav_item_icon"
+				android:text="@string/home_fragment_nav_icon_calendar"/>
+
+			<TextView
+				style="@style/text"
+				android:text="@string/title_ecust_calendar"/>
+		</LinearLayout>
+
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:id="@+id/btn_ecust_jwc"
+			style="@style/home_grid_nav_item_holder">
+
+			<TextView
+				style="@style/home_grid_nav_item_icon"
+				android:text="@string/home_fragment_nav_icon_jwc"/>
+
+			<TextView
+				style="@style/text"
+				android:text="@string/title_ecust_jwc"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/btn_ecust_wifi"
+			style="@style/home_grid_nav_item_holder">
+
+			<TextView
+				style="@style/home_grid_nav_item_icon"
+				android:text="@string/home_fragment_nav_icon_wifi"/>
+
+			<TextView
+				style="@style/text"
+				android:text="@string/title_ecust_wifi"/>
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>

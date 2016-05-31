@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/bg_dialog">
+
+	<TextView
+		android:id="@+id/textTitle"
+		style="@style/dialog_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/dialog_default_title"/>
+
+	<EditText
+		android:id="@+id/et_text"
+		style="@style/dialog_edittext"
+		android:layout_width="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/textTitle"
+		android:layout_toLeftOf="@+id/textColorCurrent"/>
+
+	<TextView
+		android:id="@+id/textColorCurrent"
+		android:layout_width="25dp"
+		android:layout_height="25dp"
+		android:layout_alignBottom="@+id/et_text"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp"
+		android:background="#000000"/>
+
+	<LinearLayout
+		android:id="@+id/layoutOptions"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/et_text">
+
+		<TextView
+			android:id="@+id/textColorRecent"
+			style="@style/dialog_color_option_textview"
+			android:background="#FF9900FF"/>
+
+		<TextView
+			android:id="@+id/textColorPurple"
+			style="@style/dialog_color_option_textview"
+			android:background="#FF9900FF"/>
+
+		<TextView
+			android:id="@+id/textColorYellow"
+			style="@style/dialog_color_option_textview"
+			android:background="#FFFFFF00"/>
+
+		<TextView
+			android:id="@+id/textColorBlue"
+			style="@style/dialog_color_option_textview"
+			android:background="#0000FF"/>
+
+		<TextView
+			android:id="@+id/textColorGreen"
+			style="@style/dialog_color_option_textview"
+			android:background="#FF00FF00"/>
+
+		<TextView
+			android:id="@+id/textColorRed"
+			style="@style/dialog_color_option_textview"
+			android:background="#FFFF0000"/>
+
+		<TextView
+			android:id="@+id/textColorBrown"
+			style="@style/dialog_color_option_textview"
+			android:background="#FF663300"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		style="@style/dialog_default_button_holder"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/layoutOptions">
+
+		<Button
+			android:id="@+id/mActionCommit"
+			style="@style/dialog_button"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="确定"/>
+
+		<Button
+			android:id="@+id/mActionCancel"
+			style="@style/dialog_button"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="取消"/>
+	</LinearLayout>
+
+</RelativeLayout>

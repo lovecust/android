@@ -1,0 +1,178 @@
+lovecust
+	: Heading for better. ..
+	# Do what you desire. ..
+	# Make Life Easier. ..
+	# Make Life Better. ..
+========================================
+Brief Introduction
+	: Log in Ecust Wifi Server instantly and automatically(no more clicks).
+	: Open Source
+	: Growing community for Ecust students.
+----------------------------------------
+About
+	: Lovecust is a growing community powered by Ecust students and serves for all the students and faculties from Ecust.
+	: Lovecust is targeting for making our complicated lives more convenient, efficient, and easy.
+	: Unlock the power of yourself.
+Details:
+	: Log in Ecust-Wifi-Server automatically and instantly. ..
+	: students number in library
+	: Ecust Calendar
+	: Ecust JWC news
+	: 自动登录华理校园网
+	: 图书馆人数查询
+	: 华理校历查询
+	:　教务处信息
+========================================
+General
+----------------------------------------
+Application ID
+	: com.lovecust.app
+App Version
+	: 0.9.4
+App Size
+	: 3.86 MB
+Release Date
+	: 2016-05-31
+Api version
+	: 1.1
+Min Android Version
+	: 15 | Android 4.0.1
+Target android version
+	: 23 | Android 6.0
+========================================
+Permissions
+----------------------------------------
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+<uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+========================================
+Details
+----------------------------------------
+# Splash
+	# daily sentences from Kingsoft-Powerword
+	# show week number on this page
+Ecust
+	# Library-Books
+		△ query books via build-in Ecust library system(poster, pages, year, where)
+		△ query books and locate book
+		△ manage books by category
+		△ borrowed-books | subscribed-books | borrowing-books
+	Ecust Calendar
+		: have a look at campus calendar in the fastest way
+		△ see which week
+		# see all the calendars
+	Library Seats
+		: available seats amount in library
+	JWC
+		: button to go to http://jwc.ecust.edu.cn/ using local browser
+		: receive the news items fetched from jwc server
+		△ check for JWC updated news | read or go to origin page | download file
+		# inform some post to specific major students
+		# [why] do not loose a hint
+	Morning-Exercise
+		: query for scores of morning exercise
+	# Campus-Card
+		# : query campus card account
+	# About Ecust [info-for-newbies]
+		# Student Union
+			# : show introduction of Student-Union
+		# Student Clubs
+			# : show all the pages for each club [ QQ-Group | Website | Wechat ]
+		# Ecust Wechat [ web-app ]
+			# : show official website and wechat id
+			# : click to show the QR code
+			# : click to add the official account
+Explore:
+	# Chatroom
+		# : chat by topics
+	# Lost-and-Found
+		# : send your info about your lost thing
+		# : find your lost thing in the forum
+		# : help others when you find something somebody lost
+		# : communication forum
+	# Forum  # something like baidu forum
+	# Activities  # Ecust Club Activities
+	TODO-List
+		* add/rename/remove tag
+		: add/edit/remove items
+		* manage history [ delete | recover ]
+		: use pop window, set icon manually
+		△ export items manually( and automatically before update)
+Feedback
+	: send feedback for Lovecust
+	: give advices about Lovecust
+	: hint the tips for usages of Lovecust
+	# : clear history of messages
+Profile
+	Avatar
+		# : set avatar from default avatar lib
+		: set avatar from album
+	CampusID
+	Nick
+	Moto
+	# Major
+	Gender
+	Birthday
+	# Major & Class
+	# Name
+	# Phone Number
+	Email
+Setting
+	Ecust Wifi
+		Auto Connect
+			: auto log in Ecust-Wifi-Server or not
+		Username
+			: campus id
+		Password
+			: your password of wifi
+		Check Now
+			: check for internet access manually
+		# Show Notification
+			: show notification when connected to Ecsut-Wifi or not
+		# Notification Delay Time
+			: the time notification will last
+	General
+		Language
+			: [ auto ] follow the system
+			: [ Chinese ] use Chinese
+			: [ English ] use English
+		# Text Size
+		# App Color [ Mon-Fri | Sat-Sun ]
+		# default file path
+		# notice for messages
+	# Module:  # all setting about modules
+		* switch off or on some modules
+	DeveloperMode
+		: show some developing modules only on developer mode
+About
+	Check For Update
+		: Integrated Version
+			: details of this version app
+			: update manually
+		# Standard Version
+			# details of this version app
+		# Simplified Version  # professional Version
+			# details of this version app
+	Share Lovecust
+		: share the QQ group
+		: show the QR Code
+		# : share the source of the app
+	# Rate Lovecust
+		rate Lovecust
+	Contact Lovecust
+		: Email Lovecust: lovecust@163.com
+		: QQ Group ID: 515656842
+		△ Website: http://lovecust.com
+		△ Open-Source URL: https://github.com/lovecust/lovecust-android
+		# button click to join the group
+		# button click go to website-homepage
+	About Lovecust
+		: (this)document of Lovecust
+	Copyright
+		: all rights belong to Lovecust
+		# : details
+========================================

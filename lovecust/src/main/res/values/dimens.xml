@@ -1,0 +1,79 @@
+<resources>
+	<!-- default -->
+	<dimen name="text_padding">2dp</dimen>
+	<dimen name="text_margin">0dp</dimen>
+
+	<dimen name="title_bar_height">50dp</dimen>
+
+	<!-- list-library -->
+	<dimen name="item_library_tag_list_height">30dp</dimen>
+	<dimen name="item_library_book_list_height">120dp</dimen>
+	<dimen name="item_library_book_list_image_width">90dp</dimen>
+	<dimen name="item_library_book_list_image_height">@dimen/item_library_book_list_height</dimen>
+
+
+	<dimen name="list_item_height">40dp</dimen>
+	<dimen name="list_item_toggle_button_width">40dp</dimen>
+	<dimen name="list_item_toggle_button_height">30dp</dimen>
+
+	<dimen name="default_button_radius">5dp</dimen>
+
+
+	<!-- library -->
+	<dimen name="library_home_slider_holder_width">150dp</dimen>
+	<dimen name="library_book_detail_image_height">213dp</dimen>
+
+	<dimen name="title_bar_options_icon_width">50dp</dimen>
+	<dimen name="default_text_item_padding">10dp</dimen>
+
+	<!-- Default screen margins, per the Android Design guidelines. -->
+	<dimen name="activity_horizontal_margin">16dp</dimen>
+	<dimen name="activity_vertical_margin">16dp</dimen>
+
+
+	<dimen name="dictionary_memorize_sentence_key_text_margin">8dp</dimen>
+	<dimen name="dictionary_memorize_sentence_value_text_margin">8dp</dimen>
+	<dimen name="dictionary_memorize_sentence_key_text_size">14sp</dimen>
+	<dimen name="dictionary_memorize_sentence_value_text_size">12sp</dimen>
+
+	<dimen name="sDictionary_Memorize_Sentence_Value_Height">200dp</dimen>
+	<dimen name="sDictionary_Memorize_Sentence_Key_Height">200dp</dimen>
+	<dimen name="default_edittext_border_radius">4dp</dimen>
+	<dimen name="dialog_reminder_todo_item_height">50dp</dimen>
+	<dimen name="default_padding_left">5dp</dimen>
+	<dimen name="default_padding_right">5dp</dimen>
+	<dimen name="feedback_edittext_height">50dp</dimen>
+	<item name="activity_translate_alpha" format="float" type="dimen">0.5</item>
+	<item name="activity_translate_scale" format="float" type="dimen">0.5</item>
+
+
+	<!-- For the side menu part -->
+	<dimen name="home_menu_icon_holder_margin_top">16dp</dimen>
+	<dimen name="home_menu_icon_holder_margin_bottom">0dp</dimen>
+	<dimen name="home_menu_icon_height">48dp</dimen>
+	<integer name="menu_icon_weight">1</integer>
+	<integer name="menu_text_weight">2</integer>
+
+	<dimen name="menu_width">200dp</dimen>
+	<dimen name="span_normal">5dp</dimen>
+	<dimen name="span_big">10dp</dimen>
+	<dimen name="span_small">3dp</dimen>
+
+	<color name="transparent">#00000000</color>
+	<color name="bg_pressed_default">#E5E5E5</color>
+
+
+	<dimen name="setting_item_height">40dp</dimen>
+
+	<dimen name="text_smaller">14sp</dimen>
+	<dimen name="text_small">16sp</dimen>
+	<dimen name="text_normal">18sp</dimen>
+	<dimen name="text_big">20sp</dimen>
+	<dimen name="text_bigger">22sp</dimen>
+	<dimen name="text_biggest">22sp</dimen>
+	<dimen name="text_default">@dimen/text_small</dimen>
+
+	<dimen name="setting_item_padding_right">15dp</dimen>
+	<dimen name="setting_item_padding_left">15dp</dimen>
+	<dimen name="default_edittext_margin">8dp</dimen>
+</resources>

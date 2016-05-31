@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".test.ActivityLauncherTestHome">
+	<include
+		layout="@layout/title_bar_mainpage"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="btnLibrary"
+		android:text="Library"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="btnTags"
+		android:text="Tag Manager"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="btnEcustWifi"
+		android:text="Ecust Wifi"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="btnSetting"
+		android:text="Setting"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="btnTestDevice"
+		android:text="Device Info"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="btnFeedback"
+		android:text="Feedback"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:onClick="btnProfile"
+		android:text="Profile"/>
+
+	<TextView
+		android:id="@+id/tv_server"
+		style="@style/button"
+		android:layout_width="match_parent"
+		android:layout_margin="@dimen/span_normal"
+		android:text="Server"/>
+
+	<Button
+		style="@style/button"
+		android:id="@+id/tv_grid_launcher"
+		android:text="Grid Launcher"/>
+
+	<TextView
+		style="@style/button"
+		android:id="@+id/tv_slide_launcher"
+		android:text="Slide Launcher"/>
+
+</LinearLayout>

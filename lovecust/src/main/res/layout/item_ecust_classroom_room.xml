@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+	style="@style/ecust_classroom_room"
+	android:text="Hello"
+	xmlns:android="http://schemas.android.com/apk/res/android"/>
+	<!--android:layout_width="wrap_content" -->

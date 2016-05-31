@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/layout_parent">
+
+	<include
+		android:id="@+id/titleBar"
+		layout="@layout/title_bar_mainpage"/>
+
+	<android.support.v4.view.ViewPager
+		android:id="@+id/viewPager"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/layoutTabbar"
+		android:layout_below="@+id/titleBar"/>
+
+	<LinearLayout
+		android:id="@+id/layoutTabbar"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/home_tabbar_icon_height"
+		android:layout_alignParentBottom="true"
+		android:background="@color/home_tabbar_bg_color"
+		android:gravity="center"
+		android:orientation="horizontal">
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center">
+
+			<CheckBox
+				android:id="@+id/tabNav"
+				android:layout_width="@dimen/home_tabbar_icon_width"
+				android:layout_height="@dimen/home_tabbar_icon_height"
+				android:background="@mipmap/icon_apps_black"
+				android:button="@android:color/transparent"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center">
+
+			<CheckBox
+				android:id="@+id/tabHome"
+				android:layout_width="@dimen/home_tabbar_icon_width"
+				android:layout_height="@dimen/home_tabbar_icon_height"
+				android:layout_gravity="center"
+				android:background="@mipmap/icon_home_black"
+				android:button="@android:color/transparent"/>
+		</LinearLayout>
+	</LinearLayout>
+
+</RelativeLayout>

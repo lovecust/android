@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<include
+		layout="@layout/title_bar_library_home"/>
+
+	<android.support.v4.widget.DrawerLayout
+		android:id="@+id/viewDrawer"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/layoutTitleBar">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/listLibraryBooks"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/bg"
+				android:divider="@android:color/transparent"/>
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:layout_width="@dimen/library_home_slider_holder_width"
+			android:layout_height="match_parent"
+			android:layout_gravity="start"
+			android:background="#99333333"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/recent"
+				style="@style/text_item"
+				android:text="Recent"/>
+
+			<TextView
+				android:id="@+id/starred"
+				style="@style/text_item"
+				android:text="Starred"/>
+			<!-- Side View -->
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/listLibrarySlider"
+				android:layout_width="@dimen/library_home_slider_holder_width"
+				android:layout_height="match_parent"
+				android:divider="@android:color/transparent"
+				android:dividerHeight="0dp"/>
+		</LinearLayout>
+
+	</android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

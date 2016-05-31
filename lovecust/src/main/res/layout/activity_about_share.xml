@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<include
+		android:id="@+id/layoutTitleBar"
+		layout="@layout/title_bar_subpage"/>
+
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/layoutTitleBar"
+		android:scaleType="centerCrop"
+		android:src="@mipmap/pic_qrcode"/>
+
+	<TextView
+		android:id="@+id/tv_share"
+		style="@style/text"
+		android:layout_width="match_parent"
+		android:layout_alignParentBottom="true"
+		android:textColor="@color/app"
+		android:textSize="@dimen/text_bigger"
+		android:background="#66888888"
+		android:gravity="center"
+		android:padding="10dp"
+		android:text="Click to Share Lovecust"/>
+
+</RelativeLayout>

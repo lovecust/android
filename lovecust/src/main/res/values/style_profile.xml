@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- profile setting -->
+	<style name="profile_item_holder">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/setting_item_height</item>
+		<item name="android:background">@drawable/default_text_selector</item>
+	</style>
+	<style name="profile_item_textview">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_centerVertical">true</item>
+	</style>
+	<style name="profile_item_text_left" parent="profile_item_textview">
+		<item name="android:layout_marginLeft">15dp</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:textColor">#FF21181B</item>
+	</style>
+	<style name="profile_item_text_right" parent="profile_item_textview">
+		<item name="android:layout_alignParentRight">true</item>
+		<item name="android:layout_marginRight">15dp</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textColor">@color/text</item>
+		<item name="android:gravity">right</item>
+	</style>
+
+
+</resources>

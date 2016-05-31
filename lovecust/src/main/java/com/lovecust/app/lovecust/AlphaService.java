@@ -1,0 +1,23 @@
+package com.lovecust.app.lovecust;
+
+import android.app.Service;
+
+import com.lovecust.app.utils.ConsoleUtil;
+import com.lovecust.app.utils.ToastUtil;
+
+
+public abstract class AlphaService extends Service {
+
+
+	protected String toast( String msg ) {
+		return ToastUtil.toast( this, msg );
+	}
+
+	protected String log( Object obj ) {
+		return ConsoleUtil.console( obj );
+	}
+	protected String log( String msg ) {
+		return ConsoleUtil.console( msg );
+	}
+
+}

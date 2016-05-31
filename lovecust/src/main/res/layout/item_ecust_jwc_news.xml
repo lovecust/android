@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	style="@style/layout_parent"
+	android:background="@drawable/bg_selector"
+	android:layout_height="wrap_content"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<TextView
+		android:id="@+id/title"
+		style="@style/text_big"
+		android:layout_height="50dp"
+		android:layout_alignParentLeft="true"
+		android:layout_toLeftOf="@+id/date"
+		android:gravity="center_vertical"
+		android:singleLine="false"
+		android:text="This is title!"/>
+
+	<TextView
+		android:id="@+id/date"
+		style="@style/text_hint"
+		android:layout_height="50dp"
+		android:layout_alignParentRight="true"
+		android:textColor="#443"
+		android:gravity="center_vertical"
+		android:text="2016-01-01"/>
+
+	<TextView
+		style="@style/decoration_line"
+		android:layout_below="@+id/title"/>
+
+</RelativeLayout>

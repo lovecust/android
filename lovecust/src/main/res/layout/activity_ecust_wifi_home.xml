@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FFFFFF">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<include
+			layout="@layout/title_bar_subpage"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnSettingAutoConnect">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/setting_wifi_auto_connect"/>
+
+			<TextView
+				android:id="@+id/settingAutoConnect"
+				style="@style/setting_item_option_text"
+				android:hint="Off"/>
+
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnSettingUsername">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/setting_wifi_username"/>
+
+			<TextView
+				android:id="@+id/tv_username"
+				style="@style/setting_item_option_text"
+				android:hint="@string/hint_profile_uid"/>
+
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnSettingPassword">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/setting_wifi_password"/>
+
+			<TextView
+				android:id="@+id/settingPassword"
+				style="@style/setting_item_option_text"
+				android:inputType="textPassword"
+				android:hint="********"/>
+
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:clickable="true"
+			android:visibility="gone">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/setting_wifi_show_notification"/>
+
+			<TextView
+				style="@style/setting_item_option_text"
+				android:text="On"/>
+
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"
+			android:visibility="gone"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:clickable="true"
+			android:visibility="gone">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/setting_wifi_set_notification_time"/>
+
+			<TextView
+				style="@style/setting_item_option_text"
+				android:text="8 secs"/>
+
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"
+			android:visibility="gone"/>
+
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnSettingCheckInternet">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/setting_wifi_check_internet"/>
+
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+	</LinearLayout>
+
+</RelativeLayout>

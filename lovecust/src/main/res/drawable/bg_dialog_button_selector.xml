@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:state_pressed="true">
+		<shape xmlns:android="http://schemas.android.com/apk/res/android">
+			<corners android:radius="@dimen/default_button_radius"/>
+			<solid
+				android:color="@color/bg_app_darker"/>
+		</shape>
+	</item>
+	<item>
+		<shape xmlns:android="http://schemas.android.com/apk/res/android">
+			<corners android:radius="@dimen/default_button_radius"/>
+			<solid
+				android:color="@color/bg_text_normal_color"/>
+
+		</shape>
+	</item>
+</selector>

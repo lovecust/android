@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FFFFFF"
+	android:orientation="vertical">
+
+	<include
+		layout="@layout/title_bar_subpage"/>
+
+	<TextView
+		android:id="@+id/today"
+		style="@style/text_title_item"
+		android:text="Today's Students: 3328"/>
+
+	<TextView
+		style="@style/decoration_line"/>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:id="@+id/parent"
+			style="@style/layout_vertical">
+
+		</LinearLayout>
+
+	</ScrollView>
+
+
+</LinearLayout>

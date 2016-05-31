@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FFFFFF">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<include
+			layout="@layout/title_bar_subpage"/>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="200dp">
+
+			<ImageView
+				android:id="@+id/image"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:onClick="btnUpdate"
+				android:src="@mipmap/icon_launcher"/>
+
+			<TextView
+				android:id="@+id/appVersion"
+				style="@style/text"
+				android:layout_below="@+id/image"
+				android:layout_centerHorizontal="true"
+				android:onClick="btnUpdate"
+				android:text="v0.0.0"/>
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnUpdate">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_about_update"/>
+		</RelativeLayout>
+
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnContact"
+			android:visibility="gone">
+			<!-- todo -->
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_about_introduction"/>
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnContact">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_about_contact"/>
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			android:id="@+id/btn_share"
+			style="@style/setting_item_holder">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_about_share"/>
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnAbout">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_about_about"/>
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnCopyright">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/title_about_copyright"/>
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+
+	</LinearLayout>
+
+</RelativeLayout>

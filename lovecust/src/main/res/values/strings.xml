@@ -1,0 +1,176 @@
+<resources>
+	<string name="app_name">Lovecust</string>
+	<string name="title">标题</string>
+	<string name="library_title">图书</string>
+
+	<string name="yesterday">"昨天 "</string>
+	<string name="today">"今天 "</string>
+
+
+	<string name="item_library_book_hint_title">书名:</string>
+	<string name="item_library_book_hint_author">作者:</string>
+	<string name="item_library_book_hint_date">时间:</string>
+	<string name="item_library_book_hint_date_example">2016–03</string>
+	<string name="item_library_book_hint_author_example">Fisher</string>
+	<string name="item_library_book_hint_title_example">Geek\'s Mind</string>
+	<string name="item_library_book_hint_publisher">出版社:</string>
+	<string name="item_library_book_hint_publisher_example">Ecust</string>
+	<string name="library_setting_tags">标签</string>
+	<string name="item_library_book_hint_pages">页面</string>
+	<string name="item_library_book_hint_pages_example">200p</string>
+	<string name="item_library_book_hint_author_info">关于作者:</string>
+	<string name="item_library_book_author_info_example">The author is a famous writer. He likes reading in his childhood.</string>
+	<string name="item_library_book_hint_summary">总结</string>
+	<string name="item_library_book_summary_example">This book is telling us a story from which we learnt that we should be honest.</string>
+	<string name="item_library_book_hint_catalog">目录</string>
+	<string name="item_library_book_catalog_example">1. Summary. \n 2. Organize Your Speech. \n 3. Speak Confidently.</string>
+	<string name="item_library_book_hint_isbn">ISBN:</string>
+	<string name="item_library_book_isbn_example">9787560092393</string>
+	<string name="item_library_book_hint_tag">标签:</string>
+	<string name="dialog_default_title">请选择</string>
+
+
+	<string name="setting_general_language">语言</string>
+	<string name="setting_general_internet_connection">使用网络连接</string>
+	<string name="setting_general_default_file_path">默认文件储存路径</string>
+	<string name="setting_general_language_default">English</string>
+	<string name="setting_general_connect_internet_example">是</string>
+	<string name="dialog_commit">确定</string>
+	<string name="dialog_cancel">取消</string>
+	<string name="info_default">This is hint text</string>
+
+	<string name="dialog_title_input_campus_id">学号</string>
+	<string name="dialog_title_input_password">密码</string>
+	<string name="dialog_title_confirmation_auto_connect">是否自动连接</string>
+
+	<string name="toast_setting_wifi_closed_auto_connect">你关闭了自动登录wifi功能 -.-</string>
+	<string name="toast_setting_wifi_check_username_and_password">请检查您的学号和密码！</string>
+	<string name="toast_setting_wifi_started_auto_connect">你打开了自动登录Ecust Wifi功能 *_*</string>
+
+
+	<!-- titles of each page -->
+	<string name="title_setting">设置</string>
+	<string name="title_feedback">留言</string>
+	<string name="title_profile">个人中心</string>
+	<string name="title_about">关于</string>
+	<!-- title about -->
+	<string name="title_about_update">检查更新</string>
+	<string name="title_about_introduction">版本介绍</string>
+	<string name="title_about_contact">联系 Lovecust</string>
+	<string name="title_about_about">关于 Lovecust</string>
+	<string name="title_about_copyright">版权</string>
+	<!-- title ecust -->
+	<string name="title_ecust_wifi">华理 Wifi</string>
+	<string name="title_ecust_library">图书馆座位</string>
+	<string name="title_ecust_classroom">空教室</string>
+	<string name="title_ecust_calendar">华理校历</string>
+	<string name="title_ecust_jwc">教务处</string>
+
+	<string name="title_setting_general">通用</string>
+	<string name="title_setting_setting">设置</string>
+
+
+	<!-- setting_wifi page -->
+	<string name="setting_wifi_auto_connect">是否自动连接wifi:</string>
+	<string name="setting_wifi_username">学号:</string>
+	<string name="setting_wifi_password">密码:</string>
+	<string name="setting_wifi_show_notification">是否显示通知:</string>
+	<string name="setting_wifi_set_notification_time">通知消失时间:</string>
+
+
+	<!-- profiles -->
+	<string name="nickname">昵称</string>
+	<string name="motto">签名</string>
+	<string name="gender">性别</string>
+	<string name="major">专业</string>
+	<string name="birthday">生日</string>
+	<string name="uid">学号</string>
+	<string name="name">姓名</string>
+	<string name="phone_number">电话号码</string>
+	<string name="email">邮箱</string>
+
+	<string name="hint_profile_nick">你的昵称</string>
+	<string name="hint_profile_moto">你喜爱的签名</string>
+	<string name="hint_profile_gender">保密</string>
+	<string name="hint_profile_birthday">2000–00–00</string>
+	<string name="hint_profile_name">你的名字</string>
+	<string name="hint_profile_phone">15200000000</string>
+	<string name="hint_profile_uid">10140000</string>
+	<string name="hint_profile_email">yourname@gmail.com</string>
+	<string name="hint_profile_major">专业140</string>
+
+
+	<!-- about -->
+	<string name="title_about_share">分享 Lovecust</string>
+
+	<!-- profiles -->
+	<string name="dialog_profile_set_moto">输入个性签名</string>
+	<string name="dialog_profile_set_nickname">输入昵称</string>
+	<string name="dialog_profile_set_birthday">请输入生日</string>
+	<string name="dialog_profile_set_phone_number">请输入电话号码</string>
+	<string name="dialog_profile_set_uid">请输入学号</string>
+	<string name="dialog_profile_set_name">请输入名字</string>
+	<string name="dialog_profile_set_email">请输入邮箱地址</string>
+
+	<string name="item_library_book_tag_example">Reading</string>
+	<string name="hint_feedback">留言，想法，建议，反馈. ..</string>
+	<string name="toast_global_device_offline_check_internet">您的设备处于离线状态，请稍后再试!</string>
+
+	<string name="notice_wifi_device_is_online">设备已经在线！</string>
+	<string name="notice_wifi_notice_disappear_in_n_secs_header">通知将在</string>
+	<string name="notice_wifi_notice_disappear_in_n_secs_footer">秒后消失 -.-</string>
+	<string name="notice_wifi_logging_in">正在登录校园wifi</string>
+	<string name="notice_wifi_device_is_offline">设备处于离线状态，请稍等</string>
+	<string name="notice_wifi_logged_in">登录校园wifi成功</string>
+	<string name="toast_feedback_set_nick_before_post">留言前，请先设置您的昵称！</string>
+
+	<string name="ecust_library_text_students_amount_today_before">"今日入馆人数: "</string>
+	<string name="ecust_library_text_floor">"F: "</string>
+	<string name="ecust_library_text_available">剩余</string>
+	<string name="dialog_profile_set_major">请输入专业</string>
+
+	<string name="hint_ecust_classroom_explain">此操作有几率会非常的慢，请耐心等待-.-\n最重要的一点是它容易崩溃. ..\n(原因之一是此操作涉及到华理最慢的网络操作)\n访问源请到\nhttp://bbs.ecust.edu.cn/page/WechatXHLSlemUdWueZhdbstwUdhesXa/fxjs.html</string>
+	<string name="hint_ecust_classroom_explain_mistakes">数据来自华理，可靠性需要聪明的你自行鉴别. ..</string>
+
+	<string name="ecust_classroom_available">可用</string>
+	<string name="ecust_classroom_occupied">占用</string>
+	<string name="toast_server_error_with_errcode">对不起，服务器错误 -.- （错误代码：</string>
+	<string name="toast_server_error_get_unexpected_response">对不起，服务器返回数据错误 -.-</string>
+	<string name="text_ecust_classroom_available_room_amount">可用教室数量：</string>
+	<string name="text_ecust_classroom_occupied_room_amount">已用教室数量：</string>
+	<string name="home_fragment_nav_icon_room">Room</string>
+	<string name="home_fragment_nav_icon_library">Lib</string>
+	<string name="home_fragment_nav_icon_calendar">Cal</string>
+	<string name="home_fragment_nav_icon_jwc">JWC</string>
+	<string name="home_fragment_nav_icon_wifi">Wifi</string>
+	<string name="about_update_button_text_already_updated">恭喜，您已经是最新版本</string>
+	<string name="about_update_button_text_update_now">现在更新!</string>
+	<string name="about_update_button_text_checking_for_update">检查更新中. ..</string>
+	<string name="about_update_button_text_server_error">服务器错误</string>
+	<string name="about_update_button_text_device_offline">设备处于离线状态</string>
+	<string name="about_update_button_text_install_now">现在安装</string>
+	<string name="about_update_button_text_download_and_install">现在下载安装!</string>
+	<string name="setting_wifi_check_internet">现在检查网络连接!</string>
+	<string name="hint_ecust_jwc_comment">说点儿什么吧！</string>
+	<string name="submit">发送</string>
+	<string name="title_ecust_morning_exercise">晨跑查询</string>
+	<string name="title_explore_todo">快速笔记</string>
+	<string name="hint_explore_todo_et">写点儿 笔记 想法. ..</string>
+	<string name="on">开</string>
+	<string name="setting_general_developer_mode">开发者模式</string>
+	<string name="dialog_title_developer_mode">开发者模式</string>
+	<string name="hint_date">2016-03-04</string>
+	<string name="hint_title">标题</string>
+	<string name="toast_check_cid_and_pwd">请检查您的用户名或密码</string>
+	<string name="hint_ecust_morning_cid">校园卡号(10140000)</string>
+	<string name="hint_ecust_morning_pwd">可不填如果用户名和密码一样</string>
+	<string name="dialog_set_content">填写内容</string>
+	<string name="dialog_open_url_use_browser">用浏览器打开网页</string>
+	<string name="title_test">测试</string>
+	<string name="toast_server_error">抱歉服务器出错啦 0.0</string>
+	<string name="notice_click_to_retry">点击重新连接！</string>
+	<string name="okay">是</string>
+	<string name="no">否</string>
+
+
+</resources>

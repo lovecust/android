@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/layout_parent">
+
+	<include
+		layout="@layout/title_bar_subpage"/>
+
+	<RelativeLayout
+		style="@style/profile_item_holder"
+		android:layout_height="wrap_content"
+		android:onClick="btnImage">
+
+		<ImageView
+			android:id="@+id/avatar"
+			android:layout_width="80dp"
+			android:layout_height="80dp"
+			android:layout_margin="10dp"
+			android:src="@mipmap/icon_avatar_black"/>
+
+		<TextView
+			android:id="@+id/nick"
+			style="@style/profile_item_text_right"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="false"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/avatar"
+			android:hint="@string/hint_profile_nick"/>
+
+	</RelativeLayout>
+
+	<TextView
+		style="@style/decoration_line"/>
+
+	<RelativeLayout
+		style="@style/profile_item_holder"
+		android:onClick="btnNick">
+
+		<TextView
+			style="@style/profile_item_text_left"
+			android:text="@string/nickname"/>
+
+		<TextView
+			android:id="@+id/settingNickname"
+			style="@style/profile_item_text_right"
+			android:hint="@string/hint_profile_nick"/>
+	</RelativeLayout>
+
+	<TextView
+		style="@style/decoration_line"/>
+
+	<RelativeLayout
+		style="@style/profile_item_holder"
+		android:onClick="btnUid">
+
+		<TextView
+			style="@style/profile_item_text_left"
+			android:text="@string/uid"/>
+
+		<TextView
+			android:id="@+id/settingUid"
+			style="@style/profile_item_text_right"
+			android:hint="@string/hint_profile_uid"/>
+	</RelativeLayout>
+
+	<TextView
+		style="@style/decoration_line"/>
+
+	<RelativeLayout
+		android:visibility="gone"
+		style="@style/profile_item_holder"
+		android:onClick="btnMajor">
+
+		<TextView
+			style="@style/profile_item_text_left"
+			android:text="@string/major"/>
+
+		<TextView
+			android:id="@+id/settingMajor"
+			style="@style/profile_item_text_right"
+			android:hint="@string/hint_profile_major"/>
+	</RelativeLayout>
+
+	<TextView
+		android:visibility="gone"
+		style="@style/decoration_line"/>
+
+	<RelativeLayout
+		style="@style/profile_item_holder"
+		android:onClick="btnMoto">
+
+		<TextView
+			style="@style/profile_item_text_left"
+			android:text="@string/motto"/>
+
+		<TextView
+			android:id="@+id/settingMoto"
+			style="@style/profile_item_text_right"
+			android:hint="@string/hint_profile_moto"/>
+	</RelativeLayout>
+
+	<TextView
+		style="@style/decoration_line"/>
+
+	<RelativeLayout
+		android:visibility="gone"
+		style="@style/profile_item_holder"
+		android:onClick="btnGender">
+
+		<TextView
+			style="@style/profile_item_text_left"
+			android:text="@string/gender"/>
+
+		<TextView
+			android:id="@+id/settingGender"
+			style="@style/profile_item_text_right"
+			android:hint="@string/hint_profile_gender"/>
+	</RelativeLayout>
+
+	<TextView
+		android:visibility="gone"
+		style="@style/decoration_line"/>
+
+	<RelativeLayout
+		style="@style/profile_item_holder"
+		android:onClick="btnBirthday">
+
+		<TextView
+			style="@style/profile_item_text_left"
+			android:text="@string/birthday"/>
+
+		<TextView
+			android:id="@+id/settingBirthday"
+			style="@style/profile_item_text_right"
+			android:hint="@string/hint_profile_birthday"/>
+	</RelativeLayout>
+
+	<!--<TextView-->
+		<!--style="@style/default_decoration_line"/>-->
+
+	<RelativeLayout
+		android:visibility="gone"
+		style="@style/profile_item_holder"
+		android:onClick="btnName">
+
+		<TextView
+			style="@style/profile_item_text_left"
+			android:text="@string/name"/>
+
+		<TextView
+			android:id="@+id/settingName"
+			style="@style/profile_item_text_right"
+			android:text="@string/hint_profile_name"/>
+	</RelativeLayout>
+
+	<TextView
+		android:visibility="gone"
+		style="@style/decoration_line"/>
+
+	<RelativeLayout
+		android:visibility="gone"
+		style="@style/profile_item_holder"
+		android:onClick="btnPhone">
+
+		<TextView
+			style="@style/profile_item_text_left"
+			android:text="@string/phone_number"/>
+
+		<TextView
+			android:id="@+id/settingPhoneNumber"
+			style="@style/profile_item_text_right"
+			android:text="@string/hint_profile_phone"/>
+	</RelativeLayout>
+
+	<TextView
+		style="@style/decoration_line"/>
+
+	<RelativeLayout
+		style="@style/profile_item_holder"
+		android:onClick="btnEmail">
+
+		<TextView
+			style="@style/profile_item_text_left"
+			android:text="@string/email"/>
+
+		<TextView
+			android:id="@+id/settingEmail"
+			style="@style/profile_item_text_right"
+			android:hint="@string/hint_profile_email"/>
+	</RelativeLayout>
+
+	<TextView
+		style="@style/decoration_line"/>
+
+</LinearLayout>

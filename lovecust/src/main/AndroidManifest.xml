@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	package="com.lovecust.app"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+
+
+	<application
+		android:name=".lovecust.AppContext"
+		android:allowBackup="true"
+		android:icon="@mipmap/icon_launcher"
+		android:label="@string/app_name"
+		android:supportsRtl="true"
+		android:theme="@style/AppTheme">
+
+		<activity android:name=".launcher.ActivityLauncherSplashHome"
+			android:autoRemoveFromRecents="true">
+		</activity>
+
+		<activity
+			android:name=".launcher.slide.ActivityLauncherSlideHome"
+			android:autoRemoveFromRecents="true"/>
+		<activity
+			android:name=".launcher.grid.ActivityLauncherGridHome"
+			android:autoRemoveFromRecents="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+
+		<activity
+			android:name=".test.ActivityLauncherTestHome"
+			android:label="Lovecust"
+			android:launchMode="singleTask">
+		</activity>
+
+		<!-- library -->
+		<activity android:name=".library.ActivityLibraryHome"/>
+		<activity android:name=".library.ActivityLibraryNewBook"/>
+		<activity android:name=".library.ActivityLibraryBookDetail"/>
+		<activity android:name=".library.ActivityLibraryTagManager"/>
+		<activity android:name=".library.ActivityLibraryTagEditor"/>
+
+		<!-- ecust parts -->
+		<activity android:name=".ecust.wifi.ActivityEcustWifiHome"/>
+		<activity android:name=".ecust.jwc.ActivityEcustJWCHome"/>
+		<activity android:name=".ecust.jwc.ActivityEcustJwcDetail"/>
+		<activity android:name=".ecust.calendar.ActivityEcustCalendarHome"/>
+		<activity android:name=".ecust.library.ActivityEcustLibraryHome"/>
+		<activity android:name=".ecust.classroom.ActivityEcustClassroomHome"/>
+		<activity android:name=".ecust.morning.ActivityEcustMorningExercise"/>
+
+		<!-- feedback -->
+		<activity
+			android:name=".feedback.ActivityFeedbackHome"
+			android:windowSoftInputMode="adjustResize"/>
+
+		<!-- profile -->
+		<activity android:name=".profile.ActivityProfileHome"/>
+
+		<!-- explore -->
+		<service android:name=".explore.popWindow.ServicePopWindowFisher"/>
+		<activity android:name=".explore.todo.ActivityExploreTodoHome"/>
+		<activity android:name=".explore.todo.ActivityExploreTodoSetting"/>
+
+		<!-- setting -->
+		<activity android:name=".settings.ActivitySettingHome">
+		</activity>
+		<activity android:name=".settings.ActivitySettingGeneral"/>
+
+		<!-- about -->
+		<activity android:name=".about.ActivityAboutHome"/>
+		<activity android:name=".about.ActivityAboutUpdate"/>
+		<activity android:name=".about.ActivityAboutContact"/>
+		<activity android:name=".about.ActivityAboutShare"/>
+		<activity android:name=".about.ActivityAboutAbout"/>
+		<activity android:name=".about.ActivityAboutCopyright"/>
+
+		<!-- test -->
+		<activity android:name=".test.ActivityDeviceHome"/>
+	</application>
+
+</manifest>

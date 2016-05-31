@@ -1,0 +1,164 @@
+<resources>
+	<string name="app_name">Lovecust</string>
+	<string name="title">Title</string>
+	<string name="library_title">Library</string>
+
+	<string name="item_library_book_hint_title">Title:</string>
+	<string name="item_library_book_hint_author">Author:</string>
+	<string name="item_library_book_hint_date">Date:</string>
+	<string name="item_library_book_hint_date_example">2016–03</string>
+	<string name="item_library_book_hint_author_example">Fisher</string>
+	<string name="item_library_book_hint_title_example">Geek\'s Mind</string>
+	<string name="item_library_book_hint_publisher">Press:</string>
+	<string name="item_library_book_hint_publisher_example">Ecust</string>
+	<string name="library_setting_tags">Tags</string>
+	<string name="item_library_book_hint_pages">pages</string>
+	<string name="item_library_book_hint_pages_example">200p</string>
+	<string name="item_library_book_hint_author_info">About Author:</string>
+	<string name="item_library_book_author_info_example">The author is a famous writer. He likes reading in his childhood.</string>
+	<string name="item_library_book_hint_summary">Summary</string>
+	<string name="item_library_book_summary_example">This book is telling us a story from which we learnt that we should be honest.</string>
+	<string name="item_library_book_hint_catalog">catalog</string>
+	<string name="item_library_book_catalog_example">1. Summary. \n 2. Organize Your Speech. \n 3. Speak Confidently.</string>
+	<string name="item_library_book_hint_isbn">ISBN:</string>
+	<string name="item_library_book_isbn_example">9787560092393</string>
+	<string name="item_library_book_hint_tag">Tag:</string>
+	<string name="item_library_book_tag_example">Reading</string>
+	<string name="dialog_default_title">Dialog Default Title</string>
+
+	<string name="setting_general_language">Language</string>
+	<string name="setting_general_internet_connection">Connect Internet</string>
+	<string name="setting_general_default_file_path">Default File Path:</string>
+	<string name="setting_general_language_default">English</string>
+	<string name="setting_general_connect_internet_example">On</string>
+	<string name="dialog_commit">Commit</string>
+	<string name="dialog_cancel">Cancel</string>
+	<string name="title_ecust_wifi">Ecust Wifi</string>
+	<string name="dialog_title_input_campus_id">Your Campus Card Id:</string>
+	<string name="dialog_title_input_password">Your Password:</string>
+	<string name="dialog_title_confirmation_auto_connect">Switch Off Auto Connect ?</string>
+	<string name="toast_setting_wifi_started_auto_connect">You have switched on \'auto-connect\' feature! *_*</string>
+	<string name="toast_setting_wifi_closed_auto_connect">You have switched off \'auto-connect\' feature! -.-</string>
+	<string name="toast_setting_wifi_check_username_and_password">check your username and password first!</string>
+
+	<!-- setting_wifi page -->
+	<string name="setting_wifi_auto_connect">Auto Connect</string>
+	<string name="setting_wifi_username">Username</string>
+	<string name="setting_wifi_password">Password:</string>
+	<string name="setting_wifi_show_notification">Show Notification:</string>
+	<string name="setting_wifi_set_notification_time">Notification Delay Time:</string>
+
+	<string name="title_profile">Profile</string>
+	<string name="title_ecust_calendar">Ecust Calendar</string>
+	<string name="title_feedback">Feedback</string>
+	<string name="title_setting">Setting</string>
+
+	<string name="title_about">About</string>
+	<string name="title_about_update">Check for Update</string>
+	<string name="title_about_contact">Contact Lovecust</string>
+	<string name="title_about_about">About Lovecust</string>
+	<string name="title_about_copyright">Copyright</string>
+
+	<!-- profiles -->
+	<string name="nickname">Nickname</string>
+	<string name="motto">Motto</string>
+	<string name="gender">Gender</string>
+	<string name="major">Major</string>
+	<string name="birthday">Birthday</string>
+	<string name="uid">Campus ID</string>
+	<string name="name">Name</string>
+	<string name="phone_number">Phone Number</string>
+	<string name="email">Email</string>
+
+	<string name="hint_profile_nick">Alias</string>
+	<string name="hint_profile_moto">Your favorite motto</string>
+	<string name="hint_profile_gender">Boy</string>
+	<string name="hint_profile_birthday">2000-00-00</string>
+	<string name="hint_profile_name">Fisher</string>
+	<string name="hint_profile_phone">15200000000</string>
+	<string name="hint_profile_uid">10140000</string>
+	<string name="hint_profile_email">yourname@gmail.com</string>
+	<string name="hint_profile_major">Major140</string>
+
+	<!-- about -->
+	<string name="title_about_share">Share Lovecust</string>
+
+
+	<!-- profile -->
+	<string name="dialog_profile_set_moto">Set Moto</string>
+	<string name="dialog_profile_set_nickname">Set Nickname</string>
+	<string name="dialog_profile_set_birthday">Set Birthday</string>
+	<string name="dialog_profile_set_phone_number">Set Phone Number</string>
+	<string name="dialog_profile_set_uid">Your Campus Id</string>
+	<string name="dialog_profile_set_name">Your Name</string>
+	<string name="dialog_profile_set_email">Set Email</string>
+
+	<string name="info_default">This is hint text</string>
+	<string name="hint_feedback">feedback, advices, ideas. ..</string>
+	<string name="toast_global_device_offline_check_internet">Your device is offline and please try it later!</string>
+	<string name="notice_wifi_device_is_online">device is already online now!</string>
+	<string name="notice_wifi_notice_disappear_in_n_secs_header">"notice will disappear in "</string>
+	<string name="notice_wifi_notice_disappear_in_n_secs_footer">" seconds"</string>
+	<string name="notice_wifi_logging_in">logging in!</string>
+	<string name="notice_wifi_device_is_offline">device is offline and wait for a while!</string>
+	<string name="notice_wifi_logged_in">logged in Ecust Wifi Server now and have a good day!</string>
+
+	<string name="title_ecust_library">Ecust Library</string>
+	<string name="title_ecust_classroom">Available Classroom</string>
+	<string name="toast_feedback_set_nick_before_post">Please set your nick before post messages!</string>
+	<string name="ecust_library_text_students_amount_today_before">"Today's Students: "</string>
+	<string name="ecust_library_text_floor">"F: "</string>
+	<string name="ecust_library_text_available">" available"</string>
+	<string name="dialog_profile_set_major">Set Major</string>
+	<string name="title_setting_general">General</string>
+	<string name="hint_ecust_classroom_explain">The operation can be extremely slow and please wait. ..\nand the most important thing is that it crashes often. ..\n(since it is also the slowest one I have ever seen among the servers in Ecust. ..)\nsee more go to\nhttp://bbs.ecust.edu.cn/page/WechatXHLSlemUdWueZhdbstwUdhesXa/fxjs.html</string>
+	<string name="hint_ecust_classroom_explain_mistakes">The data is for reference and it may contain mistakes. ..</string>
+
+	<string name="ecust_classroom_available">Available</string>
+	<string name="ecust_classroom_occupied">Occupied</string>
+	<string name="title_ecust_jwc">JWC</string>
+	<string name="title_setting_setting">Setting</string>
+	<string name="toast_server_error_with_errcode">"Server error with error code: "</string>
+	<string name="toast_server_error_get_unexpected_response">"Server error, get unexpected response!"</string>
+	<string name="text_ecust_classroom_available_room_amount">"Available Rooms Amount: "</string>
+	<string name="title_about_introduction">What\'s New</string>
+
+	<string name="home_fragment_nav_icon_room">Room</string>
+	<string name="home_fragment_nav_icon_library">Lib</string>
+	<string name="home_fragment_nav_icon_calendar">Cal</string>
+	<string name="home_fragment_nav_icon_jwc">JWC</string>
+	<string name="home_fragment_nav_icon_wifi">Wifi</string>
+	<string name="text_ecust_classroom_occupied_room_amount">"Occupied Rooms Amount: "</string>
+	<string name="about_update_button_text_already_updated">You are already updated!</string>
+	<string name="about_update_button_text_checking_for_update">Checking for Update. ..</string>
+	<string name="about_update_button_text_server_error">Sorry, Server Error!</string>
+	<string name="about_update_button_text_device_offline">You are offline!</string>
+	<string name="about_update_button_text_install_now">Install Now!</string>
+	<string name="about_update_button_text_update_now">Update Now!</string>
+	<string name="about_update_button_text_download_and_install">Download And Install Now!</string>
+	<string name="setting_wifi_check_internet">Check Internet Connection Now!</string>
+	<string name="hint_ecust_jwc_comment">Leave your footprint here. ..</string>
+	<string name="submit">Submit</string>
+	<string name="title_ecust_morning_exercise">MorningExercise</string>
+	<string name="title_explore_todo">TodoList</string>
+	<string name="hint_explore_todo_et">note down your notes or ideas. ..</string>
+	<string name="yesterday">"Yesterday "</string>
+	<string name="today">"Today "</string>
+	<string name="on">On</string>
+	<string name="setting_general_developer_mode">Developer Mode</string>
+	<string name="dialog_title_developer_mode">Developer Mode</string>
+	<string name="hint_date">2016-03-04</string>
+	<string name="hint_title">This is title.</string>
+	<string name="toast_check_cid_and_pwd">Please check your campus Id and password -.-</string>
+	<string name="hint_ecust_morning_cid">Campus ID(10140000)</string>
+	<string name="hint_ecust_morning_pwd">Keep it empty if password == Campus ID</string>
+	<string name="dialog_set_content">Set Content!</string>
+	<string name="dialog_open_url_use_browser">Open Url via local browser</string>
+	<string name="title_test">Test</string>
+	<string name="toast_server_error">Sorry, server error!</string>
+	<string name="notice_click_to_retry">click to try again!</string>
+	<string name="okay">Okay</string>
+	<string name="no">No</string>
+
+
+</resources>

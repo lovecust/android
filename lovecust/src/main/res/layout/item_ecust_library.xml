@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	style="@style/layout_vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<TextView
+		android:id="@+id/description"
+		android:textColor="@color/app"
+		style="@style/text_item"
+		android:text="0F: 0 available"/>
+
+	<TextView
+		style="@style/decoration_line"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="40dp">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#AAA"/>
+
+		<TextView
+			android:id="@+id/bar"
+			android:layout_width="15dp"
+			android:layout_height="match_parent"
+			android:background="@color/app"/>
+
+		<TextView
+			android:id="@+id/occupied"
+			style="@style/ecust_library_graphic_text"
+			android:text="0"/>
+
+		<TextView
+			android:id="@+id/available"
+			style="@style/ecust_library_graphic_text"
+			android:layout_alignParentRight="true"
+			android:text="0"/>
+
+	</RelativeLayout>
+
+	<TextView
+		style="@style/decoration_line"/>
+</LinearLayout>
+
+

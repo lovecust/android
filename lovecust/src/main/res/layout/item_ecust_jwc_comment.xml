@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/layout_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="@dimen/span_big"
+	android:background="@drawable/bg_selector"
+	android:padding="@dimen/span_big">
+
+	<ImageView
+		android:id="@+id/avatar"
+		style="@style/image_jwc_comment_avatar"
+		android:layout_margin="@dimen/span_normal"
+		android:src="@mipmap/icon_avatar_black"/>
+
+	<RelativeLayout
+		android:id="@+id/layout_comment"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/avatar">
+
+		<TextView
+			android:id="@+id/nick"
+			style="@style/text_gray"
+			android:layout_alignParentLeft="true"
+			android:layout_margin="@dimen/span_small"
+			android:text="Alias: "/>
+
+		<TextView
+			android:id="@+id/text"
+			style="@style/text"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@+id/nick"
+			android:layout_margin="@dimen/span_small"
+			android:singleLine="false"
+			android:text="Nice to meet you. ..Nice to meet you. ..Nice to meet you. ..Nice to meet you. ..Nice to meet you. ..Nice to meet you. ..Nice to meet you. ..Nice to meet you. ..Nice to meet you. ..Nice to meet you. .."
+			android:textIsSelectable="true"
+			android:textSize="@dimen/text_big"/>
+
+		<TextView
+			android:id="@+id/date"
+			style="@style/text_hint"
+			android:layout_below="@+id/text"
+			android:text="2016-04-24"/>
+	</RelativeLayout>
+</RelativeLayout>

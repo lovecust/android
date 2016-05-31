@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<include
+		android:id="@+id/titleBar"
+		layout="@layout/title_bar_library_book_detail"/>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/library_book_detail_image_height">
+
+				<ImageView
+					android:id="@+id/image"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/library_book_detail_image_height"
+					android:src="@mipmap/pic_library_book_example_big"/>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/library_book_detail_image_height"
+					android:layout_toRightOf="@+id/image"
+					android:orientation="vertical">
+
+					<LinearLayout
+						style="@style/layout_horizontal">
+
+						<TextView
+							style="@style/text_hint"
+							android:text="@string/item_library_book_hint_title"/>
+
+						<TextView
+							android:id="@+id/title"
+							style="@style/text"
+							android:text="@string/item_library_book_hint_title_example"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						style="@style/layout_horizontal">
+
+						<TextView
+							style="@style/text_hint"
+							android:text="@string/item_library_book_hint_author"/>
+
+						<TextView
+							android:id="@+id/author"
+							style="@style/text"
+							android:text="@string/item_library_book_hint_author_example"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						style="@style/layout_horizontal">
+
+						<TextView
+							style="@style/text_hint"
+							android:text="@string/item_library_book_hint_pages"/>
+
+						<TextView
+							android:id="@+id/pages"
+							style="@style/text"
+							android:text="@string/item_library_book_hint_pages_example"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						style="@style/layout_horizontal">
+
+						<TextView
+							style="@style/text_hint"
+							android:text="@string/item_library_book_hint_date"/>
+
+						<TextView
+							android:id="@+id/date"
+							style="@style/text"
+							android:text="@string/item_library_book_hint_date_example"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						style="@style/layout_horizontal">
+
+						<TextView
+							style="@style/text_hint"
+							android:text="@string/item_library_book_hint_publisher"/>
+
+						<TextView
+							android:id="@+id/publisher"
+							style="@style/text"
+							android:text="@string/item_library_book_hint_publisher_example"/>
+
+					</LinearLayout>
+					<LinearLayout
+						style="@style/layout_horizontal">
+
+						<TextView
+							style="@style/text_hint"
+							android:text="@string/item_library_book_hint_isbn"/>
+
+						<TextView
+							android:id="@+id/isbn"
+							style="@style/text"
+							android:text="@string/item_library_book_isbn_example"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						style="@style/layout_horizontal">
+
+						<TextView
+							style="@style/text_hint"
+							android:text="@string/item_library_book_hint_tag"/>
+
+						<TextView
+							android:id="@+id/tag"
+							style="@style/text"
+							android:minWidth="80dp"
+							android:background="#FFDDCCAA"
+							android:textColor="@color/app"
+							android:text="@string/item_library_book_tag_example"/>
+
+					</LinearLayout>
+
+
+				</LinearLayout>
+
+			</RelativeLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<LinearLayout
+					style="@style/layout_vertical">
+
+					<TextView
+						style="@style/text_item"
+						android:text="@string/item_library_book_hint_author_info"/>
+
+					<TextView
+						android:id="@+id/authorInfo"
+						style="@style/text_multiline"
+						android:text="@string/item_library_book_author_info_example"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					style="@style/layout_vertical">
+
+					<TextView
+						style="@style/text_item"
+						android:text="@string/item_library_book_hint_summary"/>
+
+					<TextView
+						android:id="@+id/summary"
+						style="@style/text_multiline"
+						android:text="@string/item_library_book_summary_example"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					style="@style/layout_vertical">
+
+					<TextView
+						style="@style/text_hint"
+						android:text="@string/item_library_book_hint_catalog"/>
+
+					<TextView
+						android:id="@+id/catalog"
+						style="@style/text_multiline"
+						android:text="@string/item_library_book_catalog_example"/>
+
+				</LinearLayout>
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+					<TextView
+						android:id="@+id/text"
+						android:onClick="btnTestText"
+						style="@style/text_multiline"
+						android:text="Test Text"/>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+
+	</ScrollView>
+
+
+</LinearLayout>

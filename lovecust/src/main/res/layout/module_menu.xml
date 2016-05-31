@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:id="@+id/left_drawer"
+	style="@style/layout_vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@color/bg_menu">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/menu_user_info_height"
+		android:background="@color/app"
+		android:onClick="btnProfile"
+		android:paddingLeft="40dp">
+
+		<ImageView
+			android:id="@+id/avatar"
+			android:layout_width="64dp"
+			android:layout_height="64dp"
+			android:layout_marginTop="33dp"
+			android:background="@mipmap/icon_launcher"/>
+
+		<TextView
+			android:id="@+id/nick"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/avatar"
+			android:layout_centerVertical="true"
+			android:layout_marginTop="15dp"
+			android:text="@string/hint_profile_nick"
+			android:textColor="#FFF"
+			android:textSize="18sp"/>
+	</RelativeLayout>
+
+	<LinearLayout
+		style="@style/menu_items_holder">
+
+		<LinearLayout
+			style="@style/menu_item_holder"
+			android:onClick="btnEcustCalendar">
+
+			<ImageView
+				style="@style/menu_item_icon"
+				android:src="@mipmap/icon_launcher"/>
+
+			<TextView
+				style="@style/menu_item_text"
+				android:text="@string/title_ecust_calendar"/>
+		</LinearLayout>
+
+		<LinearLayout
+			style="@style/menu_item_holder"
+			android:onClick="btnEcustLibrary">
+
+			<ImageView
+				style="@style/menu_item_icon"
+				android:src="@mipmap/icon_launcher"/>
+
+			<TextView
+				style="@style/menu_item_text"
+				android:text="@string/title_ecust_library"/>
+		</LinearLayout>
+
+		<LinearLayout
+			style="@style/menu_item_holder"
+			android:onClick="btnEcustClassroom">
+
+			<ImageView
+				style="@style/menu_item_icon"
+				android:src="@mipmap/icon_launcher"/>
+
+			<TextView
+				style="@style/menu_item_text"
+				android:text="@string/title_ecust_classroom"/>
+		</LinearLayout>
+
+		<LinearLayout
+			style="@style/menu_item_holder"
+			android:onClick="btnFeedback">
+
+			<ImageView
+				style="@style/menu_item_icon"
+				android:src="@mipmap/icon_launcher"/>
+
+			<TextView
+				style="@style/menu_item_text"
+				android:text="@string/title_feedback"/>
+		</LinearLayout>
+
+		<LinearLayout
+			style="@style/menu_item_holder"
+			android:onClick="btnSetting">
+
+			<ImageView
+				style="@style/menu_item_icon"
+				android:src="@mipmap/icon_launcher"/>
+
+			<TextView
+				style="@style/menu_item_text"
+				android:text="@string/title_setting"/>
+		</LinearLayout>
+
+		<LinearLayout
+			style="@style/menu_item_holder"
+			android:onClick="btnAbout">
+
+			<ImageView
+				style="@style/menu_item_icon"
+				android:src="@mipmap/icon_launcher"/>
+
+			<TextView
+				style="@style/menu_item_text"
+				android:text="@string/title_about"/>
+		</LinearLayout>
+
+
+	</LinearLayout>
+</LinearLayout>

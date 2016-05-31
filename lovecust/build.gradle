@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    signingConfigs {
+        SigingLovecust {
+            keyAlias 'Lovecust'
+            keyPassword '139705'
+            storeFile file('K:/projects/lovecust/modules/lovecust-v1.jks')
+            storePassword '139705'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '24.0.0 rc4'
+    defaultConfig {
+        applicationId 'com.lovecust.default'
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionName '0.0.0'
+        signingConfig signingConfigs.SigingLovecust
+        versionCode 0
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.SigingLovecust
+        }
+        debug {
+            signingConfig signingConfigs.SigingLovecust
+        }
+        BuildTypeLovecust {
+            debuggable true
+            jniDebuggable false
+            signingConfig signingConfigs.SigingLovecust
+            renderscriptDebuggable false
+            minifyEnabled false
+            zipAlignEnabled true
+        }
+    }
+    productFlavors {
+        LovecustDebug {
+            minSdkVersion 15
+            applicationId 'com.lovecust.debug'
+            targetSdkVersion 23
+            versionName '0.8.4'
+            signingConfig signingConfigs.SigingLovecust
+            versionCode 84
+        }
+        LovecustRelease {
+            minSdkVersion 15
+            applicationId 'com.lovecust.app'
+            targetSdkVersion 23
+            versionName '0.9.4'
+            signingConfig signingConfigs.SigingLovecust
+            versionCode 94
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.trello:rxlifecycle:0.4.0'
+    compile 'com.trello:rxlifecycle-components:0.4.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'org.litepal.android:core:1.3.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    compile 'org.jsoup:jsoup:1.8.2'
+    compile 'cz.msebera.android:httpclient:4.4.1.2'
+}

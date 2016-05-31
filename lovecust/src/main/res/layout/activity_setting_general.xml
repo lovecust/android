@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/page_holder">
+
+	<include
+		layout="@layout/title_bar_subpage"/>
+
+	<LinearLayout
+		style="@style/page_holder">
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:visibility="gone">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/setting_general_internet_connection"/>
+
+			<TextView
+				android:id="@+id/settingInternetConnection"
+				style="@style/setting_item_option_text"
+				android:text="@string/setting_general_connect_internet_example"/>
+
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:onClick="btnLanguage">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/setting_general_language"/>
+
+			<TextView
+				android:id="@+id/tv_language"
+				style="@style/setting_item_option_text"
+				android:text="@string/setting_general_language_default"/>
+
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			android:id="@+id/btn_developer_mode"
+			style="@style/setting_item_holder">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/setting_general_developer_mode"/>
+
+			<TextView
+				android:id="@+id/tv_developer_mode"
+				style="@style/setting_item_option_text"
+				android:text="@string/on"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			style="@style/setting_item_holder"
+			android:visibility="gone">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:onClick="btnStorePath"
+				android:text="@string/setting_general_default_file_path"/>
+
+			<TextView
+				android:id="@+id/settingDefaultFilePath"
+				style="@style/setting_item_option_text"
+				android:text="/sdcard/Yanshi"/>
+
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/bg_dialog">
+
+	<TextView
+		android:id="@+id/textTitle"
+		style="@style/dialog_title"
+		android:layout_centerHorizontal="true"
+		android:text="@string/dialog_default_title"/>
+
+	<LinearLayout
+		android:id="@+id/layout_text"
+		style="@style/layout_vertical"
+		android:layout_below="@+id/textTitle"
+		android:layout_marginLeft="@dimen/span_normal"
+		android:layout_marginRight="@dimen/span_normal"
+		android:background="@drawable/bg_white_round_corner">
+
+		<EditText
+			android:id="@+id/et_text"
+			style="@style/edittext"/>
+
+	</LinearLayout>
+
+
+	<LinearLayout
+		style="@style/dialog_default_button_holder"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/layout_text">
+
+		<Button
+			android:id="@+id/mActionCommit"
+			style="@style/dialog_button"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:textColor="#630"
+			android:textSize="@dimen/text_normal"
+			android:text="@string/dialog_commit"/>
+
+		<Button
+			android:id="@+id/mActionCancel"
+			style="@style/dialog_button"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="@string/dialog_cancel"/>
+	</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:tools="http://schemas.android.com/tools"
+	style="@style/layout_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<include
+		android:id="@+id/titleBar"
+		layout="@layout/title_bar_extended"/>
+
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/layoutFooter"
+		android:layout_below="@+id/titleBar">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="60dp">
+
+				<TextView
+					android:id="@+id/title"
+					style="@style/text"
+					android:layout_centerInParent="true"
+					android:hint="@string/hint_title"
+					android:textSize="@dimen/text_biggest"
+					android:singleLine="false"
+					android:textStyle="bold"/>
+
+				<TextView
+					android:id="@+id/date"
+					style="@style/text_hint"
+					android:layout_alignParentBottom="true"
+					android:layout_alignParentRight="true"
+					android:hint="@string/hint_date"/>
+
+			</RelativeLayout>
+
+			<TextView
+				style="@style/decoration_span_light"/>
+
+			<TextView
+				android:id="@+id/content"
+				style="@style/text_multiline"
+				android:layout_width="match_parent"
+				android:hint="Loading, Pleases Wait. .."
+				android:textSize="@dimen/text_normal"
+				android:minHeight="200dp"
+				android:padding="@dimen/span_normal"
+				android:textIsSelectable="true"/>
+
+			<TextView
+				style="@style/decoration_span_light"/>
+
+			<fragment
+				android:id="@+id/commentsHolder"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:minHeight="50dp"
+				android:name="com.lovecust.app.ecust.jwc.FragmentJwcComments"
+				tools:layout="@layout/module_ecust_jwc_comments"/>
+
+
+		</LinearLayout>
+
+	</ScrollView>
+
+	<RelativeLayout
+		android:id="@+id/layoutFooter"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true">
+
+		<RelativeLayout
+			android:id="@+id/inputHolder"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#EEEEEE"
+			android:minHeight="@dimen/ecust_jwc_edittext_height">
+
+			<LinearLayout
+				android:layout_alignParentLeft="true"
+				android:layout_toLeftOf="@+id/tv_submit"
+				android:layout_centerVertical="true"
+				android:layout_margin="@dimen/span_normal"
+				style="@style/layout_vertical"
+				android:background="@drawable/bg_white_round_corner">
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/bg_white_round_corner">
+					<EditText
+						android:id="@+id/et_text"
+						style="@style/edittext"
+						android:hint="@string/hint_ecust_jwc_comment"
+						android:singleLine="false"/>
+				</LinearLayout>
+			</LinearLayout>
+			<!--android:background="@drawable/bg_button_submit"-->
+
+			<TextView
+				android:id="@+id/tv_submit"
+				style="@style/button"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:background="@drawable/text_submit_button_selector"
+				android:text="@string/submit"/>
+		</RelativeLayout>
+
+
+	</RelativeLayout>
+</RelativeLayout>

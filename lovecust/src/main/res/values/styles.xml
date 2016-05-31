@@ -1,0 +1,298 @@
+<resources>
+
+	 Base application theme.
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<!--<item name="android:windowBackground">@color/default_bg_color</item>-->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:windowIsTranslucent">true</item>
+
+		<item name="android:textColor">@color/text</item>
+		<item name="android:textSize">@dimen/text_small</item>
+		<item name="android:background">@color/transparent</item>
+	</style>
+
+
+	<style name="theme_programmer_style" parent="AppTheme">
+		<item name="android:background">#000000</item>
+		<item name="android:textColor">#FFFFFF</item>
+	</style>
+
+
+	<!-- This is Dictionary Part -->
+	<style name="sDictionaryTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:textSize">16dp</item>
+	</style>
+
+	<style name="sDictionary">
+		<item name="android:background">#EEE</item>
+	</style>
+
+	<style name="sDictionary_TitleBar">
+		<item name="android:background">#60C</item>
+		<item name="android:paddingTop">3dp</item>
+	</style>
+
+	<style name="sDictionary_TitleBar_Options">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">#FFF</item>
+	</style>
+
+	<style name="sDictionary_TitleBar_Input">
+		<item name="android:singleLine">true</item>
+		<item name="android:background">@drawable/bg_dictionary_round_conor_input_text</item>
+		<item name="android:textSize">18dp</item>
+		<item name="android:padding">5dp</item>
+		<item name="android:layout_margin">8dp</item>
+
+	</style>
+
+	<style name="sDictionary_Tail_Options">
+		<item name="android:textSize">18dp</item>
+		<item name="android:textColor">#333</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:gravity">center</item>
+		<item name="android:background">@drawable/bg_button_selector_bg_s1</item>
+		<item name="android:layout_margin">5dp</item>
+	</style>
+
+	<style name="sDictionary_Tail">
+		<item name="android:background">#CCC</item>
+	</style>
+
+	<!-- Basic Panel -->
+	<style name="sDictionary_Basic">
+		<item name="android:background">#94D</item>
+		<item name="android:layout_margin">10dp</item>
+		<item name="android:minHeight">100dp</item>
+		<!--<item name="android:maxHeight">120dp</item>-->
+		<item name="android:padding">8dp</item>
+	</style>
+
+	<style name="sDictionary_Basic_Pronunciation">
+		<item name="android:textColor">#FFF</item>
+	</style>
+
+	<style name="sDictionary_Basic_Translation">
+		<item name="android:textColor">#FFF</item>
+		<item name="android:layout_marginTop">8dp</item>
+
+	</style>
+
+	<!-- Detail Panel -->
+	<style name="sDictionary_Detail">
+		<item name="android:layout_margin">10dp</item>
+		<item name="android:padding">8dp</item>
+		<item name="android:background">#CCC</item>
+	</style>
+
+
+	<style name="sInputMethod_Keys">
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">#330</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:layout_margin">4dp</item>
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">38dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:background">@drawable/bg_round_corner_gray_colored_selector_bg</item>
+	</style>
+
+	<style name="sInputMethod_Keys.Space">
+		<item name="android:layout_weight">3</item>
+	</style>
+
+	<style name="sInputMethod_Keys.Capital_Case">
+		<item name="android:layout_margin">2dp</item>
+		<item name="android:layout_width">45dp</item>
+		<item name="android:layout_height">35dp</item>
+		<item name="android:layout_weight">0</item>
+	</style>
+
+	<style name="sInputMethod_Keys.Backspace">
+		<item name="android:layout_margin">2dp</item>
+		<item name="android:layout_width">45dp</item>
+		<item name="android:layout_height">35dp</item>
+		<item name="android:layout_weight">0</item>
+	</style>
+
+	<style name="sDictionary_Memorize_Option_Edit">
+		<item name="android:background">#FFFFFFFF</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<!--<style name="sDictionary_Memorize_Text_Key">-->
+	<!--<item name="android:textColor">#200</item>-->
+	<!--<item name="android:background">@drawable/bg_dic_memorize_key_s1</item>-->
+	<!--<item name="android:padding">@dimen/dictionary_memorize_sentence_key_text_margin</item>-->
+	<!--<item name="android:textSize">@dimen/dictionary_memorize_sentence_key_text_size</item>-->
+	<!--</style>-->
+
+	<!--<style name="sDictionary_Memorize_Text_Value">-->
+	<!--<item name="android:textSize">@dimen/dictionary_memorize_sentence_value_text_size</item>-->
+	<!--<item name="android:padding">@dimen/dictionary_memorize_sentence_value_text_margin</item>-->
+	<!--</style>-->
+
+	<style name="sDictionary_Memorize_Panel_Key_Holder">
+		<item name="android:background">#FFF</item>
+	</style>
+
+	<style name="sDictionary_Memorize_Panel_Value_Holder">
+		<item name="android:background">#DDD</item>
+
+	</style>
+
+	<!-- for all app pages -->
+	<style name="pluto_page_holder">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:orientation">vertical</item>
+		<item name="android:background">#FFF</item>
+	</style>
+
+
+	<!-- list -->
+	<style name="list_items_holder">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:orientation">vertical</item>
+		<item name="android:background">@android:color/transparent</item>
+	</style>
+
+	<style name="list_item_textview_holder">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/list_item_height</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:textColor">@color/text</item>
+		<item name="android:background">@drawable/default_text_selector</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:paddingLeft">15dp</item>
+		<item name="android:paddingRight">15dp</item>
+		<item name="android:layout_centerVertical">true</item>
+	</style>
+
+	<style name="list_item_holder">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/list_item_height</item>
+		<item name="android:background">@drawable/default_text_selector</item>
+		<item name="android:paddingLeft">15dp</item>
+		<item name="android:paddingRight">15dp</item>
+	</style>
+
+	<style name="list_item_text">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">@dimen/list_item_height</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:textColor">@color/text</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:layout_centerVertical">true</item>
+	</style>
+
+	<style name="list_item_toggle_button">
+		<item name="android:layout_width">@dimen/list_item_toggle_button_width</item>
+		<item name="android:layout_height">@dimen/list_item_toggle_button_height</item>
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:button">@drawable/icon_toggle_btn_selector</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:layout_alignParentRight">true</item>
+		<item name="android:text"/>
+		<item name="android:textOn"/>
+		<item name="android:textOff"/>
+	</style>
+
+	<style name="list_item_right_text">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">@dimen/list_item_height</item>
+		<item name="android:gravity">center_vertical</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">@color/text</item>
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:layout_alignParentRight">true</item>
+	</style>
+
+	<!-- dialog -->
+
+
+
+
+	<!-- dialog - style c -->
+	<style name="dialog_edittext">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_margin">12dp</item>
+		<item name="android:padding">5dp</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:background">@drawable/bg_dialog_edittext</item>
+	</style>
+
+	<style name="dialog_listview_holder">
+		<item name="android:paddingTop">12dp</item>
+		<item name="android:paddingBottom">12dp</item>
+	</style>
+
+	<style name="dialog_listview">
+
+	</style>
+
+	<style name="dialog_listview_item_text">
+		<item name="android:textColor">@color/text</item>
+		<item name="android:textSize">15sp</item>
+		<item name="android:gravity">center</item>
+		<item name="android:paddingTop">17dp</item>
+		<item name="android:paddingBottom">17dp</item>
+		<item name="android:background">@drawable/default_text_selector</item>
+	</style>
+
+	<style name="dialog_time_in_millis_option_textview">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:padding">10dp</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textColor">@color/text_clickable</item>
+		<item name="android:background">@drawable/default_text_selector</item>
+	</style>
+
+	<style name="dialog_color_option_textview">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">50dp</item>
+		<item name="android:layout_weight">1</item>
+	</style>
+
+	<style name="page_holder">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">match_parent</item>
+		<item name="android:background">@color/bg_app_pages</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+
+
+	<!-- menu -->
+	<style name="menu_items_holder" parent="layout_vertical">
+		<!--<item name="android:background">#</item>-->
+	</style>
+
+	<style name="menu_item_holder" parent="layout_horizontal">
+		<item name="android:layout_height">@dimen/menu_item_height</item>
+		<item name="android:background">@drawable/bg_text_selector</item>
+	</style>
+
+	<style name="menu_item_icon">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_weight">@integer/menu_icon_weight</item>
+		<item name="android:layout_gravity">center</item>
+	</style>
+
+	<style name="menu_item_text" parent="text">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_weight">@integer/menu_text_weight</item>
+		<item name="android:layout_gravity">center_vertical</item>
+	</style>
+
+
+	<dimen name="menu_user_info_height">155dp</dimen>
+	<dimen name="menu_item_height">55dp</dimen>
+</resources>

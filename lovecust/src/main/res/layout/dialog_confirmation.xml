@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/dialog_holder">
+
+	<TextView
+		android:id="@+id/textTitle"
+		style="@style/dialog_title"
+		android:text="@string/dialog_default_title"/>
+
+	<LinearLayout
+		style="@style/dialog_default_button_holder"
+		android:layout_below="@+id/textTitle">
+
+		<Button
+			android:id="@+id/mActionCommit"
+			style="@style/dialog_button_commit"/>
+
+		<Button
+			android:id="@+id/mActionCancel"
+			style="@style/dialog_button_cancel"/>
+	</LinearLayout>
+
+</RelativeLayout>

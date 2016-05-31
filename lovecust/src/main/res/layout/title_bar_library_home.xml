@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	style="@style/titlebar"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<TextView
+		android:id="@+id/titleBarTitle"
+		style="@style/title_bar_title_text"
+		android:text="@string/title"/>
+
+	<TextView
+		android:id="@+id/titleBarOptionRight"
+		style="@style/title_bar_options_text"
+		android:layout_alignParentRight="true"
+		android:text="+"/>
+
+</RelativeLayout>

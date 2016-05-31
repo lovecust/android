@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">@color/app</color>
+	<color name="colorPrimaryDark">@color/app_darker</color>
+	<color name="colorAccent">@color/app_lighter</color>
+
+
+	<color name="white">#FFFFFF</color>
+	<color name="black">#000000</color>
+	<color name="gray">#666666</color>
+
+	<color name="bg">#00000000</color>
+
+	<!--  bg_app is for the background of the parent of every layout -->
+	<color name="bg_app">@color/white</color>
+	<color name="bg_app_darker">#DEDEDE</color>
+	<color name="bg_app_active">@color/white</color>
+	<color name="bg_app_pages">#FFFFFFFF</color>
+
+	<color name="span">@color/bg_app_darker</color>
+	<color name="span_light">#FDFDFD</color>
+
+	<color name="text">#FF32292C</color>
+	<color name="text_emphasized">#FF89292C</color>
+	<color name="text_description">#FF666655</color>
+
+	<!--<color name="app_color">#ff8400</color>-->
+	<color name="app">#9900ff</color>
+	<color name="app_darker">#550099</color>
+	<color name="app_lighter">#AA00ff</color>
+
+	<color name="bg_toggle_button_normal">#666644</color>
+
+	<color name="primary">@color/app</color>
+	<color name="primary_dark">@color/app_darker</color>
+
+	<color name="text_item">#322</color>
+	<color name="text_alert">#e04123</color>
+	<color name="divider_line">#88888888</color>
+	<color name="default_bg">#eeeeee</color>
+
+
+	<color name="bg_text_normal_color">#00000000</color>
+	<color name="bg_text_pressed_color">#E5E5E5</color>
+
+	<color name="text_clickable">#FF0000FF</color>
+
+	<color name="text_titlebar_title">#FFFFFF</color>
+	<!--<color name="titlebar_title">#433238</color>-->
+	<color name="bg_titlebar">@color/app</color>
+
+	<color name="bg_text_button_normal_color">#9900ff</color>
+	<color name="bg_text_button_disabled_color">#CCBBEE</color>
+	<color name="bg_text_button_pressed_color">#6600aa</color>
+
+	<color name="text_feedback_name">@color/app</color>
+	<color name="text_feedback_content">#FFFFFF</color>
+	<color name="text_feedback_system">#33bb66</color>
+	<color name="bg_menu">#FFFFFF</color>
+
+	<color name="red">#AA3300</color>
+
+	<color name="bg_edittext">#FFFFFF</color>
+	<!--<color name="title_bar_bg">#FEC200</color>-->
+
+
+</resources>
