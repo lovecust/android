@@ -16,16 +16,22 @@
 		android:scaleType="centerCrop"
 		android:src="@mipmap/pic_qrcode"/>
 
-	<TextView
-		android:id="@+id/tv_share"
-		style="@style/text"
+	<LinearLayout
 		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
 		android:layout_alignParentBottom="true"
-		android:textColor="@color/app"
-		android:textSize="@dimen/text_bigger"
-		android:background="#66888888"
-		android:gravity="center"
-		android:padding="10dp"
-		android:text="Click to Share Lovecust"/>
+		android:background="#66888888">
+		<TextView
+			android:id="@+id/tv_share"
+			style="@style/text"
+			android:layout_width="match_parent"
+			android:background="?android:selectableItemBackground"
+			android:gravity="center"
+			android:padding="10dp"
+			android:text="Click to Share Lovecust"
+			android:textColor="@color/app"
+			android:textSize="@dimen/text_bigger"/>
+	</LinearLayout>
+
 
 </RelativeLayout>

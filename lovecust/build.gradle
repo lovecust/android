@@ -46,17 +46,25 @@ android {
             minSdkVersion 15
             applicationId 'com.lovecust.debug'
             targetSdkVersion 23
-            versionName '0.8.4'
+            versionName '0.8.5'
             signingConfig signingConfigs.SigingLovecust
-            versionCode 84
+            versionCode 85
         }
         LovecustRelease {
             minSdkVersion 15
             applicationId 'com.lovecust.app'
             targetSdkVersion 23
-            versionName '0.9.4'
+            versionName '0.9.5'
             signingConfig signingConfigs.SigingLovecust
-            versionCode 94
+            versionCode 95
+        }
+        LovecustTest {
+            minSdkVersion 15
+            applicationId 'com.lovecust.test'
+            signingConfig signingConfigs.SigingLovecust
+            targetSdkVersion 23
+            versionCode 75
+            versionName '0.7.5'
         }
     }
 

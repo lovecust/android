@@ -9,9 +9,9 @@ import android.net.ConnectivityManager;
 import com.lovecust.app.api.ApiManager;
 import com.lovecust.app.recorder.AppReceiver;
 import com.lovecust.app.recorder.LogPasteboard;
-import com.lovecust.app.utils.AppUtil;
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.DensityUtils;
+import com.fisher.utils.AppUtil;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.DensityUtils;
 
 
 import org.litepal.LitePalApplication;
@@ -34,7 +34,7 @@ public class AppContext extends LitePalApplication {
 	// the text on the paste board
 	public static String mTextPasteBoard = "";
 	// apk version
-	public static final String mAppVersion = "v0.9.4";
+	public static final String mAppVersion = "v0.9.5";
 	// api version
 	public static final String mApiVersion = "v1.1";
 

@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.google.gson.annotations.SerializedName;
 import com.lovecust.app.R;
-import com.lovecust.app.utils.AppUtil;
+import com.fisher.utils.AppUtil;
 
 import org.litepal.crud.DataSupport;
 

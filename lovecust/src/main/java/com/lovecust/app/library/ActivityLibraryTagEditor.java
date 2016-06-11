@@ -7,7 +7,7 @@ import android.widget.EditText;
 import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.lovecust.Setting;
 import com.lovecust.app.R;
-import com.lovecust.app.utils.ToastUtil;
+import com.fisher.utils.ToastUtil;
 
 import butterknife.Bind;
 

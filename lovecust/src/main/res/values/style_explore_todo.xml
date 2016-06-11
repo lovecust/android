@@ -3,4 +3,14 @@
 
 	<dimen name="todo_icon_size">30dp</dimen>
 
+	<style name="explore_todo_nav_text">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:gravity">center</item>
+		<item name="android:padding">@dimen/span_big</item>
+		<item name="android:textColor">@color/app</item>
+		<item name="android:textSize">@dimen/text_bigger</item>
+	</style>
+
 </resources>

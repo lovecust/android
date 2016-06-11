@@ -3,7 +3,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:id="@+id/layout_parent"
-	android:background="@drawable/bg_selector"
+	android:background="?android:attr/selectableItemBackground"
 	android:layout_height="wrap_content">
 
 	<TextView
@@ -43,7 +43,7 @@
 			android:visibility="gone">
 
 			<ImageView
-				android:id="@+id/iv_done"
+				android:id="@+id/iv_remove"
 				style="@style/icon"
 				android:layout_width="@dimen/todo_icon_size"
 				android:layout_height="@dimen/todo_icon_size"
@@ -57,7 +57,7 @@
 				android:src="@mipmap/icon_edit_black"/>
 
 			<ImageView
-				android:id="@+id/iv_remove"
+				android:id="@+id/iv_done"
 				style="@style/icon"
 				android:layout_width="@dimen/todo_icon_size"
 				android:layout_height="@dimen/todo_icon_size"

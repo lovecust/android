@@ -51,8 +51,7 @@ public class Setting {
 	public static String FILE_EXTERNAL_DIR_APP = "Lovecust";
 
 	public static String FILE_EXTERNAL_DIR_APP_IMAGE = "Images";
-	public static String FILE_EXTERNAL_DIR_APP_APP = "App";
-	public static String FILE_EXTERNAL_FILE_APP_APP_UPDATE_APK = FILE_EXTERNAL_DIR_APP_APP + separator + "lovecust.apk";
-
-
+	public static String FILE_EXTERNAL_DIR_APP_APP = "App" + separator;
+	public static String FILE_EXTERNAL_FILE_APP_APP_UPDATE_APK = FILE_EXTERNAL_DIR_APP_APP + "lovecust.apk";
+	public static String FILE_EXTERNAL_DIR_APP_DATA = "Data" + separator;
 }

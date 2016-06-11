@@ -100,8 +100,8 @@
 	<string name="notice_wifi_notice_disappear_in_n_secs_header">"notice will disappear in "</string>
 	<string name="notice_wifi_notice_disappear_in_n_secs_footer">" seconds"</string>
 	<string name="notice_wifi_logging_in">logging in!</string>
-	<string name="notice_wifi_device_is_offline">device is offline and wait for a while!</string>
-	<string name="notice_wifi_logged_in">logged in Ecust Wifi Server now and have a good day!</string>
+	<string name="notice_wifi_device_is_offline">device is offline and please wait for a while!</string>
+	<string name="notice_wifi_logged_in">logged in Ecust Wifi Server now and have a great day!</string>
 
 	<string name="title_ecust_library">Ecust Library</string>
 	<string name="title_ecust_classroom">Available Classroom</string>
@@ -159,6 +159,13 @@
 	<string name="notice_click_to_retry">click to try again!</string>
 	<string name="okay">Okay</string>
 	<string name="no">No</string>
+	<string name="hint_app_version">v0.0.0</string>
+	<string name="toast_explore_todo_export_successfully">"Exported todo-list data Successfully to "</string>
+	<string name="toast_explore_todo_deleted">"Deleted "</string>
+	<string name="toast_explore_todo_items">" items!"</string>
+	<string name="explore_todo_done">DONE</string>
+	<string name="explore_todo_removed">REMOVED</string>
+	<string name="explore_todo_okay">OKAY</string>
 
 
 </resources>

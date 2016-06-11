@@ -8,9 +8,9 @@ import android.widget.TextView;
 
 import com.lovecust.app.R;
 import com.lovecust.app.lovecust.AlphaActivity;
-import com.lovecust.app.utils.EdittextUtil;
-import com.lovecust.app.utils.InstantStoreUtil;
-import com.lovecust.app.utils.NetUtil;
+import com.fisher.utils.EdittextUtil;
+import com.fisher.utils.InstantStoreUtil;
+import com.fisher.utils.NetUtil;
 
 import butterknife.Bind;
 import butterknife.OnClick;

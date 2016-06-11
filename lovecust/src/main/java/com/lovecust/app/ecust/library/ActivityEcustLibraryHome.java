@@ -7,7 +7,7 @@ import com.lovecust.app.api.ApiManager;
 import com.lovecust.app.entity.EcustLibraryStatus;
 import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.R;
-import com.lovecust.app.utils.NetUtil;
+import com.fisher.utils.NetUtil;
 
 import butterknife.Bind;
 

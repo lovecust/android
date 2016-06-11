@@ -1,5 +1,6 @@
 package com.lovecust.app.api;
 
+import com.lovecust.app.entity.AppProfileAvatar;
 import com.lovecust.app.entity.UtilComment;
 import com.lovecust.app.entity.EcustJwcNews;
 import com.lovecust.app.entity.AppProfile;
@@ -8,10 +9,13 @@ import com.lovecust.app.entity.EcustLibraryStatus;
 import com.lovecust.app.entity.Nothing;
 import com.lovecust.app.entity.AppFeedback;
 
+import okhttp3.MultipartBody;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import rx.Observable;
 
 /**
@@ -42,6 +46,10 @@ public interface Api {
 
 	@POST( Methods.APP_PROFILE_UPDATE )
 	Observable< Nothing > appProfileUpdate ( @Body AppProfile profile );
+
+	@Multipart
+	@POST( Methods.APP_PROFILE_AVATAR )
+	Observable< AppProfileAvatar > appProfileAvatar ( @Part() MultipartBody.Part avatar );
 
 	@FormUrlEncoded
 	@POST( Methods.APP_FEEDBACK_CREATE )

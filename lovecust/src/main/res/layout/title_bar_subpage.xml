@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-	style="@style/titlebar"
-	xmlns:android="http://schemas.android.com/apk/res/android">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	style="@style/titlebar">
 
-	<ImageView
+	<com.lovecust.app.view.AppImageView
 		android:id="@+id/titleBarOptionLeft"
-		style="@style/title_bar_options_icon"
-		android:src="@drawable/icon_back_selector"/>
+		style="@style/title_bar_icon"
+		android:src="@mipmap/icon_back"
+		app:iconStyle="bright"/>
 
 	<TextView
 		android:id="@+id/titleBarTitle"
-		style="@style/title_bar_options_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
 		android:layout_toRightOf="@id/titleBarOptionLeft"
-		android:text="@string/title"/>
+		android:text="@string/title"
+		android:textColor="@color/text_titlebar_title"
+		android:textSize="@dimen/text_big"/>
 
 </RelativeLayout>

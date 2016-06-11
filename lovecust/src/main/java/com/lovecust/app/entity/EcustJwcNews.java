@@ -3,7 +3,7 @@ package com.lovecust.app.entity;
 
 import com.google.gson.Gson;
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.FileUtil;
+import com.fisher.utils.FileUtil;
 
 import java.io.File;
 

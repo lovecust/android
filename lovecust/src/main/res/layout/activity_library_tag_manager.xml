@@ -6,7 +6,7 @@
 	android:orientation="vertical">
 
 	<include
-		layout="@layout/title_bar_extended"/>
+		layout="@layout/title_bar"/>
 
 	<android.support.v7.widget.RecyclerView
 		android:id="@+id/listLibraryTags"

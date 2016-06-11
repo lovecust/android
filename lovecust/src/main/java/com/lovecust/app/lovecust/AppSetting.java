@@ -4,9 +4,9 @@ package com.lovecust.app.lovecust;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.lovecust.app.R;
-import com.lovecust.app.utils.AppUtil;
-import com.lovecust.app.utils.BugsUtil;
-import com.lovecust.app.utils.FileUtil;
+import com.fisher.utils.AppUtil;
+import com.fisher.utils.BugsUtil;
+import com.fisher.utils.FileUtil;
 
 import java.util.Locale;
 
@@ -40,8 +40,9 @@ public class AppSetting {
 
 	// 0 is default
 	private int language = 0;
-	private int appColor = AppUtil.getColor(R.color.app);
 	private boolean developerMode = false;
+	private int colorApp = AppUtil.getColor(R.color.app);
+
 
 
 	public int getLanguage() {
@@ -79,14 +80,6 @@ public class AppSetting {
 		flush();
 	}
 
-	public int getAppColor() {
-		return appColor;
-	}
-
-	public void setAppColor(int appColor) {
-		this.appColor = appColor;
-	}
-
 	public boolean isDeveloperMode() {
 		return developerMode;
 	}
@@ -95,6 +88,17 @@ public class AppSetting {
 		if (this.developerMode == developerMode)
 			return;
 		this.developerMode = developerMode;
+		flush();
+	}
+
+	public int getColorApp ( ) {
+		return colorApp;
+	}
+
+	public void setColorApp ( int colorApp ) {
+		if (this.colorApp == colorApp)
+			return;
+		this.colorApp = colorApp;
 		flush();
 	}
 

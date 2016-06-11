@@ -1,8 +1,8 @@
 package com.lovecust.app.ecust.wifi;
 
 import com.lovecust.app.api.ApiManager;
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.FileUtil;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.FileUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;

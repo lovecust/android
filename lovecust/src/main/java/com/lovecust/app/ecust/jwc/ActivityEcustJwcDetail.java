@@ -4,7 +4,6 @@ package com.lovecust.app.ecust.jwc;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.Html;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -16,7 +15,7 @@ import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.lovecust.Setting;
 import com.lovecust.app.surface.DialogConfirmation;
 import com.lovecust.app.surface.DialogEdittext;
-import com.lovecust.app.utils.NetUtil;
+import com.fisher.utils.NetUtil;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -59,12 +58,7 @@ public class ActivityEcustJwcDetail extends AlphaActivity {
 		title.setText( temp.getName() );
 		date.setText( temp.getDate() );
 
-		submit.setOnClickListener( new View.OnClickListener() {
-			@Override
-			public void onClick ( View v ) {
-				submit();
-			}
-		} );
+		submit.setOnClickListener( v -> submit() );
 
 		if ( null == md5 ) {
 			toast( "got null expected a news id!" );
@@ -76,6 +70,7 @@ public class ActivityEcustJwcDetail extends AlphaActivity {
 
 		api.ecustJwcFetch( md5 )
 				.subscribe( news -> {
+					this.news = news;
 					title.setText( news.getName() );
 					date.setText( news.getDate() );
 					content.setText( Html.fromHtml( news.getValue() ) );

@@ -5,8 +5,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.lovecust.app.R;
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.BugsUtil;
-import com.lovecust.app.utils.FileUtil;
+import com.fisher.utils.BugsUtil;
+import com.fisher.utils.FileUtil;
 
 public class FloatViewImage {
 	private static FloatViewImage setting;

@@ -11,7 +11,7 @@ import com.lovecust.app.api.ApiManager;
 import com.lovecust.app.entity.AppProfile;
 import com.lovecust.app.entity.UtilComment;
 import com.lovecust.app.lovecust.AlphaFragment;
-import com.lovecust.app.utils.NetUtil;
+import com.fisher.utils.NetUtil;
 
 import java.util.ArrayList;
 

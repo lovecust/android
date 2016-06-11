@@ -37,14 +37,14 @@
 		<item name="android:background">@drawable/bg_toggle_button_selector</item>
 	</style>
 	<!-- this is for global styles -->
+
 	<style name="text">
+		<!-- only contains the basic and required style of TextView -->
 		<item name="android:layout_width">wrap_content</item>
 		<item name="android:layout_height">wrap_content</item>
-		<item name="android:padding">@dimen/text_padding</item>
-		<item name="android:layout_margin">@dimen/text_margin</item>
-		<item name="android:textColor">@color/text</item>
-		<item name="android:textSize">@dimen/text_default</item>
 		<item name="android:singleLine">true</item>
+		<item name="android:textSize">@dimen/text_default</item>
+		<item name="android:textColor">@color/text</item>
 	</style>
 	<style name="text_big" parent="text">
 		<item name="android:textSize">@dimen/text_normal</item>
@@ -98,7 +98,7 @@
 		<item name="android:layout_height">wrap_content</item>
 		<item name="android:layout_gravity">center</item>
 		<item name="android:layout_centerVertical">true</item>
-		<item name="android:background">@drawable/bg_selector</item>
+		<item name="android:background">?android:selectableItemBackground</item>
 	</style>
 
 	<style name="layout_horizontal">
@@ -169,7 +169,6 @@
 		<item name="android:layout_height">@dimen/title_bar_height</item>
 		<item name="android:gravity">center</item>
 		<item name="android:layout_centerVertical">true</item>
-		<item name="android:padding">10dp</item>
 		<item name="android:textColor">@color/text_titlebar_title</item>
 	</style>
 
@@ -178,6 +177,14 @@
 		<item name="android:layout_width">@dimen/title_bar_height</item>
 		<item name="android:layout_height">@dimen/title_bar_height</item>
 		<item name="android:layout_centerVertical">true</item>
+	</style>
+
+	<style name="title_bar_icon">
+		<item name="android:layout_width">@dimen/title_bar_height</item>
+		<item name="android:layout_height">@dimen/title_bar_height</item>
+		<item name="android:padding">13dp</item>
+		<item name="android:layout_centerVertical">true</item>
+		<item name="android:background">?android:selectableItemBackground</item>
 	</style>
 
 
@@ -190,7 +197,7 @@
 		<item name="android:layout_height">@dimen/setting_item_height</item>
 		<item name="android:paddingLeft">@dimen/setting_item_padding_left</item>
 		<item name="android:paddingRight">@dimen/setting_item_padding_right</item>
-		<item name="android:background">@drawable/bg_text_selector</item>
+		<item name="android:background">?android:attr/selectableItemBackground</item>
 	</style>
 	<style name="setting_item_title" parent="text">
 		<item name="android:layout_centerVertical">true</item>
@@ -199,5 +206,6 @@
 		<item name="android:textSize">@dimen/text_small</item>
 		<item name="android:layout_centerVertical">true</item>
 		<item name="android:layout_alignParentRight">true</item>
+		<item name="android:gravity">right</item>
 	</style>
 </resources>

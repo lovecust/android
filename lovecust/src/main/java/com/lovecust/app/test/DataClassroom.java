@@ -2,7 +2,7 @@ package com.lovecust.app.test;
 
 
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.PreferenceUtil;
+import com.fisher.utils.PreferenceUtil;
 
 
 public class DataClassroom extends PreferenceUtil {

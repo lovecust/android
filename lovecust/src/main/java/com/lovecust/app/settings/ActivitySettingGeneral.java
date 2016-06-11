@@ -8,7 +8,7 @@ import com.lovecust.app.lovecust.AppSetting;
 import com.lovecust.app.R;
 import com.lovecust.app.surface.DialogConfirmation;
 import com.lovecust.app.surface.DialogListView;
-import com.lovecust.app.utils.AppUtil;
+import com.fisher.utils.AppUtil;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -49,7 +49,7 @@ public class ActivitySettingGeneral extends AlphaActivity {
 				setting.setLanguage(index);
 				flush();
 //				startActivity( new Intent( ActivitySettingGeneral.this, ActivityLauncherHome.class ) );
-//				overridePendingTransition( R.anim.activity_zoom_out_from_center, R.anim.activity_zoom_in_from_center );
+//				overridePendingTransition( R.anim.activity_zoom_out_to_center, R.anim.activity_zoom_in_from_center );
 			}
 
 			@Override

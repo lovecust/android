@@ -1,15 +1,13 @@
 package com.lovecust.app.ecust.calendar;
 
 import android.net.Uri;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.lovecust.app.R;
 import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.FileUtil;
-import com.lovecust.app.utils.HTTPUtil;
+import com.fisher.utils.FileUtil;
+import com.fisher.utils.HTTPUtil;
 
 import java.io.File;
 

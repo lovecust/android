@@ -7,9 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import com.lovecust.app.utils.ToastUtil;
+import com.fisher.utils.ToastUtil;
 
 import butterknife.ButterKnife;
 
@@ -35,13 +34,11 @@ public abstract class AlphaFragment extends Fragment {
 		ButterKnife.unbind( this );
 	}
 
-	public void toast ( String msg ) {
-		ToastUtil.toast( getActivity(), msg );
+	protected String toast ( int stringId ) {
+		return toast( getString( stringId ) );
 	}
 
-	public void toast ( Object msg ) {
-		ToastUtil.toast( getActivity(), "" + msg );
+	protected String toast ( String msg ) {
+		return ToastUtil.toastLong( getContext(), msg );
 	}
-
-
 }

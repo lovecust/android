@@ -2,7 +2,7 @@ package com.lovecust.app.test;
 
 import android.app.Activity;
 
-import com.lovecust.app.utils.AppUtil;
+import com.fisher.utils.AppUtil;
 
 /**
  * Created by Fisher on 5/16/2016 at 13:51

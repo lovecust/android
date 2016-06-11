@@ -154,7 +154,7 @@
 	<string name="hint_ecust_jwc_comment">说点儿什么吧！</string>
 	<string name="submit">发送</string>
 	<string name="title_ecust_morning_exercise">晨跑查询</string>
-	<string name="title_explore_todo">快速笔记</string>
+	<string name="title_explore_todo">便签本</string>
 	<string name="hint_explore_todo_et">写点儿 笔记 想法. ..</string>
 	<string name="on">开</string>
 	<string name="setting_general_developer_mode">开发者模式</string>
@@ -171,6 +171,13 @@
 	<string name="notice_click_to_retry">点击重新连接！</string>
 	<string name="okay">是</string>
 	<string name="no">否</string>
+	<string name="hint_app_version">v0.0.0</string>
+	<string name="toast_explore_todo_export_successfully">成功导出todo-list数据到：</string>
+	<string name="toast_explore_todo_deleted">删除了:</string>
+	<string name="toast_explore_todo_items">项数据</string>
+	<string name="explore_todo_done">已完成</string>
+	<string name="explore_todo_removed">已移除</string>
+	<string name="explore_todo_okay">便签</string>
 
 
 </resources>

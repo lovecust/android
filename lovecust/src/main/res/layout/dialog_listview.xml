@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-	style="@style/dialog_listview_holder"
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/dialog_listview_holder"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:background="@drawable/bg_dialog_holder">
@@ -9,10 +9,11 @@
 	<ListView
 		android:id="@+id/listOptions"
 		style="@style/dialog_listview"
-		android:background="@android:color/transparent"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
 		android:divider="#E5E5E5"
 		android:dividerHeight="1dp"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"/>
+		android:footerDividersEnabled="true"
+		android:headerDividersEnabled="true"/>
 
-</RelativeLayout>
+</LinearLayout>

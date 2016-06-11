@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	style="@style/layout_parent">
 
 	<include
-		android:id="@+id/titleBar"
-		layout="@layout/title_bar_subpage"/>
+		layout="@layout/title_bar"/>
 
-	<android.support.v7.widget.RecyclerView
-		android:id="@+id/mRecyclerView"
+	<LinearLayout
+		android:id="@+id/layout_nav"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:layout_below="@+id/titleBar">
+		android:layout_height="wrap_content">
 
-	</android.support.v7.widget.RecyclerView>
+		<TextView
+			android:id="@+id/tv_okay"
+			style="@style/explore_todo_nav_text"
+			android:text="@string/explore_todo_okay"/>
+
+		<TextView
+			android:id="@+id/tv_done"
+			style="@style/explore_todo_nav_text"
+			android:text="@string/explore_todo_done"/>
+
+		<TextView
+			android:id="@+id/tv_removed"
+			style="@style/explore_todo_nav_text"
+			android:text="@string/explore_todo_removed"/>
+	</LinearLayout>
+
 
 	<TextView
-		android:id="@+id/mCount"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignBottom="@+id/mRecyclerView"
-		android:layout_alignRight="@+id/mRecyclerView"
-		android:text="20/50"
-		android:textColor="@color/app"
-		android:textSize="12sp"/>
+		android:id="@+id/tv_underline"
+		android:layout_width="100dp"
+		android:layout_height="2dp"
+		android:layout_marginLeft="140dp"
+		android:background="@color/app"/>
 
 	<TextView
-		android:id="@+id/mTag"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignBottom="@+id/mRecyclerView"
-		android:layout_centerHorizontal="true"
-		android:text="-todo-"
-		android:textColor="@color/app"
-		android:textSize="14sp"/>
+		style="@style/decoration_line"/>
 
-</RelativeLayout>
+	<android.support.v4.view.ViewPager
+		android:id="@+id/viewPager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+</LinearLayout>

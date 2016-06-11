@@ -2,8 +2,8 @@ package com.lovecust.app.lovecust;
 
 import android.app.Service;
 
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.ToastUtil;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.ToastUtil;
 
 
 public abstract class AlphaService extends Service {

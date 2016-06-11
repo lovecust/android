@@ -1,6 +1,7 @@
 package com.lovecust.app.api;
 
 import com.lovecust.app.R;
+import com.lovecust.app.entity.AppProfileAvatar;
 import com.lovecust.app.entity.UtilComment;
 import com.lovecust.app.entity.EcustJwcNews;
 import com.lovecust.app.ecust.wifi.SettingWifi;
@@ -10,18 +11,21 @@ import com.lovecust.app.entity.EcustLibraryStatus;
 import com.lovecust.app.entity.Nothing;
 import com.lovecust.app.entity.AppFeedback;
 import com.lovecust.app.lovecust.AppContext;
-import com.lovecust.app.utils.AppUtil;
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.NetUtil;
-import com.lovecust.app.utils.TextUtil;
+import com.fisher.utils.AppUtil;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.NetUtil;
+import com.fisher.utils.TextUtil;
 
 
+import java.io.File;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
@@ -97,6 +101,12 @@ public class ApiManager {
 	public Observable< Nothing > appProfileUpdate ( AppProfile profile ) {
 		return mApi
 				.appProfileUpdate( profile )
+				.subscribeOn( Schedulers.io() )
+				.observeOn( AndroidSchedulers.mainThread() );
+	}
+	public Observable< AppProfileAvatar > appProfileAvatar( File avatar ) {
+		return mApi
+				.appProfileAvatar( getPartFromFile(avatar, "avatar") )
 				.subscribeOn( Schedulers.io() )
 				.observeOn( AndroidSchedulers.mainThread() );
 	}
@@ -187,5 +197,16 @@ public class ApiManager {
 		String header = AppContext.mAppVersion + "&" + AppContext.mApiVersion + "&ap." + TextUtil.md5( NetUtil.mac ) + "&" + uid;
 		ConsoleUtil.console( "header.lovecust: " + header );
 		return header;
+	}
+
+	public static MultipartBody.Part getPartFromFile(File file, String name){
+		// create RequestBody instance from file
+//		RequestBody requestFile = RequestBody.create( MediaType.parse( "multipart/form-data" ), file );
+		RequestBody requestFile = RequestBody.create( MediaType.parse( "image/png" ), file );
+
+		// MultipartBody.Part is used to send also the actual file name
+		MultipartBody.Part body = MultipartBody.Part.createFormData( name, "local-"+file.getName(), requestFile );
+
+		return body;
 	}
 }

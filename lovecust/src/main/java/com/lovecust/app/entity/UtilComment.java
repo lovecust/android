@@ -12,14 +12,15 @@ public class UtilComment {
 	private long atime;
 
 	public static UtilComment getInstance ( String fid, String value ) {
-		return new UtilComment( fid, value );
+		return new UtilComment( fid, value ).setAvatar( AppProfile.getInstance().getAvatar() );
 	}
 
 	private UtilComment ( String fid, String value ) {
 		this.ctime = System.currentTimeMillis();
 		this.fav = 0;
 		this.fid = fid;
-		this.atime = 8 * 3600_000;
+		// it can be interval in seconds or time in millis
+		this.atime = 5 * 24 * 3600;
 		this.value = value;
 	}
 
@@ -79,8 +80,9 @@ public class UtilComment {
 		return avatar;
 	}
 
-	public void setAvatar ( String avatar ) {
+	public UtilComment setAvatar ( String avatar ) {
 		this.avatar = avatar;
+		return this;
 	}
 
 	public String getHtml ( ) {

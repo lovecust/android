@@ -10,29 +10,37 @@ Brief Introduction
 	: Growing community for Ecust students.
 ----------------------------------------
 About
-	: Lovecust is a growing community powered by Ecust students and serves for all the students and faculties from Ecust.
-	: Lovecust is targeting for making our complicated lives more convenient, efficient, and easy.
-	: Unlock the power of yourself.
+	: Lovecust 服务于华理学生，荣幸能够与您共同成长 *_*
+	: Lovecust 目标是让校园生活变得简单，高效率，轻松. ..
+	: Lovecust is a growing community powered by Ecust stduents and serves for all the students and faculties of Ecust.
+	: Lovecust is targeting for making the complicated campus lifes more convient, efficient, and easy.
+What's-New
+	: 添加便签模块
+	: 教务处查询可评论，并显示头像
+	: 首页显示周数
+	: Add module <todo-list>
+	: Comment on jwc news and show avatars
+	: Show the week number on mainpage
 Details:
-	: Log in Ecust-Wifi-Server automatically and instantly. ..
+	: log in Ecust-Wifi-Server automatically and instantly. ..
 	: students number in library
-	: Ecust Calendar
-	: Ecust JWC news
+	: Ecust calendar
+	: keep your todo-List
 	: 自动登录华理校园网
 	: 图书馆人数查询
 	: 华理校历查询
-	:　教务处信息
+	:　便签模块
 ========================================
 General
 ----------------------------------------
 Application ID
 	: com.lovecust.app
 App Version
-	: 0.9.4
+	: 0.9.5
 App Size
-	: 3.86 MB
+	: 3.87 MB
 Release Date
-	: 2016-05-31
+	: 2016-06-07
 Api version
 	: 1.1
 Min Android Version
@@ -49,6 +57,7 @@ Permissions
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+<uses-permission android:name="android.permission.VIBRATE"/>
 ========================================
 Details
 ----------------------------------------
@@ -91,7 +100,7 @@ Explore:
 		# : chat by topics
 	# Lost-and-Found
 		# : send your info about your lost thing
-		# : find your lost thing in the forum
+		# : find your lost thing via keywords
 		# : help others when you find something somebody lost
 		# : communication forum
 	# Forum  # something like baidu forum
@@ -99,9 +108,9 @@ Explore:
 	TODO-List
 		* add/rename/remove tag
 		: add/edit/remove items
-		* manage history [ delete | recover ]
+		: manage history [ delete | recover ]
 		: use pop window, set icon manually
-		△ export items manually( and automatically before update)
+		: export items manually( and automatically before update)
 Feedback
 	: send feedback for Lovecust
 	: give advices about Lovecust
@@ -113,7 +122,7 @@ Profile
 		: set avatar from album
 	CampusID
 	Nick
-	Moto
+	Motto
 	# Major
 	Gender
 	Birthday

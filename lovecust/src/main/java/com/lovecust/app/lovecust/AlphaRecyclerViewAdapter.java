@@ -47,8 +47,7 @@ public abstract class AlphaRecyclerViewAdapter< T > extends RecyclerView.Adapter
 		for ( int i = 0; i < lists.length; i++ ) {
 			arr.add( lists[ i ] );
 		}
-		this.lists = arr;
-		notifyDataSetChanged();
+		setLists( arr );
 	}
 
 	public T getItem ( int position ) {

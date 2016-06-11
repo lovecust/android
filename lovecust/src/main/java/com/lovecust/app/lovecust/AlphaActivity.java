@@ -2,18 +2,17 @@ package com.lovecust.app.lovecust;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.utils.BugsUtil;
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.ToastUtil;
+import com.fisher.utils.BugsUtil;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.ToastUtil;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import me.imid.swipebacklayout.lib.SwipeBackLayout;
 import me.imid.swipebacklayout.lib.app.SwipeBackActivity;
 
@@ -23,25 +22,26 @@ public abstract class AlphaActivity extends SwipeBackActivity implements View.On
 	private boolean exit = true;
 	protected boolean isSwipeExit = true;
 
-	public abstract int getLayout();
-	public abstract void init();
+	public abstract int getLayout ( );
+
+	public abstract void init ( );
 
 	@Override
-	protected void onCreate(@Nullable Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(getLayout());
-		ButterKnife.bind(this);
-		if(isSwipeExit){
-			getSwipeBackLayout().setEdgeTrackingEnabled(SwipeBackLayout.EDGE_LEFT);
-		}else {
-			getSwipeBackLayout().setEnableGesture(false);
+	protected void onCreate ( @Nullable Bundle savedInstanceState ) {
+		super.onCreate( savedInstanceState );
+		setContentView( getLayout() );
+		ButterKnife.bind( this );
+		if ( isSwipeExit ) {
+			getSwipeBackLayout().setEdgeTrackingEnabled( SwipeBackLayout.EDGE_LEFT );
+		} else {
+			getSwipeBackLayout().setEnableGesture( false );
 		}
 		init();
 	}
 
 	@Override
-	protected void onDestroy() {
-		ButterKnife.unbind(this);
+	protected void onDestroy ( ) {
+		ButterKnife.unbind( this );
 		super.onDestroy();
 	}
 
@@ -51,7 +51,7 @@ public abstract class AlphaActivity extends SwipeBackActivity implements View.On
 	}
 
 	public AlphaActivity setTitle ( String title ) {
-		TextView titleTextView = (TextView) findViewById( R.id.titleBarTitle );
+		TextView titleTextView = ( TextView ) findViewById( R.id.titleBarTitle );
 		if ( null == titleTextView ) {
 			BugsUtil.onFatalError( "AlphaActivity.setTitle()-> not found the title text view!" );
 			return this;
@@ -59,16 +59,17 @@ public abstract class AlphaActivity extends SwipeBackActivity implements View.On
 		titleTextView.setText( title );
 		return this;
 	}
-	public AlphaActivity setOnBackListener(){
-		View left = findViewById( R.id.titleBarOptionLeft );
-		if ( null != left ) {
-			left.setOnClickListener( this );
-		}
+
+	public AlphaActivity setOnBackListener ( ) {
+//		View left = findViewById( R.id.titleBarOptionLeft );
+//		if ( null != left ) {
+//			left.setOnClickListener( this );
+//		}
 		return this;
 	}
 
 	public AlphaActivity setOptionText ( String text ) {
-		TextView titleTextView = (TextView) findViewById( R.id.titleBarOptionRight );
+		TextView titleTextView = ( TextView ) findViewById( R.id.titleBarOptionRight );
 		if ( null == titleTextView ) {
 			BugsUtil.onFatalError( "AlphaActivity.setTitle()-> not found the title text view!" );
 			return this;
@@ -83,18 +84,10 @@ public abstract class AlphaActivity extends SwipeBackActivity implements View.On
 	}
 
 	protected String toast ( String msg ) {
-		info( msg );
-		return ToastUtil.toast( this, msg );
-	}
-
-	protected String toastLong ( int stringId ) {
-		return toastLong( getString( stringId ) );
-	}
-
-	protected String toastLong ( String msg ) {
-		info( msg );
 		return ToastUtil.toastLong( this, msg );
 	}
+
+
 	protected String log ( Object obj ) {
 		return ConsoleUtil.console( obj );
 	}
@@ -104,14 +97,7 @@ public abstract class AlphaActivity extends SwipeBackActivity implements View.On
 		return msg;
 	}
 
-	protected String info ( String msg ) {
-		TextView info = (TextView) findViewById( R.id.info );
-		if ( null != info )
-			info.setText( msg );
-		return msg;
-	}
-
-	public boolean isExit () {
+	public boolean isExit ( ) {
 		return exit;
 	}
 
@@ -145,5 +131,17 @@ public abstract class AlphaActivity extends SwipeBackActivity implements View.On
 				break;
 		}
 
+	}
+
+	@Nullable
+	@OnClick( R.id.titleBarOptionLeft )
+	void btnFinish ( ) {
+		finish();
+	}
+
+	@Override
+	public void finish ( ) {
+		super.finish();
+		overridePendingTransition( R.anim.activity_push_in_from_left, R.anim.activity_push_out_to_right );
 	}
 }

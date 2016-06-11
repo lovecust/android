@@ -15,8 +15,8 @@ import com.google.gson.Gson;
 import com.lovecust.app.R;
 import com.lovecust.app.explore.todo.DataTodo;
 import com.lovecust.app.explore.todo.DialogTodo;
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.DensityUtils;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.DensityUtils;
 
 public class FloatView {
 	private final ServicePopWindowFisher context;
@@ -104,7 +104,7 @@ public class FloatView {
 //				if ( System.currentTimeMillis() - touchTime < 100 )
 //					return;
 				DialogTodo.newDialog()
-						.init(DataTodo.TAG_DEBUG).show();
+						.init(DataTodo.TAG_TODO).show();
 			}
 		});
 		log("The pop window is initialized!");
@@ -181,8 +181,8 @@ public class FloatView {
 			log("force: " + forceX + "-" + forceY + "; temp: " + temp);
 			forceX = Math.abs(forceX);
 			forceY = Math.abs(forceY);
-			double forceXX = forceX * 0.2;
-			double forceYY = forceY * 0.2;
+			double forceXX = forceX * 0.3;
+			double forceYY = forceY * 0.3;
 
 			FloatViewImage image = FloatViewImage.getInstance();
 			int deviceBorderLeft = image.getWidth() / 2;
@@ -219,8 +219,8 @@ public class FloatView {
 				if (Math.abs(speedX) < 0.1 && Math.abs(speedY) < 0.1) {
 					break;
 				} else if (Math.abs(speedX) < 1.2 && Math.abs(speedY) < 1.2) {
-					forceX *= 0.99;
-					forceY *= 0.99;
+					forceX = forceXX;
+					forceY = forceYY;
 					log("forceX: " + forceX + " - forceY: " + forceY);
 //					if (forceX)
 				}

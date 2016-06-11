@@ -23,5 +23,13 @@
 		<item>On</item>
 		<item>Off</item>
 	</string-array>
+	<string-array name="dialog_explore_todo_options">
+		<item>Show Float Icon</item>
+		<item>Stop Float Icon</item>
+		<item>Export Data to Backup</item>
+		<item>Clear Removed Data</item>
+		<item>Clear Done Data</item>
+		<item>Clear All Data</item>
+	</string-array>
 
 </resources>

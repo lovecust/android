@@ -1,7 +1,6 @@
 package com.lovecust.app.launcher.grid;
 
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,7 +12,6 @@ import com.lovecust.app.entity.AppProfile;
 import com.lovecust.app.explore.todo.ActivityExploreTodoHome;
 import com.lovecust.app.lovecust.AlphaFragment;
 import com.lovecust.app.lovecust.AppSetting;
-import com.lovecust.app.utils.AppUtil;
 
 import java.io.File;
 
@@ -62,7 +60,7 @@ public class FragmentLauncherPageHome extends AlphaFragment {
 
 	private void btnStartActivity(Class activity) {
 		getActivity().startActivity(new Intent(getActivity(), activity));
-		getActivity().overridePendingTransition(R.anim.activity_push_in_from_right, R.anim.activity_push_out_from_left);
+		getActivity().overridePendingTransition(R.anim.activity_push_in_from_right, R.anim.activity_push_out_to_left );
 	}
 
 	@Override
@@ -78,15 +76,9 @@ public class FragmentLauncherPageHome extends AlphaFragment {
 		}
 
 		if (setting.isDeveloperMode()) {
-			layoutTodo.setVisibility(View.VISIBLE);
-			spanTodo.setVisibility(View.VISIBLE);
-
 			layoutMorningExercise.setVisibility(View.VISIBLE);
 			spanMorningExercise.setVisibility(View.VISIBLE);
 		} else {
-			layoutTodo.setVisibility(View.GONE);
-			spanTodo.setVisibility(View.GONE);
-
 			layoutMorningExercise.setVisibility(View.GONE);
 			spanMorningExercise.setVisibility(View.GONE);
 		}

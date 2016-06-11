@@ -28,9 +28,9 @@ import android.widget.Toast;
 
 import com.lovecust.app.lovecust.AppContext;
 import com.lovecust.app.R;
-import com.lovecust.app.utils.CPUUtil;
-import com.lovecust.app.utils.NetUtil;
-import com.lovecust.app.utils.TimeUtil;
+import com.fisher.utils.CPUUtil;
+import com.fisher.utils.NetUtil;
+import com.fisher.utils.TimeUtil;
 
 import java.util.Arrays;
 

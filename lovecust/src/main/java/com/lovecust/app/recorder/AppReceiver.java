@@ -8,8 +8,8 @@ import android.net.ConnectivityManager;
 import com.lovecust.app.ecust.wifi.WifiConnector;
 import com.lovecust.app.lovecust.AppContext;
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.NetUtil;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.NetUtil;
 
 
 public class AppReceiver extends BroadcastReceiver {

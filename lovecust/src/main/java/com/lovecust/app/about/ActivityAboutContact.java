@@ -1,14 +1,12 @@
 package com.lovecust.app.about;
 
 import android.graphics.Typeface;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
 import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.FileUtil;
+import com.fisher.utils.FileUtil;
 
 import java.io.IOException;
 import java.io.InputStream;

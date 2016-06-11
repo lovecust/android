@@ -6,11 +6,10 @@ import com.google.gson.JsonSyntaxException;
 import com.lovecust.app.R;
 import com.lovecust.app.api.ApiManager;
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.AppUtil;
-import com.lovecust.app.utils.BugsUtil;
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.FileUtil;
-import com.lovecust.app.utils.NetUtil;
+import com.fisher.utils.AppUtil;
+import com.fisher.utils.BugsUtil;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.FileUtil;
 
 import java.io.File;
 

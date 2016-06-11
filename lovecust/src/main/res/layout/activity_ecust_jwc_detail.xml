@@ -6,7 +6,7 @@
 
 	<include
 		android:id="@+id/titleBar"
-		layout="@layout/title_bar_extended"/>
+		layout="@layout/title_bar"/>
 
 
 	<ScrollView

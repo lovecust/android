@@ -12,9 +12,7 @@ import android.widget.TextView;
 import com.lovecust.app.R;
 import com.lovecust.app.lovecust.AlphaRecyclerViewAdapter;
 import com.lovecust.app.lovecust.AppContext;
-import com.lovecust.app.utils.EdittextUtil;
-
-import org.litepal.crud.DataSupport;
+import com.fisher.utils.EdittextUtil;
 
 
 public class DialogTodo extends AlertDialog implements View.OnClickListener {
@@ -49,7 +47,7 @@ public class DialogTodo extends AlertDialog implements View.OnClickListener {
 
 		( ( TextView ) view.findViewById( R.id.mTag ) ).setText( "-" + tag + "-" );
 		TextView mCount = ( TextView ) view.findViewById( R.id.mCount );
-		int total = DataTodo.amount( tag );
+		int total = DataTodo.amount( tag, DataTodo.STATE_OKAY );
 		mCount.setText( Math.min( total, AdapterTodo.limit ) + "/" + ( total ) );
 		TextView mAdd = ( TextView ) view.findViewById( R.id.tv_add );
 		mAdd.setOnClickListener( this );
@@ -59,7 +57,7 @@ public class DialogTodo extends AlertDialog implements View.OnClickListener {
 		// use a linear layout manager
 		LinearLayoutManager mLayoutManager = new LinearLayoutManager( getContext() );
 		mRecyclerView.setLayoutManager( mLayoutManager );
-		mRecyclerView.setAdapter( adapter = new AdapterTodo( tag ) );
+		mRecyclerView.setAdapter( adapter = new AdapterTodo( tag, DataTodo.STATE_OKAY ) );
 		setView( view );
 		return this;
 	}

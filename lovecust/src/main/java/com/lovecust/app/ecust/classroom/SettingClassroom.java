@@ -2,7 +2,7 @@ package com.lovecust.app.ecust.classroom;
 
 
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.PreferenceUtil;
+import com.fisher.utils.PreferenceUtil;
 
 public class SettingClassroom extends PreferenceUtil {
 	public static String FILE_NAME = Setting.FILE_GSON_SETTING_ECUST_CLASSROOM;

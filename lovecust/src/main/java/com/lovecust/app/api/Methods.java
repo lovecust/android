@@ -12,6 +12,8 @@ public class Methods {
 	// profile part
 	private static final String APP_PROFILE = APP + "profile";
 	public static final String APP_PROFILE_UPDATE = APP_PROFILE + "-update";
+	public static final String APP_PROFILE_AVATAR = APP_PROFILE + "-avatar";
+
 	// app-update part
 	private static final String APP_UPDATE = APP + "update";
 	public static final String APP_UPDATE_STATUS = APP_UPDATE + "-status";

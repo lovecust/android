@@ -3,12 +3,7 @@ package com.lovecust.app.launcher.grid;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.CheckBox;
@@ -20,18 +15,15 @@ import com.lovecust.app.ecust.calendar.ActivityEcustCalendarHome;
 import com.lovecust.app.ecust.classroom.ActivityEcustClassroomHome;
 import com.lovecust.app.ecust.jwc.ActivityEcustJWCHome;
 import com.lovecust.app.ecust.library.ActivityEcustLibraryHome;
-import com.lovecust.app.ecust.morning.ActivityEcustMorningExercise;
 import com.lovecust.app.ecust.wifi.ActivityEcustWifiHome;
 import com.lovecust.app.feedback.ActivityFeedbackHome;
 import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.lovecust.AppContext;
 import com.lovecust.app.profile.ActivityProfileHome;
 import com.lovecust.app.settings.ActivitySettingHome;
-import com.lovecust.app.utils.AppUtil;
-import com.lovecust.app.utils.ConsoleUtil;
+import com.fisher.utils.AppUtil;
 
 import butterknife.Bind;
-import butterknife.OnClick;
 
 public class ActivityLauncherGridHome extends AlphaActivity implements CompoundButton.OnCheckedChangeListener {
 
@@ -165,13 +157,18 @@ public class ActivityLauncherGridHome extends AlphaActivity implements CompoundB
 
 	private void startActivityFromCenter(Class activityClass) {
 		startActivity(new Intent(this, activityClass));
-		overridePendingTransition(R.anim.activity_zoom_in_from_center, R.anim.activity_zoom_out_from_center);
+		overridePendingTransition(R.anim.activity_zoom_in_from_center, R.anim.activity_zoom_out_to_center );
 	}
 
 	private void startActivityFromRight(Class<? extends Activity> activityClass) {
 		startActivity(new Intent(this, activityClass));
-		overridePendingTransition(R.anim.activity_push_in_from_right, R.anim.activity_push_out_from_left);
+		overridePendingTransition(R.anim.activity_push_in_from_right, R.anim.activity_push_out_to_left );
 	}
 
 
+	@Override
+	public void finish ( ) {
+		super.finish();
+//		overridePendingTransition( R.anim.activity_push_in_from_left, R.anim.activity_push_out_to_bottom );
+	}
 }

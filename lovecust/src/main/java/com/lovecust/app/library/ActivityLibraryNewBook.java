@@ -9,9 +9,9 @@ import com.google.gson.Gson;
 import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.lovecust.Setting;
 import com.lovecust.app.R;
-import com.lovecust.app.utils.BugsUtil;
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.ToastUtil;
+import com.fisher.utils.BugsUtil;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.ToastUtil;
 
 import org.litepal.crud.DataSupport;
 

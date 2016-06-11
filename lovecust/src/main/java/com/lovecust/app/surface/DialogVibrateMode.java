@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.lovecust.app.lovecust.AppContext;
 import com.lovecust.app.R;
-import com.lovecust.app.utils.VibrateUtil;
+import com.fisher.utils.VibrateUtil;
 
 
 public class DialogVibrateMode {

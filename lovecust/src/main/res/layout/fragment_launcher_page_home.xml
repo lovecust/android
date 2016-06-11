@@ -6,7 +6,7 @@
 	<RelativeLayout
 		style="@style/profile_item_holder"
 		android:layout_height="wrap_content"
-		android:background="@color/bg_app_active"
+		android:background="?android:selectableItemBackground"
 		android:onClick="btnProfile">
 
 		<ImageView

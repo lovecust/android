@@ -14,8 +14,8 @@ import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.R;
 import com.lovecust.app.surface.DialogEdittext;
 import com.lovecust.app.test.TestRouter;
-import com.lovecust.app.utils.InstantStoreUtil;
-import com.lovecust.app.utils.NetUtil;
+import com.fisher.utils.InstantStoreUtil;
+import com.fisher.utils.NetUtil;
 
 import butterknife.Bind;
 import butterknife.OnClick;

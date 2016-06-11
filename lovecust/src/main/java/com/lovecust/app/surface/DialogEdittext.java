@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import com.lovecust.app.R;
 import com.lovecust.app.lovecust.AppContext;
-import com.lovecust.app.utils.AppUtil;
-import com.lovecust.app.utils.EdittextUtil;
+import com.fisher.utils.AppUtil;
+import com.fisher.utils.EdittextUtil;
 
 
 public class DialogEdittext extends AlertDialog implements View.OnClickListener {

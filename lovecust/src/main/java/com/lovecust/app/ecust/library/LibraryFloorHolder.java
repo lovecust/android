@@ -7,8 +7,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.utils.AppUtil;
-import com.lovecust.app.utils.TextUtil;
+import com.fisher.utils.AppUtil;
+import com.fisher.utils.TextUtil;
 
 public class LibraryFloorHolder {
 

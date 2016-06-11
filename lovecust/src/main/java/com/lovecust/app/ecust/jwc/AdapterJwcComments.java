@@ -3,12 +3,14 @@ package com.lovecust.app.ecust.jwc;
 
 import android.content.Context;
 import android.text.Html;
+import android.widget.ImageView;
 
 import com.lovecust.app.R;
 import com.lovecust.app.entity.UtilComment;
 import com.lovecust.app.lovecust.AlphaRecyclerViewAdapter;
 import com.lovecust.app.lovecust.AlphaRecyclerViewHolder;
-import com.lovecust.app.utils.TimeUtil;
+import com.fisher.utils.TimeUtil;
+import com.squareup.picasso.Picasso;
 
 public class AdapterJwcComments extends AlphaRecyclerViewAdapter< UtilComment > {
 	private Context context;
@@ -35,7 +37,7 @@ public class AdapterJwcComments extends AlphaRecyclerViewAdapter< UtilComment > 
 		holder.setText( R.id.date, TimeUtil.getReadableTime( comment.getCtime() ) );
 		if ( null != comment.getAvatar() && !"".equals( comment.getAvatar() ) ) {
 			//		TODO set avatars
-			// 	holder.get( R.id.avatar );
+			 	Picasso.with( context ).load( comment.getAvatar() ).into( ( ImageView ) holder.get( R.id.avatar ) );
 		}
 	}
 }

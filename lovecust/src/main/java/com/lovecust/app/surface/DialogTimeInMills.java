@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.utils.TimeUtil;
+import com.fisher.utils.TimeUtil;
 
 
 public class DialogTimeInMills extends AlertDialog implements View.OnClickListener {

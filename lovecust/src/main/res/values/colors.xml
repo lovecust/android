@@ -18,14 +18,14 @@
 	<color name="bg_app_pages">#FFFFFFFF</color>
 
 	<color name="span">@color/bg_app_darker</color>
-	<color name="span_light">#FDFDFD</color>
+	<color name="span_light">#EDEDED</color>
 
-	<color name="text">#FF32292C</color>
+	<color name="text">@android:color/primary_text_light</color>
 	<color name="text_emphasized">#FF89292C</color>
 	<color name="text_description">#FF666655</color>
 
 	<!--<color name="app_color">#ff8400</color>-->
-	<color name="app">#9900ff</color>
+	<color name="app">#ff9900ff</color>
 	<color name="app_darker">#550099</color>
 	<color name="app_lighter">#AA00ff</color>
 

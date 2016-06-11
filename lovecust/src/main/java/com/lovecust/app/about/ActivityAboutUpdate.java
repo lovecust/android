@@ -2,7 +2,6 @@ package com.lovecust.app.about;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.view.View;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
@@ -11,10 +10,10 @@ import com.lovecust.app.entity.AppUpdateStatus;
 import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.lovecust.AppContext;
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.FileUtil;
-import com.lovecust.app.utils.HTTPUtil;
-import com.lovecust.app.utils.NetUtil;
-import com.lovecust.app.utils.TextUtil;
+import com.fisher.utils.FileUtil;
+import com.fisher.utils.HTTPUtil;
+import com.fisher.utils.NetUtil;
+import com.fisher.utils.TextUtil;
 
 import java.io.File;
 
@@ -59,13 +58,13 @@ public class ActivityAboutUpdate extends AlphaActivity {
 					install( file );
 					break;
 				case TARGET_ALREADY_UPDATED:
-					toastLong( R.string.about_update_button_text_already_updated );
+					toast( R.string.about_update_button_text_already_updated );
 					break;
 				case TARGET_CHECKING_FOR_UPDATE:
-					toastLong( R.string.about_update_button_text_checking_for_update );
+					toast( R.string.about_update_button_text_checking_for_update );
 					break;
 				case TARGET_DEVICE_OFFLINE:
-					toastLong( R.string.about_update_button_text_device_offline );
+					toast( R.string.about_update_button_text_device_offline );
 					break;
 				case TARGET_SERVER_ERROR:
 					button.setText( R.string.about_update_button_text_server_error );
@@ -125,7 +124,7 @@ public class ActivityAboutUpdate extends AlphaActivity {
 			@Override
 			public void onFailed ( ) {
 				alterTarget( TARGET_SERVER_ERROR );
-				toastLong( "Sorry, Server Error!" );
+				toast( "Sorry, Server Error!" );
 			}
 		} );
 	}
@@ -141,11 +140,11 @@ public class ActivityAboutUpdate extends AlphaActivity {
 				startActivity( promptInstall );
 			} else {
 				alterTarget( TARGET_SERVER_ERROR );
-				toastLong( "The hash code of downloaded code is desired! Please try manually!" );
+				toast( "The hash code of downloaded code is desired! Please try manually!" );
 			}
 		} else {
 			alterTarget( TARGET_SERVER_ERROR );
-			toastLong( "Download failed and please try manually!" );
+			toast( "Download failed and please try manually!" );
 		}
 	}
 

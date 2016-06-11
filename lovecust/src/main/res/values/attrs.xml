@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<!--<attr name="titleText" format="string"/>-->
-	<!--<attr name="titleTextColor" format="color"/>-->
-	<!--<attr name="titleTextSize" format="dimension"/>-->
+	<attr name="iconStyle" format="string"/>
 
-	<declare-styleable name="CustomTitleView">
-		<!--<attr name="titleText"/>-->
-		<!--<attr name="titleTextColor"/>-->
-		<!--<attr name="titleTextSize"/>-->
+	<declare-styleable name="AppImageView">
+		<attr name="iconStyle"/>
 	</declare-styleable>
 </resources>

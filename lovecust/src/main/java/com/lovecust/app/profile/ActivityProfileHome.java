@@ -8,14 +8,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.lovecust.app.api.ApiManager;
 import com.lovecust.app.entity.AppProfile;
 import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.lovecust.Setting;
 import com.lovecust.app.R;
 import com.lovecust.app.surface.DialogEdittext;
 import com.lovecust.app.surface.DialogListView;
-import com.lovecust.app.utils.BugsUtil;
-import com.lovecust.app.utils.FileUtil;
+import com.fisher.utils.BugsUtil;
+import com.fisher.utils.FileUtil;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -31,47 +32,54 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 
 	private AppProfile appProfile;
 
-	@Bind(R.id.settingNickname)
+	@Bind( R.id.settingNickname )
 	TextView settingNickname;
-	@Bind(R.id.settingMoto)
+	@Bind( R.id.settingMoto )
 	TextView settingMoto;
-	@Bind(R.id.settingGender)
+	@Bind( R.id.settingGender )
 	TextView settingGender;
-	@Bind(R.id.settingBirthday)
+	@Bind( R.id.settingBirthday )
 	TextView settingBirthday;
-	@Bind(R.id.settingName)
+	@Bind( R.id.settingName )
 	TextView settingName;
-	@Bind(R.id.settingPhoneNumber)
+	@Bind( R.id.settingPhoneNumber )
 	TextView settingPhoneNumber;
-	@Bind(R.id.settingEmail)
+	@Bind( R.id.settingEmail )
 	TextView settingEmail;
-	@Bind(R.id.avatar)
+	@Bind( R.id.avatar )
 	ImageView settingAvatar;
-	@Bind(R.id.nick)
+	@Bind( R.id.nick )
 	TextView mNickname;
-	@Bind(R.id.settingUid)
+	@Bind( R.id.settingUid )
 	TextView mUid;
-	@Bind(R.id.settingMajor)
+	@Bind( R.id.settingMajor )
 	TextView settingMajor;
 
 	@Override
-	public int getLayout() {
+	public int getLayout ( ) {
 		return R.layout.activity_profile_home;
 	}
 
 	@Override
-	public void init() {
+	public void init ( ) {
 		setTitle( getString( R.string.title_profile ) ).setOnBackListener();
 
 		appProfile = AppProfile.getInstance();
 
 		File temp = appProfile.getAvatarFile();
-		if ( null != temp && temp.exists() )
+		if ( null != temp && temp.exists() ) {
 			settingAvatar.setImageURI( Uri.fromFile( temp ) );
+			if ( null == appProfile.getAvatar() || "".equals( appProfile.getAvatar() ) ) {
+				ApiManager.getInstance().appProfileAvatar( temp )
+						.subscribe( result -> {
+							appProfile.setAvatar( result.getAvatar() );
+						}, Throwable::printStackTrace );
+			}
+		}
 		flush();
 	}
 
-	public void flush () {
+	public void flush ( ) {
 		mNickname.setText( appProfile.getNick() );
 		mUid.setText( appProfile.getUid() );
 		settingNickname.setText( appProfile.getNick() );
@@ -97,7 +105,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 					}
 
 					@Override
-					public void onActionCancel () {
+					public void onActionCancel ( ) {
 
 					}
 				} ).show();
@@ -116,7 +124,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 					}
 
 					@Override
-					public void onActionCancel () {
+					public void onActionCancel ( ) {
 
 					}
 				} ).show();
@@ -135,7 +143,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 					}
 
 					@Override
-					public void onActionCancel () {
+					public void onActionCancel ( ) {
 
 					}
 				} ).show();
@@ -154,7 +162,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 					}
 
 					@Override
-					public void onActionCancel () {
+					public void onActionCancel ( ) {
 
 					}
 				} ).show();
@@ -171,7 +179,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 					}
 
 					@Override
-					public void onActionCancel () {
+					public void onActionCancel ( ) {
 
 					}
 				} ).show();
@@ -190,7 +198,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 					}
 
 					@Override
-					public void onActionCancel () {
+					public void onActionCancel ( ) {
 
 					}
 				} ).show();
@@ -209,7 +217,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 					}
 
 					@Override
-					public void onActionCancel () {
+					public void onActionCancel ( ) {
 
 					}
 				} ).show();
@@ -228,7 +236,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 					}
 
 					@Override
-					public void onActionCancel () {
+					public void onActionCancel ( ) {
 
 					}
 				} ).show();
@@ -247,7 +255,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 					}
 
 					@Override
-					public void onActionCancel () {
+					public void onActionCancel ( ) {
 
 					}
 				} ).show();
@@ -257,7 +265,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 		choosePhoto();
 	}
 
-	public void choosePhoto () {
+	public void choosePhoto ( ) {
 		Intent galleryIntent = new Intent( Intent.ACTION_GET_CONTENT );
 		galleryIntent.addCategory( Intent.CATEGORY_OPENABLE );
 		galleryIntent.setType( "image/*" );
@@ -290,6 +298,15 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 				BugsUtil.onFatalError( "ActivityProfileHome.showResizeImage()-> failed to write file" );
 			}
 			settingAvatar.setImageBitmap( photo );
+			File temp = appProfile.getAvatarFile();
+			if ( null != temp && temp.exists() ) {
+				ApiManager.getInstance().appProfileAvatar( temp )
+						.subscribe( result -> {
+							appProfile.setAvatar( result.getAvatar() );
+						}, err->{
+							err.printStackTrace();
+						} );
+			}
 		}
 	}
 
@@ -312,7 +329,7 @@ public class ActivityProfileHome extends AlphaActivity implements View.OnClickLi
 	}
 
 	@Override
-	protected void onStop () {
+	protected void onStop ( ) {
 		super.onStop();
 	}
 

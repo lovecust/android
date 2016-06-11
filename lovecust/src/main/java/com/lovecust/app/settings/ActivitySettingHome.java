@@ -1,7 +1,6 @@
 package com.lovecust.app.settings;
 
 
-import android.content.Intent;
 import android.view.View;
 
 import com.lovecust.app.about.ActivityAboutHome;
@@ -10,7 +9,7 @@ import com.lovecust.app.explore.todo.ActivityExploreTodoSetting;
 import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.R;
 import com.lovecust.app.lovecust.AppSetting;
-import com.lovecust.app.utils.AppUtil;
+import com.fisher.utils.AppUtil;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -58,13 +57,13 @@ public class ActivitySettingHome extends AlphaActivity {
 		AppUtil.startActivityFromRight(this, activity);
 	}
 
-	@Override
-	protected void onResume ( ) {
-		if(appSetting.isDeveloperMode()){
-			layoutTodo.setVisibility(View.VISIBLE);
-		}else {
-			layoutTodo.setVisibility(View.GONE);
-		}
-		super.onResume();
-	}
+//	@Override
+//	protected void onResume ( ) {
+//		if(appSetting.isDeveloperMode()){
+//			layoutTodo.setVisibility(View.VISIBLE);
+//		}else {
+//			layoutTodo.setVisibility(View.GONE);
+//		}
+//		super.onResume();
+//	}
 }

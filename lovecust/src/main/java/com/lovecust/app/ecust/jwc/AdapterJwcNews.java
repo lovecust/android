@@ -12,7 +12,7 @@ import com.lovecust.app.entity.EcustJwcNews;
 import com.lovecust.app.lovecust.AlphaRecyclerViewAdapter;
 import com.lovecust.app.lovecust.AlphaRecyclerViewHolder;
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.ConsoleUtil;
+import com.fisher.utils.ConsoleUtil;
 
 public class AdapterJwcNews extends AlphaRecyclerViewAdapter< EcustJwcNews > {
 	private Context context;

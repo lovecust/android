@@ -21,4 +21,13 @@
 		<item>开</item>
 		<item>关</item>
 	</string-array>
+
+	<string-array name="dialog_explore_todo_options">
+		<item>显示悬浮框</item>
+		<item>关闭悬浮框</item>
+		<item>导出数据备份</item>
+		<item>清空已移除的记录</item>
+		<item>清空已完成的记录</item>
+		<item>清空所有记录</item>
+	</string-array>
 </resources>

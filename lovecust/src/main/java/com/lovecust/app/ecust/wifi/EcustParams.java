@@ -2,8 +2,8 @@ package com.lovecust.app.ecust.wifi;
 
 
 import com.google.gson.Gson;
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.URLUtil;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.URLUtil;
 
 import java.io.IOException;
 import java.util.HashMap;

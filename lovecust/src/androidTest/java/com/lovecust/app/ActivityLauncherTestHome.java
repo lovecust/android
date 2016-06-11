@@ -14,7 +14,7 @@ import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.profile.ActivityProfileHome;
 import com.lovecust.app.settings.ActivitySettingHome;
 import com.lovecust.app.test.ActivityDeviceHome;
-import com.lovecust.app.utils.AppUtil;
+import com.fisher.utils.AppUtil;
 
 import butterknife.Bind;
 import butterknife.OnClick;

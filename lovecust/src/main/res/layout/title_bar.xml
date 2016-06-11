@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	style="@style/titlebar"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<com.lovecust.app.view.AppImageView
+		android:id="@+id/titleBarOptionLeft"
+		style="@style/title_bar_icon"
+		app:iconStyle="bright"
+		android:src="@mipmap/icon_back"/>
+
+	<TextView
+		android:id="@+id/titleBarTitle"
+		android:textColor="@color/text_titlebar_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:textSize="@dimen/text_big"
+		android:layout_toRightOf="@id/titleBarOptionLeft"
+		android:text="@string/title"/>
+
+	<com.lovecust.app.view.AppImageView
+		android:id="@+id/titleBarOptionRight"
+		style="@style/title_bar_icon"
+		app:iconStyle="bright"
+		android:layout_alignParentRight="true"
+		android:src="@mipmap/icon_more"/>
+
+</RelativeLayout>

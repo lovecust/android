@@ -3,6 +3,7 @@ package com.lovecust.app.test;
 import android.view.View;
 import android.widget.TextView;
 
+import com.fisher.utils.CacheManagerUtil;
 import com.lovecust.app.R;
 import com.lovecust.app.api.Methods;
 import com.lovecust.app.ecust.wifi.ActivityEcustWifiHome;
@@ -14,7 +15,7 @@ import com.lovecust.app.library.ActivityLibraryTagManager;
 import com.lovecust.app.lovecust.AlphaActivity;
 import com.lovecust.app.profile.ActivityProfileHome;
 import com.lovecust.app.settings.ActivitySettingHome;
-import com.lovecust.app.utils.AppUtil;
+import com.fisher.utils.AppUtil;
 
 import butterknife.Bind;
 import butterknife.OnClick;

@@ -8,12 +8,12 @@ import com.lovecust.app.R;
 import com.lovecust.app.api.Methods;
 import com.lovecust.app.lovecust.AppContext;
 import com.lovecust.app.lovecust.Setting;
-import com.lovecust.app.utils.AppUtil;
-import com.lovecust.app.utils.BugsUtil;
-import com.lovecust.app.utils.ConsoleUtil;
-import com.lovecust.app.utils.LogUtil;
-import com.lovecust.app.utils.NetUtil;
-import com.lovecust.app.utils.NotificationUtil;
+import com.fisher.utils.AppUtil;
+import com.fisher.utils.BugsUtil;
+import com.fisher.utils.ConsoleUtil;
+import com.fisher.utils.LogUtil;
+import com.fisher.utils.NetUtil;
+import com.fisher.utils.NotificationUtil;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -95,7 +95,7 @@ public class WifiConnector {
 						}
 						for ( int i = 8; i > 0; i-- ) {
 							String content = AppUtil.getString( R.string.notice_wifi_notice_disappear_in_n_secs_header ) + i + AppUtil.getString( R.string.notice_wifi_notice_disappear_in_n_secs_footer );
-							flushNotification( AppUtil.getString( R.string.notice_wifi_device_is_online ), content );
+							flushNotification( AppUtil.getString( R.string.notice_wifi_logged_in ), content );
 							Thread.sleep( 1000 );
 						}
 						NotificationUtil.cancel();
