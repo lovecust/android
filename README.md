@@ -14,6 +14,44 @@ It is targeting for making the complicated life more convenient, efficient, and 
 
 ---
 
+### lovecust.[v0.9.5](https://github.com/lovecust/lovecust-assets/raw/master/releases/lovecust.v0.9.5.apk).apk
+
+- name: Lovecust
+- ename: Lovecust
+- app: v0.9.5
+- api: v1.1
+- url: https://github.com/lovecust/lovecust-assets/raw/master/releases/lovecust.v0.9.5.apk
+- md5: bc7d301d99d3c4fd20cf5a0485222049
+- sha1: 0ffaeef515cb25a380690dd64dd08b7260070b9f
+- size: 3.87 MB
+- date: 2016-06-07
+- about: 
+	- Lovecust 服务于华理学生，荣幸能够与您共同成长 *_*
+	- Lovecust 目标是让校园生活变得简单，高效率，轻松. ..
+- eabout: 
+	- Lovecust is a growing community powered by Ecust stduents and serves for all the students and faculties from Ecust.
+	- Lovecust is targeting for making the complicated campus lifes more convient, efficient, and easy.
+- desc:
+	- 添加便签模块
+	- 教务处查询可评论，并显示头像
+	- 首页显示教学周数
+- edesc: 
+	- Add module <todo-list>
+	- Comment on jwc news and show avatars
+	- Show the week number on mainpage
+- detail
+	- 自动登录华理校园网
+	- 图书馆人数查询
+	- 华理校历查询
+	- 便签记录生活
+- edetail: 
+	- log in Ecust-Wifi-Server automatically and instantly. ..
+	- students number in library
+	- Ecust calendar
+	- keep your todo-List
+
+---
+
 ### lovecust.[v0.9.4](https://github.com/lovecust/lovecust-assets/raw/master/releases/lovecust.v0.9.4.apk).apk
 
 - name: Lovecust
