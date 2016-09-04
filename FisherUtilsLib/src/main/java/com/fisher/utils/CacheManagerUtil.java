@@ -22,7 +22,7 @@ public class CacheManagerUtil< T > {
 	public void save ( ) {
 		try {
 			String name = data.getClass().getPackage() + "." + data.getClass().getName();
-			FileUtil.writeFile( getFile(name), data.toString() );
+			FileUtil.writeFile( getFile(name), this.toString() );
 		} catch ( IOException e ) {
 			e.printStackTrace();
 		}
@@ -77,5 +77,9 @@ public class CacheManagerUtil< T > {
 		this.data = data;
 	}
 
+	@Override
+	public String toString ( ) {
+		return new Gson().toJson( this );
+	}
 }
 

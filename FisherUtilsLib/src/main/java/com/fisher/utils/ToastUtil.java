@@ -4,14 +4,14 @@ package com.fisher.utils;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.lovecust.app.lovecust.AppContext;
+
 
 
 public class ToastUtil {
 
 
 	public static String toast ( String msg ) {
-		return toast( AppContext.getContext(), msg );
+		return toast( AppUtil.getContext(), msg );
 	}
 
 	public static String toast ( int stringRes ) {

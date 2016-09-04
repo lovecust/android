@@ -1,6 +1,6 @@
 package com.fisher.utils;
 
-import com.lovecust.app.lovecust.AppContext;
+
 
 public class BugsUtil {
 	public static final String FILE_NAME = "bugs.log";
@@ -13,7 +13,7 @@ public class BugsUtil {
 
 	public static String onFatalError(String bug) {
 		ConsoleUtil.error(bug);
-		if (!AppContext.mDebug)
+		if (!AppUtil.isDebug())
 			return bug;
 		if (null == util)
 			util = PermanentUtil.get(FILE_NAME);

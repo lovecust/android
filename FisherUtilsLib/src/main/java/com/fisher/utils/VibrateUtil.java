@@ -4,7 +4,7 @@ package com.fisher.utils;
 import android.content.Context;
 import android.os.Vibrator;
 
-import com.lovecust.app.lovecust.AppContext;
+
 
 /*
 * permission
@@ -30,7 +30,7 @@ public class VibrateUtil {
 
 	public static void vibrate ( long[] pattern ) {
 		try {
-			Vibrator vibrator = ( Vibrator ) AppContext.getContext().getSystemService( Context.VIBRATOR_SERVICE );
+			Vibrator vibrator = ( Vibrator ) AppUtil.getContext().getSystemService( Context.VIBRATOR_SERVICE );
 			vibrator.vibrate( pattern, -1 );
 		} catch ( Exception e ) {
 			e.printStackTrace();

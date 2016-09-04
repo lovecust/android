@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Environment;
 
-import com.lovecust.app.lovecust.AppContext;
-import com.lovecust.app.lovecust.Setting;
+
+import com.fisher.utils.constants.FileConstant;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -28,8 +28,8 @@ import java.io.RandomAccessFile;
 public class FileUtil {
 	public static final String separator = File.separator;
 	public static final String FILE_PATH_SDCARD = Environment.getExternalStorageDirectory().getAbsolutePath();
-	public static final String FILE_PATH_INTERNAL = AppContext.getContext().getFilesDir().getAbsolutePath();
-	public static final String FILE_PATH_APP = FILE_PATH_SDCARD + separator + Setting.FILE_EXTERNAL_DIR_APP;
+	public static final String FILE_PATH_INTERNAL = AppUtil.getContext().getFilesDir().getAbsolutePath();
+	public static final String FILE_PATH_APP = FILE_PATH_SDCARD + separator + FileConstant.DIR_EXTERNAL_APP;
 	public static final String FILE_PATH_APP_LOG = FILE_PATH_APP + "/Log";
 
 	public static final String charset = "UTF-8";
@@ -48,9 +48,9 @@ public class FileUtil {
 		}
 	}
 
-	public static File getExternalFile ( String filename ){
+	public static File getExternalFile ( String filename ) {
 		try {
-			return createDirectory( FILE_PATH_SDCARD + separator+Setting.FILE_EXTERNAL_DIR_APP + separator + filename );
+			return createDirectory( FILE_PATH_SDCARD + separator + FileConstant.DIR_EXTERNAL_APP + separator + filename );
 		} catch ( IOException e ) {
 			e.printStackTrace();
 			BugsUtil.onFatalError( "Fatal Error: crate file to External Storage failed!" );
@@ -185,9 +185,9 @@ public class FileUtil {
 
 	public static byte[] getBytes ( File file ) {
 		try {
-			RandomAccessFile f = new RandomAccessFile(file, "r");
-			byte[] bytes = new byte[(int)f.length()];
-			f.read(bytes);
+			RandomAccessFile f = new RandomAccessFile( file, "r" );
+			byte[] bytes = new byte[ ( int ) f.length() ];
+			f.read( bytes );
 			return bytes;
 		} catch ( Exception e ) {
 			e.printStackTrace();

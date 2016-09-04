@@ -14,17 +14,46 @@ import android.os.Build;
 import android.telephony.TelephonyManager;
 
 import com.google.gson.Gson;
-import com.lovecust.app.lovecust.AppContext;
-import com.lovecust.app.library.ActivityLibraryHome;
-import com.lovecust.app.R;
 
 import java.util.Locale;
 
 public class AppUtil {
 
-	private AppUtil() {
+	/**
+	 * Hold the application context object.
+	 */
+	private static Context sContext;
+	/**
+	 * debug flag
+	 */
+	private static boolean sDebug = false;
+
+	public static void init( Context context){
+		sContext = context;
 	}
 
+	/**
+	 * get application context
+	 *
+	 * @return context
+	 */
+	public static Context getContext ( ) {
+		return sContext;
+	}
+
+	public static boolean isDebug ( ) {
+		return sDebug;
+	}
+
+	public static void setDebug ( boolean sDebug ) {
+		AppUtil.sDebug = sDebug;
+	}
+
+	/**
+	 * No initialization.
+	 */
+	private AppUtil() {
+	}
 
 	/**
 	 * 获取应用程序名称
@@ -113,7 +142,7 @@ public class AppUtil {
 	}
 
 	public static void fnLockScreen() {
-		DevicePolicyManager manager = (DevicePolicyManager) AppContext.getContext().getSystemService(Context.DEVICE_POLICY_SERVICE);
+		DevicePolicyManager manager = (DevicePolicyManager) AppUtil.getContext().getSystemService(Context.DEVICE_POLICY_SERVICE);
 		manager.lockNow();
 	}
 
@@ -124,7 +153,7 @@ public class AppUtil {
 //		intent.putExtra( DevicePolicyManager.EXTRA_DEVICE_ADMIN, compName );
 //		intent.putExtra( DevicePolicyManager.EXTRA_ADD_EXPLANATION,
 //				"Additional text explaining why this needs to be added." );
-//		WindowManager windowManager = (WindowManager) AppContext.getContext().getSystemService( Context.WINDOW_SERVICE );
+//		WindowManager windowManager = (WindowManager) AppUtil.getContext().getSystemService( Context.WINDOW_SERVICE );
 //		windowManager.;
 //				window.addFlags(wm.LayoutParams.FLAG_DISMISS_KEYGUARD);
 //		Activity activity=null;
@@ -133,7 +162,7 @@ public class AppUtil {
 	}
 
 	public static void fnGetRunningApps() {
-		ActivityManager manager = (ActivityManager) AppContext.getContext().getSystemService(Context.ACTIVITY_SERVICE);
+		ActivityManager manager = (ActivityManager) AppUtil.getContext().getSystemService(Context.ACTIVITY_SERVICE);
 		ConsoleUtil.console("----------------------------running-apps------------------------------");
 		for (ActivityManager.RunningAppProcessInfo info : manager.getRunningAppProcesses()) {
 			ConsoleUtil.console(new Gson().toJson(info));
@@ -141,7 +170,7 @@ public class AppUtil {
 	}
 
 	public static void fnKillRunningApps() {
-		ActivityManager manager = (ActivityManager) AppContext.getContext().getSystemService(Context.ACTIVITY_SERVICE);
+		ActivityManager manager = (ActivityManager) AppUtil.getContext().getSystemService(Context.ACTIVITY_SERVICE);
 		ConsoleUtil.console("----------------------------installed-apps------------------------------");
 		for (ActivityManager.RunningAppProcessInfo info : manager.getRunningAppProcesses()) {
 			ConsoleUtil.console(new Gson().toJson(info));
@@ -149,7 +178,7 @@ public class AppUtil {
 	}
 
 	public static void fnListInstalledAppInfo() {
-		PackageManager manager = AppContext.getContext().getPackageManager();
+		PackageManager manager = AppUtil.getContext().getPackageManager();
 		Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
 		mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
 		ConsoleUtil.console("----------------------------installed-apps------------------------------");
@@ -453,23 +482,23 @@ public class AppUtil {
 //			readFromParcel(source);
 //		}
 //	}
-	public static void fnAddShortcut(String title) {
-		//Adding shortcut for MainActivity
-		//on Home screen
-		Intent shortcutIntent = new Intent(AppContext.getContext(), ActivityLibraryHome.class);
-//		shortcutIntent.setAction( Intent.ACTION_MAIN );
-		Intent addIntent = new Intent();
-		addIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
-		addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, title);
-		addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(AppContext.getContext(), R.mipmap.icon_launcher));
-		addIntent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
-		AppContext.getContext().sendBroadcast(addIntent);
-	}
+//	public static void fnAddShortcut(String title) {
+//		//Adding shortcut for MainActivity
+//		//on Home screen
+//		Intent shortcutIntent = new Intent(AppUtil.getContext(), AppUtil.class);
+////		shortcutIntent.setAction( Intent.ACTION_MAIN );
+//		Intent addIntent = new Intent();
+//		addIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
+//		addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, title);
+//		addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(AppUtil.getContext(), R.mipmap.icon_launcher));
+//		addIntent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
+//		AppUtil.getContext().sendBroadcast(addIntent);
+//	}
 
 
 	// set app language
 	public static void changeLanguageMode(Locale locale) {
-		AppContext context = AppContext.getContext();
+		Context context = AppUtil.getContext();
 		Configuration configuration = context.getResources().getConfiguration();
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
 			configuration.setLocale(locale);
@@ -479,18 +508,18 @@ public class AppUtil {
 
 	public static void getPhoneId() {
 		// need permission android.permission.READ_PHONE_STATE
-		TelephonyManager mTelephonyMgr = (TelephonyManager) AppContext.getContext().getSystemService(Context.TELEPHONY_SERVICE);
+		TelephonyManager mTelephonyMgr = (TelephonyManager) AppUtil.getContext().getSystemService(Context.TELEPHONY_SERVICE);
 		String imsi = mTelephonyMgr.getSubscriberId();
 		String imei = mTelephonyMgr.getDeviceId();
 		ConsoleUtil.console("imsi: " + imsi + "; imei: " + imei + ";");
 	}
 
 	public static int getColor(int colorResourceId) {
-		return AppContext.getContext().getResources().getColor(colorResourceId);
+		return AppUtil.getContext().getResources().getColor(colorResourceId);
 	}
 
 	public static String getString(int id) {
-		return AppContext.getContext().getString(id);
+		return AppUtil.getContext().getString(id);
 	}
 
 	public static String getAndroidInfo() {
@@ -502,7 +531,7 @@ public class AppUtil {
 
 
 	public static String[] getStringArray(int id) {
-		return AppContext.getContext().getResources().getStringArray(id);
+		return AppUtil.getContext().getResources().getStringArray(id);
 	}
 
 	/*

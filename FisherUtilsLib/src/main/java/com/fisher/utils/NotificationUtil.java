@@ -6,8 +6,8 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.support.v4.app.NotificationCompat;
 
-import com.lovecust.app.lovecust.AppContext;
-import com.lovecust.app.R;
+
+
 
 public class NotificationUtil {
 	public static final int NOTIFICATION_DEFAULT_ID = 50920;
@@ -27,14 +27,14 @@ public class NotificationUtil {
 
 	public static void sendNotification ( String title, String text, int icon, PendingIntent intent ) {
 		NotificationCompat.Builder mBuilder =
-				new NotificationCompat.Builder( AppContext.getContext() )
+				new NotificationCompat.Builder( AppUtil.getContext() )
 						.setSmallIcon( icon )
 						.setContentTitle( title )
 						.setContentText( text );
 		if ( null != intent )
 			mBuilder.setContentIntent( intent );
 		// Gets an instance of the NotificationManager service
-		NotificationManager mNotifyMgr = ( NotificationManager ) AppContext.getContext().getSystemService( Context.NOTIFICATION_SERVICE );
+		NotificationManager mNotifyMgr = ( NotificationManager ) AppUtil.getContext().getSystemService( Context.NOTIFICATION_SERVICE );
 		// Builds the notification and issues it.
 		mNotifyMgr.notify( NOTIFICATION_DEFAULT_ID, mBuilder.build() );
 	}
@@ -44,12 +44,12 @@ public class NotificationUtil {
 	}
 
 	public static void cancel ( int id ) {
-		NotificationManager mNotifyMgr = ( NotificationManager ) AppContext.getContext().getSystemService( Context.NOTIFICATION_SERVICE );
+		NotificationManager mNotifyMgr = ( NotificationManager ) AppUtil.getContext().getSystemService( Context.NOTIFICATION_SERVICE );
 		mNotifyMgr.cancel( id );
 	}
 
 	public static void cancelAll ( ) {
-		NotificationManager mNotifyMgr = ( NotificationManager ) AppContext.getContext().getSystemService( Context.NOTIFICATION_SERVICE );
+		NotificationManager mNotifyMgr = ( NotificationManager ) AppUtil.getContext().getSystemService( Context.NOTIFICATION_SERVICE );
 		mNotifyMgr.cancelAll();
 	}
 

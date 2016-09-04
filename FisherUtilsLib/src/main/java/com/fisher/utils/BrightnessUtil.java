@@ -5,7 +5,7 @@ import android.app.Activity;
 import android.provider.Settings;
 import android.view.WindowManager;
 
-import com.lovecust.app.lovecust.AppContext;
+
 
 
 public class BrightnessUtil {
@@ -13,7 +13,7 @@ public class BrightnessUtil {
 	public static int getScreenBrightnessMode() {
 		int screenMode = 0;
 		try {
-			screenMode = Settings.System.getInt( AppContext.getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE );
+			screenMode = Settings.System.getInt( AppUtil.getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE );
 		} catch ( Exception e ) {
 			e.printStackTrace();
 		}
@@ -23,7 +23,7 @@ public class BrightnessUtil {
 	public static int getScreenBrightness() {
 		int screenBrightness = 255;
 		try {
-			screenBrightness = Settings.System.getInt( AppContext.getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS );
+			screenBrightness = Settings.System.getInt( AppUtil.getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS );
 		} catch ( Settings.SettingNotFoundException e ) {
 			e.printStackTrace();
 		}
@@ -34,14 +34,14 @@ public class BrightnessUtil {
 	* @param mode [ Settings.System.SCREEN_BRIGHTNESS_MANUAL | Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC ]
 	* */
 	public static void setScreenBrightnessMode( int mode ) {
-		Settings.System.putInt( AppContext.getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE, mode );
+		Settings.System.putInt( AppUtil.getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE, mode );
 	}
 	/*
 	* set the global brightness
 	* @param brightness [ 0->255 (darkest->brightest) ]
 	* */
 	public static void setScreenBrightness( int brightness ) {
-		Settings.System.putInt( AppContext.getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, brightness );
+		Settings.System.putInt( AppUtil.getContext().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, brightness );
 	}
 
 	/*

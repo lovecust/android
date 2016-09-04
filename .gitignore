@@ -31,8 +31,9 @@ proguard/
 # Android Studio captures folder
 captures/
 
-# @D05-31 21:58
-# By Fisher
+# Added by Fisher @D05-31 21:58
 .idea
 gradle
 
+# Ignore module.iml files; Added by Fisher @D09-04 21:18
+*.iml

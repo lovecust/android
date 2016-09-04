@@ -58,6 +58,7 @@ public class AppContext extends LitePalApplication {
 	private void init () {
 		context = this;
 
+		AppUtil.init( this );
 		AppSetting.getInstance().flushLanguageMode();
 		DensityUtils.init( this );
 		if ( mDebug ) {

@@ -1,8 +1,8 @@
 package com.fisher.utils;
 
 
-import com.lovecust.app.lovecust.AppContext;
-import com.lovecust.app.lovecust.Setting;
+
+import com.fisher.utils.constants.FileConstant;
 
 import java.util.HashMap;
 
@@ -13,7 +13,7 @@ public class LogUtil {
 
 	public static String log( String msg ) {
 		ConsoleUtil.console( msg );
-		if( !AppContext.mDebug){
+		if( !AppUtil.isDebug()){
 			return msg;
 		}
 		if ( null == util )
@@ -33,7 +33,7 @@ public class LogUtil {
 
 	public static String log( String filename, String msg ) {
 		ConsoleUtil.console( msg );
-		if( !AppContext.mDebug){
+		if( !AppUtil.isDebug()){
 			return msg;
 		}
 		PermanentUtil util = utils.get( filename );
@@ -41,7 +41,7 @@ public class LogUtil {
 			util = PermanentUtil.get( filename );
 			utils.put( filename, util );
 		}
-		util.write( msg + Setting.LINE_BREAK_MARK );
+		util.write( msg + FileConstant.SEPARATOR);
 		return msg;
 	}
 

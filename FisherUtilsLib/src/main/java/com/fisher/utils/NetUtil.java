@@ -8,8 +8,8 @@ import android.net.wifi.WifiManager;
 import android.os.Build;
 
 import com.google.gson.Gson;
-import com.lovecust.app.R;
-import com.lovecust.app.lovecust.AppContext;
+
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,7 +44,7 @@ public class NetUtil {
 	}
 
 	public static void flush () {
-		Context context = AppContext.getContext();
+		Context context = AppUtil.getContext();
 		ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService( Context.CONNECTIVITY_SERVICE );
 		WifiManager wifiManager = (WifiManager) context.getSystemService( Context.WIFI_SERVICE );
 		// info will be null if the internet is not available

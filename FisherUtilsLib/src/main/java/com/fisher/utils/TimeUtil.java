@@ -14,7 +14,7 @@ package com.fisher.utils;
 *
 * */
 
-import com.lovecust.app.R;
+
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
