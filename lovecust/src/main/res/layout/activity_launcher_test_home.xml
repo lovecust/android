@@ -5,7 +5,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	tools:context=".test.ActivityLauncherTestHome">
+	tools:context="com.lovecust.tests.test.ActivityLauncherTestHome">
 	<include
 		layout="@layout/title_bar_mainpage"/>
 

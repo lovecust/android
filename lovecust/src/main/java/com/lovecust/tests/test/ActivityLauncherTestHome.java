@@ -1,8 +1,9 @@
-package com.lovecust.app;
+package com.lovecust.tests.test;
 
 import android.view.View;
 import android.widget.TextView;
 
+import com.lovecust.app.R;
 import com.lovecust.network.Methods;
 import com.lovecust.modules.ecust.wifi.ActivityEcustWifiHome;
 import com.lovecust.modules.app.feedback.ActivityFeedbackHome;
@@ -10,16 +11,16 @@ import com.lovecust.modules.app.launcher.grid.ActivityLauncherGridHome;
 import com.lovecust.modules.app.launcher.slide.ActivityLauncherSlideHome;
 import com.lovecust.modules.app.library.ActivityLibraryHome;
 import com.lovecust.modules.app.library.ActivityLibraryTagManager;
+import com.lovecust.app.AlphaActivity;
 import com.lovecust.modules.app.profile.ActivityProfileHome;
 import com.lovecust.modules.app.settings.ActivitySettingHome;
-import com.lovecust.tests.test.ActivityDeviceHome;
 import com.fisher.utils.AppUtil;
 
 import butterknife.Bind;
 import butterknife.OnClick;
 
 public class ActivityLauncherTestHome extends AlphaActivity {
-	public static final String SERVER_TEST = "http://192.168.1.101:20161/";
+	public static final String SERVER_TEST = "http://192.168.1.246:20161/";
 	public static final String SERVER_PLUTO = "http://apis.lovecust.com/";
 
 	@Bind( R.id.tv_server )

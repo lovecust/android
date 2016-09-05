@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-	package="com.lovecust.app"
-	xmlns:android="http://schemas.android.com/apk/res/android">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="com.lovecust.app">
 
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
@@ -13,22 +14,23 @@
 	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
 
 	<application
-		android:name=".lovecust.AppContext"
+		android:name=".AppContext"
 		android:allowBackup="true"
 		android:icon="@mipmap/icon_launcher"
 		android:label="@string/app_name"
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme">
 
-		<activity android:name=".launcher.ActivityLauncherSplashHome"
+		<activity
+			android:name="com.lovecust.modules.app.launcher.ActivityLauncherSplashHome"
 			android:autoRemoveFromRecents="true">
 		</activity>
 
 		<activity
-			android:name=".launcher.slide.ActivityLauncherSlideHome"
+			android:name="com.lovecust.modules.app.launcher.slide.ActivityLauncherSlideHome"
 			android:autoRemoveFromRecents="true"/>
 		<activity
-			android:name=".launcher.grid.ActivityLauncherGridHome"
+			android:name="com.lovecust.modules.app.launcher.grid.ActivityLauncherGridHome"
 			android:autoRemoveFromRecents="true">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
@@ -38,55 +40,56 @@
 		</activity>
 
 		<activity
-			android:name=".test.ActivityLauncherTestHome"
+			android:name="com.lovecust.tests.test.ActivityLauncherTestHome"
 			android:label="Lovecust"
 			android:launchMode="singleTask">
 		</activity>
 
 		<!-- library -->
-		<activity android:name=".library.ActivityLibraryHome"/>
-		<activity android:name=".library.ActivityLibraryNewBook"/>
-		<activity android:name=".library.ActivityLibraryBookDetail"/>
-		<activity android:name=".library.ActivityLibraryTagManager"/>
-		<activity android:name=".library.ActivityLibraryTagEditor"/>
+		<activity android:name="com.lovecust.modules.app.library.ActivityLibraryHome"/>
+		<activity android:name="com.lovecust.modules.app.library.ActivityLibraryNewBook"/>
+		<activity android:name="com.lovecust.modules.app.library.ActivityLibraryBookDetail"/>
+		<activity android:name="com.lovecust.modules.app.library.ActivityLibraryTagManager"/>
+		<activity android:name="com.lovecust.modules.app.library.ActivityLibraryTagEditor"/>
 
 		<!-- ecust parts -->
-		<activity android:name=".ecust.wifi.ActivityEcustWifiHome"/>
-		<activity android:name=".ecust.jwc.ActivityEcustJWCHome"/>
-		<activity android:name=".ecust.jwc.ActivityEcustJwcDetail"/>
-		<activity android:name=".ecust.calendar.ActivityEcustCalendarHome"/>
-		<activity android:name=".ecust.library.ActivityEcustLibraryHome"/>
-		<activity android:name=".ecust.classroom.ActivityEcustClassroomHome"/>
-		<activity android:name=".ecust.morning.ActivityEcustMorningExercise"/>
+		<activity android:name="com.lovecust.modules.ecust.wifi.ActivityEcustWifiHome"/>
+		<activity android:name="com.lovecust.modules.ecust.jwc.ActivityEcustJWCHome"/>
+		<activity android:name="com.lovecust.modules.ecust.jwc.ActivityEcustJwcDetail"/>
+		<activity android:name="com.lovecust.modules.ecust.calendar.ActivityEcustCalendarHome"/>
+		<activity android:name="com.lovecust.modules.ecust.library.ActivityEcustLibraryHome"/>
+		<activity android:name="com.lovecust.modules.ecust.classroom.ActivityEcustClassroomHome"/>
+		<activity android:name="com.lovecust.modules.ecust.morning.ActivityEcustMorningExercise"/>
 
 		<!-- feedback -->
 		<activity
-			android:name=".feedback.ActivityFeedbackHome"
+			android:name="com.lovecust.modules.app.feedback.ActivityFeedbackHome"
 			android:windowSoftInputMode="adjustResize"/>
 
 		<!-- profile -->
-		<activity android:name=".profile.ActivityProfileHome"/>
+		<activity android:name="com.lovecust.modules.app.profile.ActivityProfileHome"/>
 
 		<!-- explore -->
-		<service android:name=".explore.popWindow.ServicePopWindowFisher"/>
-		<activity android:name=".explore.todo.ActivityExploreTodoHome"/>
-		<activity android:name=".explore.todo.ActivityExploreTodoSetting"/>
+		<service android:name="com.lovecust.modules.explore.popWindow.ServicePopWindowFisher"/>
+
+		<activity android:name="com.lovecust.modules.explore.todo.ActivityExploreTodoHome"/>
+		<activity android:name="com.lovecust.modules.explore.todo.ActivityExploreTodoSetting"/>
 
 		<!-- setting -->
-		<activity android:name=".settings.ActivitySettingHome">
+		<activity android:name="com.lovecust.modules.app.settings.ActivitySettingHome">
 		</activity>
-		<activity android:name=".settings.ActivitySettingGeneral"/>
+		<activity android:name="com.lovecust.modules.app.settings.ActivitySettingGeneral"/>
 
 		<!-- about -->
-		<activity android:name=".about.ActivityAboutHome"/>
-		<activity android:name=".about.ActivityAboutUpdate"/>
-		<activity android:name=".about.ActivityAboutContact"/>
-		<activity android:name=".about.ActivityAboutShare"/>
-		<activity android:name=".about.ActivityAboutAbout"/>
-		<activity android:name=".about.ActivityAboutCopyright"/>
+		<activity android:name="com.lovecust.modules.app.about.ActivityAboutHome"/>
+		<activity android:name="com.lovecust.modules.app.about.ActivityAboutUpdate"/>
+		<activity android:name="com.lovecust.modules.app.about.ActivityAboutContact"/>
+		<activity android:name="com.lovecust.modules.app.about.ActivityAboutShare"/>
+		<activity android:name="com.lovecust.modules.app.about.ActivityAboutAbout"/>
+		<activity android:name="com.lovecust.modules.app.about.ActivityAboutCopyright"/>
 
 		<!-- test -->
-		<activity android:name=".test.ActivityDeviceHome"/>
+		<activity android:name="com.lovecust.tests.test.ActivityDeviceHome"/>
 	</application>
 
 </manifest>

@@ -32,13 +32,13 @@
 		</list>
 	-->
 	<list>
-		<mapping class="com.lovecust.app.library.Book"/>
-		<mapping class="com.lovecust.app.library.Images"/>
+		<mapping class="com.lovecust.modules.app.library.Book"/>
+		<mapping class="com.lovecust.modules.app.library.Images"/>
 		<!--<mapping class="com.love_ecust.app.Library.Book.Rating"/>-->
 		<!--<mapping class="com.love_ecust.app.Library.Book.BookTag"/>-->
 		<!--<mapping class="com.love_ecust.app.Library.Book.Series"/>-->
-		<mapping class="com.lovecust.app.library.Tag"/>
-		<mapping class="com.lovecust.app.entity.AppFeedback"/>
-		<mapping class="com.lovecust.app.explore.todo.DataTodo"/>
+		<mapping class="com.lovecust.modules.app.library.Tag"/>
+		<mapping class="com.lovecust.entities.AppFeedback"/>
+		<mapping class="com.lovecust.modules.explore.todo.DataTodo"/>
 	</list>
 </litepal>

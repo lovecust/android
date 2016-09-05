@@ -4,7 +4,7 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	style="@style/titlebar">
 
-	<com.lovecust.app.view.AppImageView
+	<com.lovecust.surfaces.AppImageView
 		android:id="@+id/titleBarOptionLeft"
 		style="@style/title_bar_icon"
 		android:src="@mipmap/icon_back"
