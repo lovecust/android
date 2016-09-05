@@ -6,6 +6,7 @@ import android.media.projection.MediaProjectionManager;
 import android.net.ConnectivityManager;
 
 
+import com.lovecust.constants.AppConstant;
 import com.lovecust.network.ApiManager;
 import com.lovecust.tests.recorder.AppReceiver;
 import com.lovecust.tests.recorder.LogPasteboard;
@@ -33,16 +34,14 @@ public class AppContext extends LitePalApplication {
 	public static int mBatteryLevel = 0;
 	// the text on the paste board
 	public static String mTextPasteBoard = "";
-	// apk version
-	public static final String mAppVersion = "v0.9.5";
-	// api version
-	public static final String mApiVersion = "v1.1";
+	public static final String mAppVersion = AppConstant.APP_VERSION;
+	public static final String mApiVersion = AppConstant.API_VERSION;
 
 	private static AppContext context;
-	public static boolean mDebug = false;
+	public static boolean mDebug = AppConstant.DEBUG;
 	public static boolean mIsHomeSwipeExit = true;
 
-	public static AppContext getContext () {
+	public static AppContext getContext ( ) {
 		return context;
 	}
 
@@ -50,19 +49,19 @@ public class AppContext extends LitePalApplication {
 	private AppReceiver receiver;
 
 	@Override
-	public void onCreate () {
+	public void onCreate ( ) {
 		super.onCreate();
 		init();
 	}
 
-	private void init () {
+	private void init ( ) {
 		context = this;
 
 		AppUtil.init( this );
 		AppSetting.getInstance().flushLanguageMode();
 		DensityUtils.init( this );
 		if ( mDebug ) {
-			ConsoleUtil.console( "Fisher-Home App Initialising :@ "+ ApiManager.getHeader() );
+			ConsoleUtil.console( "Fisher-Home App Initialising :@ " + ApiManager.getHeader() );
 			LogPasteboard.init();
 
 //			AppUtil.getPhoneId();
@@ -109,9 +108,9 @@ public class AppContext extends LitePalApplication {
 	}
 
 	@Override
-	public void onTerminate () {
+	public void onTerminate ( ) {
 		context.unregisterReceiver( receiver );
-		if ( mDebug ){
+		if ( mDebug ) {
 			LogPasteboard.release();
 		}
 		super.onTerminate();
@@ -122,15 +121,15 @@ public class AppContext extends LitePalApplication {
 	private Intent intent;
 	private MediaProjectionManager mMediaProjectionManager;
 
-	public int getResult () {
+	public int getResult ( ) {
 		return result;
 	}
 
-	public Intent getIntent () {
+	public Intent getIntent ( ) {
 		return intent;
 	}
 
-	public MediaProjectionManager getMediaProjectionManager () {
+	public MediaProjectionManager getMediaProjectionManager ( ) {
 		return mMediaProjectionManager;
 	}
 
