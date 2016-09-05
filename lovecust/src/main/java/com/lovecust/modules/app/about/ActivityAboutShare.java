@@ -2,15 +2,15 @@ package com.lovecust.modules.app.about;
 
 import android.content.Intent;
 
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
-import com.lovecust.app.AlphaActivity;
 
 import butterknife.OnClick;
 
 /**
  * Created by Fisher on 5/13/2016 at 1:36
  */
-public class ActivityAboutShare extends AlphaActivity {
+public class ActivityAboutShare extends BaseActivity {
 
 
 	@Override

@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.lovecust.modules.explore.popWindow.ServicePopWindowFisher;
-import com.lovecust.app.AlphaActivity;
 import com.lovecust.app.Setting;
 import com.lovecust.surfaces.DialogConfirmation;
 import com.lovecust.surfaces.DialogListView;
@@ -26,7 +26,7 @@ import butterknife.OnClick;
 /**
  * Created by Fisher on 5/9/2016 at 23:06
  */
-public class ActivityExploreTodoHome extends AlphaActivity {
+public class ActivityExploreTodoHome extends BaseActivity {
 
 	@Bind( R.id.tv_okay )
 	TextView tvOkay;

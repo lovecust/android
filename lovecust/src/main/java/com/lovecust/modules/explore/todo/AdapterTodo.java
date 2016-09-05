@@ -5,8 +5,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.AlphaRecyclerViewAdapter;
-import com.lovecust.app.AlphaRecyclerViewHolder;
+import com.lovecust.app.BaseRecyclerViewAdapter;
+import com.lovecust.app.BaseRecyclerViewHolder;
 import com.lovecust.surfaces.DialogEdittext;
 import com.fisher.utils.AppUtil;
 import com.fisher.utils.ConsoleUtil;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 /**
  * Created by Fisher on 5/9/2016 at 22:56
  */
-public class AdapterTodo extends AlphaRecyclerViewAdapter< DataTodo > {
+public class AdapterTodo extends BaseRecyclerViewAdapter< DataTodo > {
 	public static int limit = 20;
 
 	private final ArrayList< DataTodo > todos;
@@ -50,7 +50,7 @@ public class AdapterTodo extends AlphaRecyclerViewAdapter< DataTodo > {
 	}
 
 	@Override
-	public void onBindViewHolder ( final AlphaRecyclerViewHolder holder, final int position ) {
+	public void onBindViewHolder ( final BaseRecyclerViewHolder holder, final int position ) {
 		final DataTodo todo = todos.get( position );
 
 		holder.setText( R.id.tv_text, todo.getText() );

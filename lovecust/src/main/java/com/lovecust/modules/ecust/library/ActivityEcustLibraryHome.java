@@ -5,14 +5,14 @@ import android.widget.TextView;
 
 import com.lovecust.network.ApiManager;
 import com.lovecust.entities.EcustLibraryStatus;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.fisher.utils.NetUtil;
 
 import butterknife.Bind;
 
 
-public class ActivityEcustLibraryHome extends AlphaActivity {
+public class ActivityEcustLibraryHome extends BaseActivity {
 
 	private int AMOUNT_FLOORS = 6;
 

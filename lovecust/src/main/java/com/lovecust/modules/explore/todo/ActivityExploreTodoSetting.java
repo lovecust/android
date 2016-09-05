@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.lovecust.modules.explore.popWindow.FloatViewImage;
 import com.lovecust.modules.explore.popWindow.ServicePopWindowFisher;
-import com.lovecust.app.AlphaActivity;
 import com.lovecust.surfaces.DialogEdittext;
 import com.lovecust.surfaces.DialogSelectorIcon;
 
@@ -16,7 +16,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 
 
-public class ActivityExploreTodoSetting extends AlphaActivity {
+public class ActivityExploreTodoSetting extends BaseActivity {
 
 	@Bind( R.id.settingImageSize )
 	TextView settingImageSize;

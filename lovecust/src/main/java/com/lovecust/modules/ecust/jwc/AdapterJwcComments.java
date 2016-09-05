@@ -7,12 +7,12 @@ import android.widget.ImageView;
 
 import com.lovecust.app.R;
 import com.lovecust.entities.UtilComment;
-import com.lovecust.app.AlphaRecyclerViewAdapter;
-import com.lovecust.app.AlphaRecyclerViewHolder;
+import com.lovecust.app.BaseRecyclerViewAdapter;
+import com.lovecust.app.BaseRecyclerViewHolder;
 import com.fisher.utils.TimeUtil;
 import com.squareup.picasso.Picasso;
 
-public class AdapterJwcComments extends AlphaRecyclerViewAdapter< UtilComment > {
+public class AdapterJwcComments extends BaseRecyclerViewAdapter< UtilComment > {
 	private Context context;
 
 	public AdapterJwcComments ( Context context ) {
@@ -25,7 +25,7 @@ public class AdapterJwcComments extends AlphaRecyclerViewAdapter< UtilComment > 
 	}
 
 	@Override
-	public void onBindViewHolder ( AlphaRecyclerViewHolder holder, int position ) {
+	public void onBindViewHolder ( BaseRecyclerViewHolder holder, int position ) {
 		UtilComment comment = getItem( position );
 
 		holder.setText( R.id.nick, comment.getNick() );

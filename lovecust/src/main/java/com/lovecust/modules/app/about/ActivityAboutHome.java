@@ -3,7 +3,7 @@ package com.lovecust.modules.app.about;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.lovecust.app.AppContext;
 import com.fisher.utils.AppUtil;
@@ -11,7 +11,7 @@ import com.fisher.utils.AppUtil;
 import butterknife.OnClick;
 
 
-public class ActivityAboutHome extends AlphaActivity {
+public class ActivityAboutHome extends BaseActivity {
 
 	@Override
 	public int getLayout ( ) {

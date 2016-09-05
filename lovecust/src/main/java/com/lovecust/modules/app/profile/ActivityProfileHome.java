@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.lovecust.network.ApiManager;
 import com.lovecust.entities.AppProfile;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.Setting;
 import com.lovecust.app.R;
 import com.lovecust.surfaces.DialogEdittext;
@@ -25,7 +25,7 @@ import java.io.FileOutputStream;
 import butterknife.Bind;
 
 
-public class ActivityProfileHome extends AlphaActivity implements View.OnClickListener {
+public class ActivityProfileHome extends BaseActivity implements View.OnClickListener {
 	private static final int IMAGE_REQUEST_CODE = 0;
 	private static final int CAMERA_REQUEST_CODE = 1;
 	private static final int RESIZE_REQUEST_CODE = 2;

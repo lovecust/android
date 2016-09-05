@@ -6,12 +6,12 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.lovecust.modules.ecust.jwc.ActivityEcustJWCHome;
 import com.lovecust.modules.ecust.wifi.ActivityEcustWifiHome;
 import com.lovecust.modules.ecust.wifi.SettingWifi;
-import com.lovecust.app.AlphaActivity;
-import com.lovecust.app.AlphaFragment;
+import com.lovecust.app.BaseFragment;
 import com.lovecust.app.AppSetting;
 import com.fisher.utils.TimeUtil;
 import com.fisher.utils.VibrateUtil;
@@ -20,7 +20,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 
 
-public class FragmentLauncherPageNav extends AlphaFragment {
+public class FragmentLauncherPageNav extends BaseFragment {
 
 	@Bind( R.id.btn_ecust_jwc )
 	View layoutEcustJwc;
@@ -65,7 +65,7 @@ public class FragmentLauncherPageNav extends AlphaFragment {
 		btnStartActivity( ActivityEcustWifiHome.class );
 	}
 
-	private void btnStartActivity ( Class< ? extends AlphaActivity > activity ) {
+	private void btnStartActivity ( Class< ? extends BaseActivity > activity ) {
 		getActivity().startActivity( new Intent( getActivity(), activity ) );
 		getActivity().overridePendingTransition( R.anim.activity_zoom_in_from_center, R.anim.activity_zoom_out_to_center );
 	}

@@ -4,10 +4,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.widget.TextView;
 
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.lovecust.network.ApiManager;
 import com.lovecust.entities.AppUpdateStatus;
-import com.lovecust.app.AlphaActivity;
 import com.lovecust.app.AppContext;
 import com.lovecust.app.Setting;
 import com.fisher.utils.FileUtil;
@@ -20,7 +20,7 @@ import java.io.File;
 import butterknife.Bind;
 
 
-public class ActivityAboutUpdate extends AlphaActivity {
+public class ActivityAboutUpdate extends BaseActivity {
 
 	private static final int TARGET_DOWNLOAD_AND_INSTALL = -1;
 	private static final int TARGET_INSTALL = -2;

@@ -18,7 +18,7 @@ import com.fisher.utils.AppUtil;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class ActivityLauncherTestHome extends AlphaActivity {
+public class ActivityLauncherTestHome extends BaseActivity {
 	public static final String SERVER_TEST = "http://192.168.1.101:20161/";
 	public static final String SERVER_PLUTO = "http://apis.lovecust.com/";
 

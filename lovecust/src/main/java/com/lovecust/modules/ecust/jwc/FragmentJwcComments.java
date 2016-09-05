@@ -10,14 +10,14 @@ import com.lovecust.app.R;
 import com.lovecust.network.ApiManager;
 import com.lovecust.entities.AppProfile;
 import com.lovecust.entities.UtilComment;
-import com.lovecust.app.AlphaFragment;
+import com.lovecust.app.BaseFragment;
 import com.fisher.utils.NetUtil;
 
 import java.util.ArrayList;
 
 import butterknife.Bind;
 
-public class FragmentJwcComments extends AlphaFragment {
+public class FragmentJwcComments extends BaseFragment {
 
 	private EditText input;
 	private TextView submit;

@@ -5,7 +5,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.Setting;
 import com.lovecust.app.R;
 
@@ -14,7 +14,7 @@ import java.util.List;
 import butterknife.Bind;
 
 
-public class ActivityLibraryTagManager extends AlphaActivity {
+public class ActivityLibraryTagManager extends BaseActivity {
 
 	@Bind(R.id.listLibraryTags)
 	RecyclerView listLibraryTags;

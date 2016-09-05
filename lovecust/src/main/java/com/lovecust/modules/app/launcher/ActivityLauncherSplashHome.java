@@ -4,11 +4,11 @@ import android.content.Intent;
 
 import com.lovecust.app.R;
 import com.lovecust.modules.app.launcher.grid.ActivityLauncherGridHome;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.Setting;
 
 
-public class ActivityLauncherSplashHome extends AlphaActivity {
+public class ActivityLauncherSplashHome extends BaseActivity {
 
 
 	@Override

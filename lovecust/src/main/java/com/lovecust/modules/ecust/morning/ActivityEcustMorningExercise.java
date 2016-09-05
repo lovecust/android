@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.fisher.utils.EdittextUtil;
 import com.fisher.utils.InstantStoreUtil;
 import com.fisher.utils.NetUtil;
@@ -18,7 +18,7 @@ import butterknife.OnClick;
 /**
  * Created by Fisher on 5/7/2016 at 22:48
  */
-public class ActivityEcustMorningExercise extends AlphaActivity {
+public class ActivityEcustMorningExercise extends BaseActivity {
 	private final String KEY_CID = getClass().getName() + ".cid";
 	private final String KEY_SCORE = getClass().getName() + ".score";
 

@@ -7,11 +7,11 @@ import android.text.Html;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.lovecust.network.ApiManager;
 import com.lovecust.entities.AppProfile;
 import com.lovecust.entities.EcustJwcNews;
-import com.lovecust.app.AlphaActivity;
 import com.lovecust.app.Setting;
 import com.lovecust.surfaces.DialogConfirmation;
 import com.lovecust.surfaces.DialogEdittext;
@@ -20,7 +20,7 @@ import com.fisher.utils.NetUtil;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class ActivityEcustJwcDetail extends AlphaActivity {
+public class ActivityEcustJwcDetail extends BaseActivity {
 	public static final String JWC_URL_SERVER = "http://jwc.ecust.edu.cn";
 
 	@Bind( R.id.title )

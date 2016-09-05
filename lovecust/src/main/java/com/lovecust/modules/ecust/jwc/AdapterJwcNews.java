@@ -9,12 +9,12 @@ import android.widget.TextView;
 
 import com.lovecust.app.R;
 import com.lovecust.entities.EcustJwcNews;
-import com.lovecust.app.AlphaRecyclerViewAdapter;
-import com.lovecust.app.AlphaRecyclerViewHolder;
+import com.lovecust.app.BaseRecyclerViewAdapter;
+import com.lovecust.app.BaseRecyclerViewHolder;
 import com.lovecust.app.Setting;
 import com.fisher.utils.ConsoleUtil;
 
-public class AdapterJwcNews extends AlphaRecyclerViewAdapter< EcustJwcNews > {
+public class AdapterJwcNews extends BaseRecyclerViewAdapter< EcustJwcNews > {
 	private Context context;
 
 	public AdapterJwcNews ( Context context ) {
@@ -27,7 +27,7 @@ public class AdapterJwcNews extends AlphaRecyclerViewAdapter< EcustJwcNews > {
 	}
 
 	@Override
-	public void onBindViewHolder ( AlphaRecyclerViewHolder holder, int position ) {
+	public void onBindViewHolder ( BaseRecyclerViewHolder holder, int position ) {
 		EcustJwcNews news = getItem( position );
 		holder.setText( R.id.title, news.getName() );
 		holder.setText( R.id.date, news.getDate() );

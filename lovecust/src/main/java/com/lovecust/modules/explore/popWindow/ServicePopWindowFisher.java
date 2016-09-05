@@ -3,10 +3,10 @@ package com.lovecust.modules.explore.popWindow;
 import android.content.Intent;
 import android.os.IBinder;
 
-import com.lovecust.app.AlphaService;
+import com.lovecust.app.BaseService;
 
 
-public class ServicePopWindowFisher extends AlphaService {
+public class ServicePopWindowFisher extends BaseService {
 
 
 	private FloatView floatView;

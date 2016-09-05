@@ -6,7 +6,7 @@ import com.fisher.utils.ConsoleUtil;
 import com.fisher.utils.ToastUtil;
 
 
-public abstract class AlphaService extends Service {
+public abstract class BaseService extends Service {
 
 
 	protected String toast( String msg ) {

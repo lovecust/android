@@ -6,7 +6,7 @@ import android.view.View;
 import com.lovecust.modules.app.about.ActivityAboutHome;
 import com.lovecust.modules.ecust.wifi.ActivityEcustWifiHome;
 import com.lovecust.modules.explore.todo.ActivityExploreTodoSetting;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.lovecust.app.AppSetting;
 import com.fisher.utils.AppUtil;
@@ -14,7 +14,7 @@ import com.fisher.utils.AppUtil;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class ActivitySettingHome extends AlphaActivity {
+public class ActivitySettingHome extends BaseActivity {
 
 	@Bind(R.id.btn_explore_todo)
 	View layoutTodo;

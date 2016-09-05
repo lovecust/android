@@ -4,7 +4,7 @@ import android.graphics.Typeface;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.Setting;
 import com.fisher.utils.FileUtil;
 
@@ -14,7 +14,7 @@ import java.io.InputStream;
 import butterknife.Bind;
 
 
-public class ActivityAboutAbout extends AlphaActivity {
+public class ActivityAboutAbout extends BaseActivity {
 
 
 	@Bind(R.id.text)

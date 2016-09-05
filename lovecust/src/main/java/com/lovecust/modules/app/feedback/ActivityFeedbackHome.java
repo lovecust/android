@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.lovecust.network.ApiManager;
 import com.lovecust.entities.AppProfile;
 import com.lovecust.entities.AppFeedback;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.lovecust.surfaces.DialogEdittext;
 import com.lovecust.tests.test.TestRouter;
@@ -21,7 +21,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 //import retrofit.RestAdapter;
 
-public class ActivityFeedbackHome extends AlphaActivity {
+public class ActivityFeedbackHome extends BaseActivity {
 
 	@Bind( R.id.tv_messages )
 	TextView mMessagesHolder;

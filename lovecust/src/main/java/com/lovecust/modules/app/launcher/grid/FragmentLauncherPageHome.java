@@ -10,7 +10,7 @@ import com.lovecust.app.R;
 import com.lovecust.modules.ecust.morning.ActivityEcustMorningExercise;
 import com.lovecust.entities.AppProfile;
 import com.lovecust.modules.explore.todo.ActivityExploreTodoHome;
-import com.lovecust.app.AlphaFragment;
+import com.lovecust.app.BaseFragment;
 import com.lovecust.app.AppSetting;
 
 import java.io.File;
@@ -19,7 +19,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 
 
-public class FragmentLauncherPageHome extends AlphaFragment {
+public class FragmentLauncherPageHome extends BaseFragment {
 
 	@Bind(R.id.nick)
 	TextView nick;

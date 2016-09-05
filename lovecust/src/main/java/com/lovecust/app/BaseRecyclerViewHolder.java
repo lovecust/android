@@ -11,21 +11,21 @@ import android.widget.TextView;
 /**
  * Created by Fisher on 5/9/2016 at 4:28
  */
-public class AlphaRecyclerViewHolder extends RecyclerView.ViewHolder {
+public class BaseRecyclerViewHolder extends RecyclerView.ViewHolder {
 
 	private SparseArray<View> mViews;
 	private View mConvertView;
 
-	private AlphaRecyclerViewHolder(View itemView, ViewGroup parent) {
+	private BaseRecyclerViewHolder ( View itemView, ViewGroup parent) {
 		super(itemView);
 		mConvertView = itemView;
 		mViews = new SparseArray<>();
 	}
 
 
-	public static AlphaRecyclerViewHolder getItemView ( ViewGroup parent, int layoutId) {
+	public static BaseRecyclerViewHolder getItemView ( ViewGroup parent, int layoutId) {
 		View itemView = LayoutInflater.from(parent.getContext()).inflate(layoutId, parent, false);
-		return new AlphaRecyclerViewHolder(itemView, parent);
+		return new BaseRecyclerViewHolder(itemView, parent);
 	}
 
 	public View getView(){

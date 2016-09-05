@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.Setting;
 import com.lovecust.app.R;
 import com.lovecust.surfaces.DialogListView;
@@ -20,7 +20,7 @@ import java.util.List;
 import butterknife.Bind;
 
 
-public class ActivityLibraryBookDetail extends AlphaActivity {
+public class ActivityLibraryBookDetail extends BaseActivity {
 
 	@Bind(R.id.tag)
 	TextView tag;

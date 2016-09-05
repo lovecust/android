@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
 
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.Setting;
 import com.lovecust.app.R;
 import com.fisher.utils.ToastUtil;
@@ -12,7 +12,7 @@ import com.fisher.utils.ToastUtil;
 import butterknife.Bind;
 
 
-public class ActivityLibraryTagEditor extends AlphaActivity {
+public class ActivityLibraryTagEditor extends BaseActivity {
 	public static final long CODE_CREATE_TAG = -100;
 	private long id;
 

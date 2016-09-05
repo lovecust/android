@@ -1,9 +1,9 @@
 package com.lovecust.tests.test;
 
 
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 
-public class ActivityDebugSetting extends AlphaActivity {
+public class ActivityDebugSetting extends BaseActivity {
 
 	@Override
 	public int getLayout() {

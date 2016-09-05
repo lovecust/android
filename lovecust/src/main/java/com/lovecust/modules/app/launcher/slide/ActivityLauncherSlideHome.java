@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.lovecust.modules.ecust.calendar.ActivityEcustCalendarHome;
 import com.lovecust.modules.ecust.classroom.ActivityEcustClassroomHome;
 import com.lovecust.modules.ecust.library.ActivityEcustLibraryHome;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.entities.AppProfile;
 import com.lovecust.modules.app.profile.ActivityProfileHome;
 import com.lovecust.app.R;
@@ -23,7 +23,7 @@ import java.io.File;
 
 import butterknife.Bind;
 
-public class ActivityLauncherSlideHome extends AlphaActivity {
+public class ActivityLauncherSlideHome extends BaseActivity {
 
 	@Bind(R.id.drawer_layout)
 	DrawerLayout drawerLayout;

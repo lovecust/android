@@ -3,6 +3,7 @@ package com.lovecust.tests.test;
 import android.view.View;
 import android.widget.TextView;
 
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.lovecust.network.Methods;
 import com.lovecust.modules.ecust.wifi.ActivityEcustWifiHome;
@@ -11,7 +12,6 @@ import com.lovecust.modules.app.launcher.grid.ActivityLauncherGridHome;
 import com.lovecust.modules.app.launcher.slide.ActivityLauncherSlideHome;
 import com.lovecust.modules.app.library.ActivityLibraryHome;
 import com.lovecust.modules.app.library.ActivityLibraryTagManager;
-import com.lovecust.app.AlphaActivity;
 import com.lovecust.modules.app.profile.ActivityProfileHome;
 import com.lovecust.modules.app.settings.ActivitySettingHome;
 import com.fisher.utils.AppUtil;
@@ -19,7 +19,7 @@ import com.fisher.utils.AppUtil;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class ActivityLauncherTestHome extends AlphaActivity {
+public class ActivityLauncherTestHome extends BaseActivity {
 	public static final String SERVER_TEST = "http://192.168.1.246:20161/";
 	public static final String SERVER_PLUTO = "http://apis.lovecust.com/";
 

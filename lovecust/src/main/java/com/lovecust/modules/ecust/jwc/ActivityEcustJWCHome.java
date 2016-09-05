@@ -6,13 +6,13 @@ import android.support.v7.widget.RecyclerView;
 import com.lovecust.app.R;
 import com.lovecust.network.ApiManager;
 import com.lovecust.entities.EcustJwcNews;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.fisher.utils.NetUtil;
 
 import butterknife.Bind;
 
 
-public class ActivityEcustJWCHome extends AlphaActivity {
+public class ActivityEcustJWCHome extends BaseActivity {
 
 	@Bind( R.id.mRecyclerView )
 	RecyclerView mRecyclerView;

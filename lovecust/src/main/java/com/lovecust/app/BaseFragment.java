@@ -12,7 +12,7 @@ import com.fisher.utils.ToastUtil;
 
 import butterknife.ButterKnife;
 
-public abstract class AlphaFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
 
 	public abstract int getLayoutID ( );
 

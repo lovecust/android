@@ -4,7 +4,7 @@ import android.net.Uri;
 import android.widget.ImageView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.Setting;
 import com.fisher.utils.FileUtil;
 import com.fisher.utils.HTTPUtil;
@@ -14,7 +14,7 @@ import java.io.File;
 import butterknife.Bind;
 
 
-public class ActivityEcustCalendarHome extends AlphaActivity {
+public class ActivityEcustCalendarHome extends BaseActivity {
 
 	@Bind(R.id.image)
 	ImageView image;

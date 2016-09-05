@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 
 import java.util.Comparator;
@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 
-public class ActivityEcustClassroomHome extends AlphaActivity {
+public class ActivityEcustClassroomHome extends BaseActivity {
 
 	private LinearLayout layoutClassroomHolder;
 	private ToggleButton[] buildings;

@@ -16,7 +16,7 @@ import me.imid.swipebacklayout.lib.SwipeBackLayout;
 import me.imid.swipebacklayout.lib.app.SwipeBackActivity;
 
 
-public abstract class AlphaActivity extends SwipeBackActivity implements View.OnClickListener {
+public abstract class BaseActivity extends SwipeBackActivity implements View.OnClickListener {
 
 	private boolean exit = true;
 	protected boolean isSwipeExit = true;
@@ -49,17 +49,17 @@ public abstract class AlphaActivity extends SwipeBackActivity implements View.On
 		setTitle( getString( id ) );
 	}
 
-	public AlphaActivity setTitle ( String title ) {
+	public BaseActivity setTitle ( String title ) {
 		TextView titleTextView = ( TextView ) findViewById( R.id.titleBarTitle );
 		if ( null == titleTextView ) {
-			BugsUtil.onFatalError( "AlphaActivity.setTitle()-> not found the title text view!" );
+			BugsUtil.onFatalError( "BaseActivity.setTitle()-> not found the title text view!" );
 			return this;
 		}
 		titleTextView.setText( title );
 		return this;
 	}
 
-	public AlphaActivity setOnBackListener ( ) {
+	public BaseActivity setOnBackListener ( ) {
 //		View left = findViewById( R.id.titleBarOptionLeft );
 //		if ( null != left ) {
 //			left.setOnClickListener( this );
@@ -67,10 +67,10 @@ public abstract class AlphaActivity extends SwipeBackActivity implements View.On
 		return this;
 	}
 
-	public AlphaActivity setOptionText ( String text ) {
+	public BaseActivity setOptionText ( String text ) {
 		TextView titleTextView = ( TextView ) findViewById( R.id.titleBarOptionRight );
 		if ( null == titleTextView ) {
-			BugsUtil.onFatalError( "AlphaActivity.setTitle()-> not found the title text view!" );
+			BugsUtil.onFatalError( "BaseActivity.setTitle()-> not found the title text view!" );
 			return this;
 		}
 		titleTextView.setText( text );
@@ -100,7 +100,7 @@ public abstract class AlphaActivity extends SwipeBackActivity implements View.On
 		return exit;
 	}
 
-	public AlphaActivity setExit ( boolean exit ) {
+	public BaseActivity setExit ( boolean exit ) {
 		this.exit = exit;
 		return this;
 	}

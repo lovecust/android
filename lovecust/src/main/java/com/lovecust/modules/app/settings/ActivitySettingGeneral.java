@@ -3,7 +3,7 @@ package com.lovecust.modules.app.settings;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.AppSetting;
 import com.lovecust.app.R;
 import com.lovecust.surfaces.DialogConfirmation;
@@ -14,7 +14,7 @@ import butterknife.Bind;
 import butterknife.OnClick;
 
 
-public class ActivitySettingGeneral extends AlphaActivity {
+public class ActivitySettingGeneral extends BaseActivity {
 
 	@Bind(R.id.tv_language)
 	TextView settingLanguage;

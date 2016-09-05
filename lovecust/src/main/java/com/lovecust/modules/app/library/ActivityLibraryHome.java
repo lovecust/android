@@ -5,7 +5,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.Setting;
 import com.lovecust.app.R;
 
@@ -13,7 +13,7 @@ import java.util.List;
 
 import butterknife.Bind;
 
-public class ActivityLibraryHome extends AlphaActivity {
+public class ActivityLibraryHome extends BaseActivity {
 
 	@Bind(R.id.listLibraryBooks)
 	RecyclerView listLibraryBooks;

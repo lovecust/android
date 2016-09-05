@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.google.gson.Gson;
-import com.lovecust.app.AlphaActivity;
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.Setting;
 import com.lovecust.app.R;
 import com.fisher.utils.BugsUtil;
@@ -23,7 +23,7 @@ import java.util.List;
 //import retrofit.client.Response;
 
 
-public class ActivityLibraryNewBook extends AlphaActivity {
+public class ActivityLibraryNewBook extends BaseActivity {
 
 	private EditText edittext;
 	private InterfaceBookAPI service;

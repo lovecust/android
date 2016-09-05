@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
+import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
 import com.lovecust.modules.app.about.ActivityAboutHome;
 import com.lovecust.modules.ecust.calendar.ActivityEcustCalendarHome;
@@ -17,7 +18,6 @@ import com.lovecust.modules.ecust.jwc.ActivityEcustJWCHome;
 import com.lovecust.modules.ecust.library.ActivityEcustLibraryHome;
 import com.lovecust.modules.ecust.wifi.ActivityEcustWifiHome;
 import com.lovecust.modules.app.feedback.ActivityFeedbackHome;
-import com.lovecust.app.AlphaActivity;
 import com.lovecust.app.AppContext;
 import com.lovecust.modules.app.profile.ActivityProfileHome;
 import com.lovecust.modules.app.settings.ActivitySettingHome;
@@ -25,7 +25,7 @@ import com.fisher.utils.AppUtil;
 
 import butterknife.Bind;
 
-public class ActivityLauncherGridHome extends AlphaActivity implements CompoundButton.OnCheckedChangeListener {
+public class ActivityLauncherGridHome extends BaseActivity implements CompoundButton.OnCheckedChangeListener {
 
 	@Bind(R.id.viewPager)
 	ViewPager mPager;

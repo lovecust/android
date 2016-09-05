@@ -8,24 +8,24 @@ import java.util.ArrayList;
 /**
  * Created by Fisher on 5/9/2016 at 4:29
  */
-public abstract class AlphaRecyclerViewAdapter< T > extends RecyclerView.Adapter< AlphaRecyclerViewHolder > {
+public abstract class BaseRecyclerViewAdapter< T > extends RecyclerView.Adapter< BaseRecyclerViewHolder > {
 
 	public ArrayList< T > lists = new ArrayList<>();
 	private boolean withHeader = false;
 
-	public AlphaRecyclerViewAdapter ( ) {
+	public BaseRecyclerViewAdapter ( ) {
 	}
 
-	public AlphaRecyclerViewAdapter ( boolean withHeader ) {
+	public BaseRecyclerViewAdapter ( boolean withHeader ) {
 		this.withHeader = withHeader;
 	}
 
-	public AlphaRecyclerViewAdapter ( ArrayList< T > lists, boolean withHeader ) {
+	public BaseRecyclerViewAdapter ( ArrayList< T > lists, boolean withHeader ) {
 		this.lists = lists;
 		this.withHeader = withHeader;
 	}
 
-	public AlphaRecyclerViewAdapter ( ArrayList< T > lists ) {
+	public BaseRecyclerViewAdapter ( ArrayList< T > lists ) {
 		this.lists = lists;
 	}
 
@@ -58,8 +58,8 @@ public abstract class AlphaRecyclerViewAdapter< T > extends RecyclerView.Adapter
 
 
 	@Override
-	public AlphaRecyclerViewHolder onCreateViewHolder ( ViewGroup parent, int viewType ) {
-		return AlphaRecyclerViewHolder.getItemView( parent, layoutId( viewType ) );
+	public BaseRecyclerViewHolder onCreateViewHolder ( ViewGroup parent, int viewType ) {
+		return BaseRecyclerViewHolder.getItemView( parent, layoutId( viewType ) );
 	}
 
 	@Override

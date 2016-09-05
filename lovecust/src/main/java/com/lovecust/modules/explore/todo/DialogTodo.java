@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.AlphaRecyclerViewAdapter;
+import com.lovecust.app.BaseRecyclerViewAdapter;
 import com.lovecust.app.AppContext;
 import com.fisher.utils.EdittextUtil;
 
@@ -23,7 +23,7 @@ public class DialogTodo extends AlertDialog implements View.OnClickListener {
 	private RecyclerView mRecyclerView;
 	private String tag;
 
-	private AlphaRecyclerViewAdapter< DataTodo > adapter;
+	private BaseRecyclerViewAdapter< DataTodo > adapter;
 
 	public static DialogTodo newDialog ( ) {
 		Context context = AppContext.getContext();

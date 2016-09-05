@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.AlphaFragment;
+import com.lovecust.app.BaseFragment;
 
 import butterknife.Bind;
 
@@ -13,7 +13,7 @@ import butterknife.Bind;
  * Created on 6/5/2016 at 16:33
  * By Fisher
  */
-public class FragmentExploreTodoOkay extends AlphaFragment {
+public class FragmentExploreTodoOkay extends BaseFragment {
 	@Bind( R.id.mCount )
 	TextView tvAmount;
 	@Bind( R.id.mTag )
