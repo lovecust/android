@@ -44,8 +44,8 @@ public class FragmentLauncherPageNav extends BaseFragment {
 		setting = AppSetting.getInstance();
 		wifi = SettingWifi.getInstance();
 		// TODO get info from server and dismiss offset with local time
-		int week = TimeUtil.getWeekOfYear() - 8;
-		tvCurrentWeek.setText( week + "th" );
+		int week = TimeUtil.getWeekOfYear() - 36;
+		tvCurrentWeek.setText( String.format( getContext().getString( R.string.text_home_nav_week_model ), week ));
 
 		if ( wifi.isAutoConnect() ) {
 			layoutEcustWifi.setVisibility( View.INVISIBLE );

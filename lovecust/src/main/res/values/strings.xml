@@ -180,12 +180,13 @@
 	<string name="explore_todo_okay">便签</string>
 	<string name="notice_ecust_wifi_failed_to_login">Wifi 登录失败</string>
 	<string name="notice_ecust_wifi_server_error_with_code">"华理服务器错误, 错误码: "</string>
-	<string name="error_fatal_unhandled_click_event">Unhandled Click Event!</string>
+	<string name="error_fatal_unhandled_click_event">未处理的点击事件!</string>
 	<string name="text_ecust_wifi_channel_title">登录通道(ac_id)</string>
 	<string name="hint_ecust_wifi_channel">16</string>
 	<string name="hint_password">********</string>
-	<string name="dialog_title_ecust_wifi_channel">Login Channel</string>
-	<string name="hint_ecust_wifi_auto_connect">Off</string>
+	<string name="dialog_title_ecust_wifi_channel">登录通道(ac_id)</string>
+	<string name="hint_ecust_wifi_auto_connect">开</string>
+	<string name="text_home_nav_week_model">第%d周</string>
 
 
 </resources>

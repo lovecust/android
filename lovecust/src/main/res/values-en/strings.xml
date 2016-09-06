@@ -173,6 +173,7 @@
 	<string name="notice_ecust_wifi_server_error_with_code">"Ecust server fatal error with code: "</string>
 	<string name="hint_ecust_wifi_channel">16</string>
 	<string name="hint_ecust_wifi_auto_connect">Off</string>
+	<string name="text_home_nav_week_model">%dth</string>
 
 
 </resources>
