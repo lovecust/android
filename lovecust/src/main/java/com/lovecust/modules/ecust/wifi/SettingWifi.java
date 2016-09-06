@@ -14,7 +14,6 @@ import java.util.Calendar;
 
 public class SettingWifi {
 	// should be edited ?
-	public static final String SSID_ECUST = "\"ECUST\"";
 	private boolean autoConnect = false;
 	private boolean sendNotification = true;
 	private long cancelNotificationDelayTime = 8000;

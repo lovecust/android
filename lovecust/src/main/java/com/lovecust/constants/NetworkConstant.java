@@ -1,9 +1,9 @@
-package com.lovecust.network;
+package com.lovecust.constants;
 
 /**
  * Created by Fisher on 5/22/2016 at 1:04
  */
-public class Methods {
+public class NetworkConstant {
 	public static String server = "http://apis.lovecust.com/";
 	private static final String APIS = "apis/";
 

@@ -13,6 +13,8 @@ import com.lovecust.tests.recorder.LogPasteboard;
 import com.fisher.utils.AppUtil;
 import com.fisher.utils.ConsoleUtil;
 import com.fisher.utils.DensityUtils;
+import com.orhanobut.logger.LogLevel;
+import com.orhanobut.logger.Logger;
 
 
 import org.litepal.LitePalApplication;
@@ -58,6 +60,17 @@ public class AppContext extends LitePalApplication {
 		context = this;
 
 		AppUtil.init( this );
+		AppUtil.setDebug( true );
+
+		LogLevel level = AppConstant.DEBUG ? LogLevel.FULL : LogLevel.NONE;
+		Logger
+				.init( "Lovecust" )                 // default PRETTYLOGGER or use just init()
+				.methodCount( 3 )                 // default 2
+				.hideThreadInfo()               // default shown
+				.logLevel( level )        // default LogLevel.FULL; Use LogLevel.NONE for the release versions.
+				.methodOffset( 2 );                // default 0
+//				.logAdapter( new LogAdapter() ); //default AndroidLogAdapter
+
 		AppSetting.getInstance().flushLanguageMode();
 		DensityUtils.init( this );
 		if ( mDebug ) {

@@ -107,4 +107,7 @@ dependencies {
     compile 'me.imid.swipebacklayout.lib:library:1.0.0'
     compile 'org.jsoup:jsoup:1.8.2'
     compile 'cz.msebera.android:httpclient:4.4.1.2'
+    // For debug usage; By Fisher at 2016-09-05 22:15;
+    // APK-Before-Size: 4,069,766B; APK-After-Size: 4,073,954B;
+    compile 'com.orhanobut:logger:1.15'
 }

@@ -159,7 +159,7 @@
 	<string name="on">开</string>
 	<string name="setting_general_developer_mode">开发者模式</string>
 	<string name="dialog_title_developer_mode">开发者模式</string>
-	<string name="hint_date">2016-03-04</string>
+	<string name="hint_date">2016–03–04</string>
 	<string name="hint_title">标题</string>
 	<string name="toast_check_cid_and_pwd">请检查您的用户名或密码</string>
 	<string name="hint_ecust_morning_cid">校园卡号(10140000)</string>
@@ -178,6 +178,10 @@
 	<string name="explore_todo_done">已完成</string>
 	<string name="explore_todo_removed">已移除</string>
 	<string name="explore_todo_okay">便签</string>
+	<string name="error_ecust_wifi_url_expected_not_found">Error(-3028): did not detect url expected!</string>
+	<string name="notice_ecust_wifi_failed_to_login">failed to log in Ecust Wifi!</string>
+	<string name="notice_ecust_wifi_server_error_with_code">"ecust error happened, got code: "</string>
+	<string name="error_fatal_unhandled_click_event">Unhandled Click Event!</string>
 
 
 </resources>

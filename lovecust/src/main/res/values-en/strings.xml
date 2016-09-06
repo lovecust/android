@@ -73,7 +73,7 @@
 	<string name="hint_profile_nick">Alias</string>
 	<string name="hint_profile_moto">Your favorite motto</string>
 	<string name="hint_profile_gender">Boy</string>
-	<string name="hint_profile_birthday">2000-00-00</string>
+	<string name="hint_profile_birthday">2000–00–00</string>
 	<string name="hint_profile_name">Fisher</string>
 	<string name="hint_profile_phone">15200000000</string>
 	<string name="hint_profile_uid">10140000</string>
@@ -147,7 +147,7 @@
 	<string name="on">On</string>
 	<string name="setting_general_developer_mode">Developer Mode</string>
 	<string name="dialog_title_developer_mode">Developer Mode</string>
-	<string name="hint_date">2016-03-04</string>
+	<string name="hint_date">2016–03–04</string>
 	<string name="hint_title">This is title.</string>
 	<string name="toast_check_cid_and_pwd">Please check your campus Id and password -.-</string>
 	<string name="hint_ecust_morning_cid">Campus ID(10140000)</string>
@@ -166,6 +166,8 @@
 	<string name="explore_todo_done">DONE</string>
 	<string name="explore_todo_removed">REMOVED</string>
 	<string name="explore_todo_okay">OKAY</string>
+	<string name="notice_ecust_wifi_failed_to_login">failed to log in Ecust Wifi!</string>
+	<string name="error_fatal_unhandled_click_event">Unhandled Click Event!</string>
 
 
 </resources>

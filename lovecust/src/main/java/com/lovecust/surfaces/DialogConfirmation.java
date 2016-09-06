@@ -7,7 +7,12 @@ import android.widget.TextView;
 
 import com.lovecust.app.R;
 
-
+/**
+ * Updated on 9/6/2016 at 09:32
+ * By Fisher
+ * <p>
+ * Dialog for Confirmation
+ */
 public class DialogConfirmation extends AlertDialog implements View.OnClickListener {
 	private View view;
 

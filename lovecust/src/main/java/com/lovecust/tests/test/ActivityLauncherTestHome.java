@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 import com.lovecust.app.BaseActivity;
 import com.lovecust.app.R;
-import com.lovecust.network.Methods;
+import com.lovecust.constants.NetworkConstant;
 import com.lovecust.modules.ecust.wifi.ActivityEcustWifiHome;
 import com.lovecust.modules.app.feedback.ActivityFeedbackHome;
 import com.lovecust.modules.app.launcher.grid.ActivityLauncherGridHome;
@@ -34,7 +34,7 @@ public class ActivityLauncherTestHome extends BaseActivity {
 	public void init ( ) {
 		setTitle( R.string.title_test );
 
-		tvServer.setText( Methods.server );
+		tvServer.setText( NetworkConstant.server );
 	}
 
 	public void btnLibrary ( View view ) {
@@ -84,8 +84,8 @@ public class ActivityLauncherTestHome extends BaseActivity {
 	void click ( View view ) {
 		switch ( view.getId() ) {
 			case R.id.tv_server:
-				Methods.server = Methods.server.equals( SERVER_TEST ) ? SERVER_PLUTO : SERVER_TEST;
-				tvServer.setText( Methods.server );
+				NetworkConstant.server = NetworkConstant.server.equals( SERVER_TEST ) ? SERVER_PLUTO : SERVER_TEST;
+				tvServer.setText( NetworkConstant.server );
 				break;
 		}
 	}

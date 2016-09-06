@@ -21,7 +21,7 @@ public class APILib {
 	public static String URL_ECUST_WIFI_CHECK = "http://172.20.13.100/cgi-bin/rad_user_info";
 	public static String URL_SERVER = "http://api.lovecust.com";
 	public static String URL_REDIRECT_BAIDU = "http://www.baidu.com/";
-//	public static String URL_REDIRECT_BAIDU = "http://www.baidu.com/&arubalp=221e86ec-1a18-4a48-8d6e-c5f4ef09d0";
+	//	public static String URL_REDIRECT_BAIDU = "http://www.baidu.com/&arubalp=221e86ec-1a18-4a48-8d6e-c5f4ef09d0";
 	public static String URL_CHECK_INTERNET = URL_SERVER + "/core-apis/check-internet.php";
 
 	public static Response request ( String server ) throws IOException {
@@ -30,7 +30,7 @@ public class APILib {
 
 	public static Response request ( String server, String params ) throws IOException {
 		URL url = new URL( server );
-		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		HttpURLConnection conn = ( HttpURLConnection ) url.openConnection();
 		conn.setInstanceFollowRedirects( false );
 		conn.setConnectTimeout( 15000 );
 		conn.setReadTimeout( 10000 );
@@ -53,6 +53,7 @@ public class APILib {
 		int code = conn.getResponseCode();
 		InputStream in = conn.getInputStream();
 		String response = FileUtil.getString( in );
+		ConsoleUtil.console( "HTTPUtil.login(server, params)-> now response: " + response );
 		return new Response( code, response ).setConnection( conn );
 	}
 
@@ -62,7 +63,7 @@ public class APILib {
 		public String response;
 		public HttpURLConnection connection;
 
-		public HttpURLConnection getConnection () {
+		public HttpURLConnection getConnection ( ) {
 			return connection;
 		}
 
@@ -77,7 +78,7 @@ public class APILib {
 		}
 
 		@Override
-		public String toString () {
+		public String toString ( ) {
 			JSONObject json = new JSONObject();
 			try {
 				json.put( "code", code );

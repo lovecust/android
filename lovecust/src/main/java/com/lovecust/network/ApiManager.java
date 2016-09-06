@@ -1,6 +1,7 @@
 package com.lovecust.network;
 
 import com.lovecust.app.R;
+import com.lovecust.constants.NetworkConstant;
 import com.lovecust.entities.AppProfileAvatar;
 import com.lovecust.entities.UtilComment;
 import com.lovecust.entities.EcustJwcNews;
@@ -42,14 +43,14 @@ import rx.schedulers.Schedulers;
  * Created by Fisher on 5/22/2016 at 1:03
  */
 public class ApiManager {
-	private Api mApi;
+	private ApiInterface mApiInterface;
 
 	public static ApiManager getInstance ( ) {
 		return new ApiManager();
 	}
 
 	public Observable< EcustLibraryStatus > ecustLibraryStatus ( ) {
-		return mApi
+		return mApiInterface
 				.ecustLibraryStatus()
 //                .flatMap(urls -> Observable.from(urls.getData()))
 //                .map(url -> url.getId())
@@ -58,61 +59,61 @@ public class ApiManager {
 	}
 
 	public Observable< EcustJwcNews[] > ecustJwcList ( ) {
-		return mApi
+		return mApiInterface
 				.ecustJwcList()
 				.subscribeOn( Schedulers.io() )
 				.observeOn( AndroidSchedulers.mainThread() );
 	}
 
 	public Observable< EcustJwcNews > ecustJwcFetch ( String md5 ) {
-		return mApi
+		return mApiInterface
 				.ecustJwcFetch( md5 )
 				.subscribeOn( Schedulers.io() )
 				.observeOn( AndroidSchedulers.mainThread() );
 	}
 
 	public Observable< Nothing > ecustJwcCommentCreate ( UtilComment comment ) {
-		return mApi
+		return mApiInterface
 				.ecustJwcCommentCreate( comment )
 				.subscribeOn( Schedulers.io() )
 				.observeOn( AndroidSchedulers.mainThread() );
 	}
 
 	public Observable< UtilComment[] > ecustJwcCommentList ( String fid ) {
-		return mApi
+		return mApiInterface
 				.ecustJwcCommentList( fid )
 				.subscribeOn( Schedulers.io() )
 				.observeOn( AndroidSchedulers.mainThread() );
 	}
 
 	public Observable< Nothing > appFeedbackCreate ( String nick, String value ) {
-		return mApi
+		return mApiInterface
 				.appFeedbackCreate( nick, value )
 				.subscribeOn( Schedulers.io() )
 				.observeOn( AndroidSchedulers.mainThread() );
 	}
 	public Observable< AppFeedback[] > appFeedbackFetch ( ) {
-		return mApi
+		return mApiInterface
 				.appFeedbackFetch(  )
 				.subscribeOn( Schedulers.io() )
 				.observeOn( AndroidSchedulers.mainThread() );
 	}
 
 	public Observable< Nothing > appProfileUpdate ( AppProfile profile ) {
-		return mApi
+		return mApiInterface
 				.appProfileUpdate( profile )
 				.subscribeOn( Schedulers.io() )
 				.observeOn( AndroidSchedulers.mainThread() );
 	}
 	public Observable< AppProfileAvatar > appProfileAvatar( File avatar ) {
-		return mApi
+		return mApiInterface
 				.appProfileAvatar( getPartFromFile(avatar, "avatar") )
 				.subscribeOn( Schedulers.io() )
 				.observeOn( AndroidSchedulers.mainThread() );
 	}
 
 	public Observable< AppUpdateStatus > appUpdateStatus ( ) {
-		return mApi
+		return mApiInterface
 				.appUpdateStatus()
 				.subscribeOn( Schedulers.io() )
 				.observeOn( AndroidSchedulers.mainThread() );
@@ -120,12 +121,12 @@ public class ApiManager {
 
 	private ApiManager ( ) {
 		Retrofit retrofit = new Retrofit.Builder()
-				.baseUrl( Methods.server )
+				.baseUrl( NetworkConstant.server )
 				.addCallAdapterFactory( RxJavaCallAdapterFactory.create() )
 				.addConverterFactory( GsonConverterFactory.create() )
 				.client( genericClient() )
 				.build();
-		mApi = retrofit.create( Api.class );
+		mApiInterface = retrofit.create( ApiInterface.class );
 	}
 
 	private ApiManager ( String text ) {
@@ -158,12 +159,12 @@ public class ApiManager {
 					public void execute ( Runnable command ) {
 
 					}
-				} ).baseUrl( Methods.server )
+				} ).baseUrl( NetworkConstant.server )
 				.addCallAdapterFactory( RxJavaCallAdapterFactory.create() )
 				.addConverterFactory( GsonConverterFactory.create() )
 				.client( genericClient() )
 				.build();
-		mApi = retrofit.create( Api.class );
+		mApiInterface = retrofit.create( ApiInterface.class );
 	}
 
 	private OkHttpClient genericClient ( ) {

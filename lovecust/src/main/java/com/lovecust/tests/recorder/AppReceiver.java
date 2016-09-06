@@ -22,7 +22,7 @@ public class AppReceiver extends BroadcastReceiver {
 			case Setting.ACTION_ECUST_WIFI_RECONNECT:
 				NetUtil.flush();
 				ConsoleUtil.console( NetUtil.toReadableString() );
-				WifiConnector.check();
+				WifiConnector.checkConnection();
 				break;
 			case Intent.ACTION_BATTERY_CHANGED:
 				AppContext.mBatteryLevel = intent.getIntExtra( "scale", -1 );

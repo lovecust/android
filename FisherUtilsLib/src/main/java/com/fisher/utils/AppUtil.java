@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.os.Build;
+import android.support.annotation.StringRes;
 import android.telephony.TelephonyManager;
 
 import com.google.gson.Gson;
@@ -518,7 +519,7 @@ public class AppUtil {
 		return AppUtil.getContext().getResources().getColor(colorResourceId);
 	}
 
-	public static String getString(int id) {
+	public static String getString(@StringRes int id) {
 		return AppUtil.getContext().getString(id);
 	}
 

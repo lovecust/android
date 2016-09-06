@@ -34,8 +34,6 @@ public class FileUtil {
 
 	public static final String charset = "UTF-8";
 	public static final String CHARSET_UTF_8 = "UTF-8";
-	public static final String CHARSET_GBK = "GBK";
-	public static final String CHARSET_UTF_16 = "UTF-16";
 
 
 	public static File getInternalFile ( String filename ) {

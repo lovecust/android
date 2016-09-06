@@ -14,8 +14,8 @@
 			layout="@layout/title_bar_subpage"/>
 
 		<RelativeLayout
-			style="@style/setting_item_holder"
-			android:onClick="btnSettingAutoConnect">
+			android:id="@+id/rl_auto_connect"
+			style="@style/setting_item_holder">
 
 			<TextView
 				style="@style/setting_item_title"
@@ -32,8 +32,8 @@
 			style="@style/decoration_line"/>
 
 		<RelativeLayout
-			style="@style/setting_item_holder"
-			android:onClick="btnSettingUsername">
+			android:id="@+id/rl_cid"
+			style="@style/setting_item_holder">
 
 			<TextView
 				style="@style/setting_item_title"
@@ -50,8 +50,8 @@
 			style="@style/decoration_line"/>
 
 		<RelativeLayout
-			style="@style/setting_item_holder"
-			android:onClick="btnSettingPassword">
+			android:id="@+id/rl_pwd"
+			style="@style/setting_item_holder">
 
 			<TextView
 				style="@style/setting_item_title"
@@ -60,8 +60,8 @@
 			<TextView
 				android:id="@+id/settingPassword"
 				style="@style/setting_item_option_text"
-				android:inputType="textPassword"
-				android:hint="********"/>
+				android:hint="********"
+				android:inputType="textPassword"/>
 
 		</RelativeLayout>
 
@@ -108,8 +108,8 @@
 
 
 		<RelativeLayout
-			style="@style/setting_item_holder"
-			android:onClick="btnSettingCheckInternet">
+			android:id="@+id/rl_check_connection"
+			style="@style/setting_item_holder">
 
 			<TextView
 				style="@style/setting_item_title"
