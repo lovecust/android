@@ -14,23 +14,23 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 
-public class EcustParams {
+public class WifiLoggingInHelper {
 
 	private final String redirect;
 	public String user_ip = "";
 	private String nas_ip = "";
 	private String user_mac = "";
-	private int ac_id = 16;
+	private int ac_id;
 
-	public static EcustParams getInstance ( String redirect ) {
-		return new EcustParams( redirect ).init();
+	public static WifiLoggingInHelper getInstance ( String redirect ) {
+		return new WifiLoggingInHelper( redirect ).init();
 	}
 
-	private EcustParams ( String redirect ) {
+	private WifiLoggingInHelper ( String redirect ) {
 		this.redirect = redirect;
 	}
 
-	private EcustParams init ( ) {
+	private WifiLoggingInHelper init ( ) {
 		String path = redirect.substring( redirect.indexOf( '?' ) + 1 );
 		String[] params = path.split( "&" );
 		for ( String param : params ) {
@@ -43,6 +43,7 @@ public class EcustParams {
 					break;
 			}
 		}
+		ac_id = SettingWifi.getInstance().getChannel();
 		return this;
 	}
 

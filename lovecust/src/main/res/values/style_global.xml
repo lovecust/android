@@ -46,6 +46,7 @@
 		<item name="android:textSize">@dimen/text_default</item>
 		<item name="android:textColor">@color/text</item>
 	</style>
+
 	<style name="text_big" parent="text">
 		<item name="android:textSize">@dimen/text_normal</item>
 	</style>
@@ -66,6 +67,7 @@
 		<item name="android:textColor">@color/text_description</item>
 		<item name="android:textSize">@dimen/text_smaller</item>
 	</style>
+
 	<style name="text_hint_multiline" parent="text_hint">
 		<!-- TODO change the name as text_something -->
 		<item name="android:singleLine">false</item>
@@ -188,10 +190,6 @@
 	</style>
 
 
-
-
-
-
 	<style name="setting_item_holder">
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">@dimen/setting_item_height</item>
@@ -199,9 +197,11 @@
 		<item name="android:paddingRight">@dimen/setting_item_padding_right</item>
 		<item name="android:background">?android:attr/selectableItemBackground</item>
 	</style>
+
 	<style name="setting_item_title" parent="text">
 		<item name="android:layout_centerVertical">true</item>
 	</style>
+
 	<style name="setting_item_option_text" parent="text">
 		<item name="android:textSize">@dimen/text_small</item>
 		<item name="android:layout_centerVertical">true</item>

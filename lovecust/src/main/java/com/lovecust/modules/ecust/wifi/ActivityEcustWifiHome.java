@@ -21,6 +21,8 @@ public class ActivityEcustWifiHome extends BaseActivity {
 	TextView settingUsername;
 	@Bind( R.id.settingPassword )
 	TextView settingPassword;
+	@Bind( R.id.tv_channel )
+	TextView mTvChannel;
 
 	private SettingWifi wifi;
 
@@ -48,12 +50,15 @@ public class ActivityEcustWifiHome extends BaseActivity {
 		settingAutoConnect.setText( wifi.isAutoConnectText() );
 		settingUsername.setText( wifi.getUsername() );
 		settingPassword.setText( wifi.getPassword() );
+		mTvChannel.setText( String.valueOf( wifi.getChannel() ) );
+
 	}
 
-	@OnClick( { R.id.rl_auto_connect, R.id.rl_check_connection, R.id.rl_pwd, R.id.rl_cid } )
+	@OnClick( { R.id.rl_auto_connect, R.id.rl_channel, R.id.rl_check_connection, R.id.rl_cid, R.id.rl_pwd } )
 	public void onBtnClick ( View view ) {
 		switch ( view.getId() ) {
 			case R.id.rl_auto_connect:
+				// Set whether login Wifi server automatically
 				if ( wifi.isAutoConnect() ) {
 					DialogConfirmation.newDialog( this ).init( getString( R.string.dialog_title_confirmation_auto_connect ) )
 							.setOnActionResultListener( new DialogConfirmation.OnActionResultListener() {
@@ -79,7 +84,24 @@ public class ActivityEcustWifiHome extends BaseActivity {
 					render();
 				}
 				break;
+			case R.id.rl_channel:
+				// Set connection channel
+				DialogEdittext.newDialog( this ).init( R.string.dialog_title_ecust_wifi_channel ).toInputMethodNumber()
+						.setEdittext( String.valueOf( wifi.getChannel() ) ).setHintText( R.string.hint_ecust_wifi_channel )
+						.setOnActionResultListener( new DialogEdittext.OnActionResultListener() {
+							@Override
+							public void onActionCommit ( String input ) {
+								wifi.setChannel( Integer.valueOf( input ) ).save();
+								render();
+							}
+						} ).show();
+				break;
+			case R.id.rl_check_connection:
+				// Check connection manually and login if offline
+				WifiConnector.checkConnection();
+				break;
 			case R.id.rl_cid:
+				// Set login campus id
 				DialogEdittext.newDialog( this ).init( getString( R.string.dialog_title_input_campus_id ) ).toInputMethodNumber().setDigitsAndAlphabets()
 						.setEdittext( wifi.getUsername() ).setHintText( R.string.hint_profile_uid )
 						.setOnActionResultListener( new DialogEdittext.OnActionResultListener() {
@@ -89,13 +111,10 @@ public class ActivityEcustWifiHome extends BaseActivity {
 								render();
 							}
 
-							@Override
-							public void onActionCancel ( ) {
-
-							}
 						} ).show();
 				break;
 			case R.id.rl_pwd:
+				// Set login password
 				DialogEdittext.newDialog( this ).init( getString( R.string.dialog_title_input_password ) ).toPasswordMode()
 						.setEdittext( wifi.getPassword() )
 						.setOnActionResultListener( new DialogEdittext.OnActionResultListener() {
@@ -105,14 +124,7 @@ public class ActivityEcustWifiHome extends BaseActivity {
 								render();
 							}
 
-							@Override
-							public void onActionCancel ( ) {
-
-							}
 						} ).show();
-				break;
-			case R.id.rl_check_connection:
-				WifiConnector.checkConnection();
 				break;
 			default:
 				LogUtil.e( R.string.error_fatal_unhandled_click_event );

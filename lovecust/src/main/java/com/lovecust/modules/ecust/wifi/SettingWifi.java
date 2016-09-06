@@ -19,7 +19,7 @@ public class SettingWifi {
 	private long cancelNotificationDelayTime = 8000;
 	private String username = "";
 	private String password = "";
-
+	private int channel = 16;
 
 	private static SettingWifi setting;
 
@@ -32,7 +32,7 @@ public class SettingWifi {
 				setting = new Gson().fromJson(json, SettingWifi.class);
 			} catch (JsonSyntaxException e) {
 				e.printStackTrace();
-				BugsUtil.onFatalError("SettingWifi.flush()-> json string format failed[ configure edited ]!");
+				BugsUtil.onFatalError("SettingWifi.save()-> json string format failed[ configure edited ]!");
 			}
 		}
 		if (null == setting)
@@ -40,7 +40,7 @@ public class SettingWifi {
 		return setting;
 	}
 
-	public void flush() {
+	public void save() {
 		System.currentTimeMillis();
 		Calendar.getInstance().getTime();
 		FileUtil.writeFileWithoutException(FileUtil.getInternalFile(Setting.FILE_GSON_SETTING_ECUST_WIFI), new Gson().toJson(this));
@@ -68,12 +68,12 @@ public class SettingWifi {
 		if (this.autoConnect == autoConnect)
 			return;
 		this.autoConnect = autoConnect;
-		flush();
+		save();
 	}
 
 	public void toggleAutoConnect() {
 		this.autoConnect = !autoConnect;
-		flush();
+		save();
 	}
 
 	public boolean isSendNotification() {
@@ -84,7 +84,7 @@ public class SettingWifi {
 		if (this.sendNotification == sendNotification)
 			return;
 		this.sendNotification = sendNotification;
-		flush();
+		save();
 	}
 
 	public long getCancelNotificationDelayTime() {
@@ -95,7 +95,7 @@ public class SettingWifi {
 		if (this.cancelNotificationDelayTime == cancelNotificationDelayTime)
 			return;
 		this.cancelNotificationDelayTime = cancelNotificationDelayTime;
-		flush();
+		save();
 	}
 
 	public String getUsername() {
@@ -106,7 +106,7 @@ public class SettingWifi {
 		if (this.username.equals(username))
 			return;
 		this.username = username;
-		flush();
+		save();
 	}
 
 	public String getPassword() {
@@ -117,6 +117,15 @@ public class SettingWifi {
 		if (this.password.equals(password))
 			return;
 		this.password = password;
-		flush();
+		save();
+	}
+
+	public int getChannel ( ) {
+		return channel;
+	}
+
+	public SettingWifi setChannel ( int channel ) {
+		this.channel = channel;
+		return this;
 	}
 }

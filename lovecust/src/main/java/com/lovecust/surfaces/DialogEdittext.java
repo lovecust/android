@@ -2,6 +2,7 @@ package com.lovecust.surfaces;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.support.annotation.StringRes;
 import android.text.InputType;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,10 +16,12 @@ import com.fisher.utils.EdittextUtil;
 
 
 public class DialogEdittext extends AlertDialog implements View.OnClickListener {
-	public interface OnActionResultListener {
-		void onActionCommit(String input);
+	public static abstract class OnActionResultListener {
+		public abstract void onActionCommit ( String input );
 
-		void onActionCancel();
+		public void onActionCancel(){
+
+		}
 	}
 
 	private OnActionResultListener listener;
@@ -46,6 +49,10 @@ public class DialogEdittext extends AlertDialog implements View.OnClickListener 
 		if (system) {
 			getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
 		}
+	}
+
+	public DialogEdittext init(@StringRes int strResId){
+		return init( getContext().getString( strResId ) );
 	}
 
 	public DialogEdittext init(String title) {

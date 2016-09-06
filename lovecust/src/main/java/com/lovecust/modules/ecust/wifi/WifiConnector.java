@@ -78,21 +78,21 @@ public class WifiConnector {
 			APILib.Response res = APILib.request( EcustWifiConstant.URL_BAIDU );
 			String url = parseURL( res.response );
 			if ( TextUtils.isEmpty( url ) ) {
-				noticeError( AppUtil.getString( R.string.error_ecust_wifi_url_expected_not_found ), AppUtil.getString( R.string.notice_click_to_retry ) );
-				BugsUtil.onFatalError( AppUtil.getString( R.string.error_ecust_wifi_url_expected_not_found ), res.code + ": " + res.response );
+				noticeError( AppUtil.getString( R.string.notice_ecust_wifi_server_error_with_code ), AppUtil.getString( R.string.notice_click_to_retry ) );
+				BugsUtil.onFatalError( AppUtil.getString( R.string.notice_ecust_wifi_server_error_with_code ), res.code + ": " + res.response );
 				return;
 			}
 			res = APILib.request( url );
 			if ( res.code != HttpURLConnection.HTTP_OK ) {
 				if ( res.code == HttpURLConnection.HTTP_MOVED_TEMP || res.code == HttpURLConnection.HTTP_MOVED_PERM || res.code == HttpURLConnection.HTTP_SEE_OTHER ) {
 					String direction = res.getConnection().getHeaderField( "Location" );
-					boolean status = EcustParams.getInstance( direction ).connect();
+					boolean status = WifiLoggingInHelper.getInstance( direction ).connect();
 					if ( status ) {
 						APILib.Response response = APILib.request( NetworkConstant.server + NetworkConstant.APP_INTERNET_STATUS );
 						if ( AppContext.mDebug && response.code == HttpURLConnection.HTTP_OK ) {
 							if ( !"{\"code\":0}".equals( response.response ) ) {
 								String temp = ConsoleUtil.console( "Unexpected response: " + response.response );
-								BugsUtil.onFatalError( "EcustParams.login()-> " + temp );
+								BugsUtil.onFatalError( "WifiLoggingInHelper.login()-> " + temp );
 							} else {
 								LogUtil.log( "fisher.log", "got okay!" );
 							}

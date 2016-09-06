@@ -24,7 +24,7 @@
 			<TextView
 				android:id="@+id/settingAutoConnect"
 				style="@style/setting_item_option_text"
-				android:hint="Off"/>
+				android:hint="@string/hint_ecust_wifi_auto_connect"/>
 
 		</RelativeLayout>
 
@@ -57,11 +57,32 @@
 				style="@style/setting_item_title"
 				android:text="@string/setting_wifi_password"/>
 
-			<TextView
+			<EditText
 				android:id="@+id/settingPassword"
 				style="@style/setting_item_option_text"
-				android:hint="********"
+				android:background="@color/transparent"
+				android:clickable="false"
+				android:focusable="false"
+				android:hint="@string/hint_password"
 				android:inputType="textPassword"/>
+
+		</RelativeLayout>
+
+		<TextView
+			style="@style/decoration_line"/>
+
+		<RelativeLayout
+			android:id="@+id/rl_channel"
+			style="@style/setting_item_holder">
+
+			<TextView
+				style="@style/setting_item_title"
+				android:text="@string/text_ecust_wifi_channel_title"/>
+
+			<TextView
+				android:id="@+id/tv_channel"
+				style="@style/setting_item_option_text"
+				android:hint="@string/hint_ecust_wifi_channel"/>
 
 		</RelativeLayout>
 

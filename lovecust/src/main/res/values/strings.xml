@@ -150,7 +150,7 @@
 	<string name="about_update_button_text_device_offline">设备处于离线状态</string>
 	<string name="about_update_button_text_install_now">现在安装</string>
 	<string name="about_update_button_text_download_and_install">现在下载安装!</string>
-	<string name="setting_wifi_check_internet">现在检查网络连接!</string>
+	<string name="setting_wifi_check_internet">手动检查网络连接!</string>
 	<string name="hint_ecust_jwc_comment">说点儿什么吧！</string>
 	<string name="submit">发送</string>
 	<string name="title_ecust_morning_exercise">晨跑查询</string>
@@ -178,10 +178,14 @@
 	<string name="explore_todo_done">已完成</string>
 	<string name="explore_todo_removed">已移除</string>
 	<string name="explore_todo_okay">便签</string>
-	<string name="error_ecust_wifi_url_expected_not_found">Error(-3028): did not detect url expected!</string>
-	<string name="notice_ecust_wifi_failed_to_login">failed to log in Ecust Wifi!</string>
-	<string name="notice_ecust_wifi_server_error_with_code">"ecust error happened, got code: "</string>
+	<string name="notice_ecust_wifi_failed_to_login">Wifi 登录失败</string>
+	<string name="notice_ecust_wifi_server_error_with_code">"华理服务器错误, 错误码: "</string>
 	<string name="error_fatal_unhandled_click_event">Unhandled Click Event!</string>
+	<string name="text_ecust_wifi_channel_title">登录通道(ac_id)</string>
+	<string name="hint_ecust_wifi_channel">16</string>
+	<string name="hint_password">********</string>
+	<string name="dialog_title_ecust_wifi_channel">Login Channel</string>
+	<string name="hint_ecust_wifi_auto_connect">Off</string>
 
 
 </resources>

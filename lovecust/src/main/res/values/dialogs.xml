@@ -6,7 +6,7 @@
 
 	<style name="dialog_title" parent="text">
 		<item name="android:padding">10dp</item>
-		<item name="android:textSize">@dimen/text_normal</item>
+		<item name="android:textSize">@dimen/text_big</item>
 	</style>
 
 	<style name="dialog_default_button_holder">

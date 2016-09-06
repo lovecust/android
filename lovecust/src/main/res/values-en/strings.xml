@@ -166,8 +166,13 @@
 	<string name="explore_todo_done">DONE</string>
 	<string name="explore_todo_removed">REMOVED</string>
 	<string name="explore_todo_okay">OKAY</string>
-	<string name="notice_ecust_wifi_failed_to_login">failed to log in Ecust Wifi!</string>
+	<string name="notice_ecust_wifi_failed_to_login">Failed to log in Ecust Wifi!</string>
 	<string name="error_fatal_unhandled_click_event">Unhandled Click Event!</string>
+	<string name="hint_password">********</string>
+	<string name="text_ecust_wifi_channel_title">Channel(ac_id)</string>
+	<string name="notice_ecust_wifi_server_error_with_code">"Ecust server fatal error with code: "</string>
+	<string name="hint_ecust_wifi_channel">16</string>
+	<string name="hint_ecust_wifi_auto_connect">Off</string>
 
 
 </resources>
