@@ -25,5 +25,7 @@ dependencies {
 
     // Decode from json and encode to json; Added by Fisher at 2016-09-04 21:27;
     compile 'com.google.code.gson:gson:2.4'
-
+    // For BaseRecyclerViewAdapter usage.
+    // Added by Fisher at 01:58 on 2016-11-21.
+    compile 'com.android.support:recyclerview-v7:24.2.1'
 }
