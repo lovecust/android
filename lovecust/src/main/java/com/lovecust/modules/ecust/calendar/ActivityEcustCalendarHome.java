@@ -42,7 +42,7 @@ public class ActivityEcustCalendarHome extends BaseActivity {
 			return;
 		}
 
-		String url = "https://raw.githubusercontent.com/fisher1995/lovecust-assets/master/images/ecust-calendar-2016a.png";
+		String url = "https://raw.githubusercontent.com/lovecust/assets/master/images/ecust-calendar-2016a.png";
 		HTTPUtil.download( url, file, new HTTPUtil.OnDownloadCompleteListener() {
 			@Override
 			public void onCompleted ( File file ) {

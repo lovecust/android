@@ -49,7 +49,6 @@ public class WifiConnector {
 				try {
 					APILib.Response res = APILib.request( APILib.URL_ECUST_WIFI_CHECK );
 					if ( EcustWifiConstant.STATUS_NOT_ONLINE.equals( res.response ) ) {
-						stime = System.currentTimeMillis();
 						loginNow();
 					} else {
 						// Show notification for online;
@@ -74,6 +73,7 @@ public class WifiConnector {
 	 */
 	public static void loginNow ( ) {
 		try {
+			stime = System.currentTimeMillis();
 			postNotification( AppUtil.getString( R.string.notice_wifi_device_is_offline ), AppUtil.getString( R.string.notice_wifi_logging_in ) );
 			APILib.Response res = APILib.request( EcustWifiConstant.URL_BAIDU );
 			String url = parseURL( res.response );
@@ -97,9 +97,10 @@ public class WifiConnector {
 								LogUtil.log( "fisher.log", "got okay!" );
 							}
 						}
+						double usingTime = ( System.currentTimeMillis() - stime ) / 1000.0;
 						for ( int i = 8; i > 0; i-- ) {
 							String content = AppUtil.getString( R.string.notice_wifi_notice_disappear_in_n_secs_header ) + i + AppUtil.getString( R.string.notice_wifi_notice_disappear_in_n_secs_footer );
-							flushNotification( AppUtil.getString( R.string.notice_wifi_logged_in ), content );
+							flushNotification( String.format( AppUtil.getString( R.string.notice_wifi_logged_in_with_time ), usingTime ), content );
 							Thread.sleep( 1000 );
 						}
 						NotificationUtil.cancel();

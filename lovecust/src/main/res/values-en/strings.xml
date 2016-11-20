@@ -101,7 +101,7 @@
 	<string name="notice_wifi_notice_disappear_in_n_secs_footer">" seconds"</string>
 	<string name="notice_wifi_logging_in">logging in!</string>
 	<string name="notice_wifi_device_is_offline">device is offline and please wait for a while!</string>
-	<string name="notice_wifi_logged_in">logged in Ecust Wifi Server now and have a great day!</string>
+	<string name="notice_wifi_logged_in_with_time">logged in Ecust Wifi Server now within %.2f secs!</string>
 
 	<string name="title_ecust_library">Ecust Library</string>
 	<string name="title_ecust_classroom">Available Classroom</string>
@@ -174,6 +174,7 @@
 	<string name="hint_ecust_wifi_channel">16</string>
 	<string name="hint_ecust_wifi_auto_connect">Off</string>
 	<string name="text_home_nav_week_model">%dth</string>
+	<string name="dialog_title_ecust_wifi_channel">Channel(ac_id)</string>
 
 
 </resources>

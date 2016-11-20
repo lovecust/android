@@ -291,6 +291,9 @@ public class ActivityProfileHome extends BaseActivity implements View.OnClickLis
 		Bundle extras = data.getExtras();
 		if ( extras != null ) {
 			Bitmap photo = extras.getParcelable( "data" );
+			if(null == photo){
+				return;
+			}
 			try {
 				photo.compress( Bitmap.CompressFormat.PNG, 100, new FileOutputStream( FileUtil.getInternalFile( Setting.FILE_PROFILE_AVATAR ) ) );
 			} catch ( FileNotFoundException e ) {

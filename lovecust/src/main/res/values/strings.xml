@@ -121,7 +121,7 @@
 	<string name="notice_wifi_notice_disappear_in_n_secs_footer">秒后消失 -.-</string>
 	<string name="notice_wifi_logging_in">正在登录校园wifi</string>
 	<string name="notice_wifi_device_is_offline">设备处于离线状态，请稍等</string>
-	<string name="notice_wifi_logged_in">登录校园wifi成功</string>
+	<string name="notice_wifi_logged_in_with_time">登录校园 wifi 成功, 用时%.2f秒</string>
 	<string name="toast_feedback_set_nick_before_post">留言前，请先设置您的昵称！</string>
 
 	<string name="ecust_library_text_students_amount_today_before">"今日入馆人数: "</string>
