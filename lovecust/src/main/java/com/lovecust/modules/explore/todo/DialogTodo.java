@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.BaseRecyclerViewAdapter;
+import com.fisher.utils.app.BaseRecyclerViewAdapter;
 import com.lovecust.app.AppContext;
 import com.fisher.utils.EdittextUtil;
 

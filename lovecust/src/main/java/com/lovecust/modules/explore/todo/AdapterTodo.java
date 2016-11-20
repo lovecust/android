@@ -5,8 +5,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.lovecust.app.R;
-import com.lovecust.app.BaseRecyclerViewAdapter;
-import com.lovecust.app.BaseRecyclerViewHolder;
+import com.fisher.utils.app.BaseRecyclerViewAdapter;
+import com.fisher.utils.app.BaseRecyclerViewHolder;
 import com.lovecust.surfaces.DialogEdittext;
 import com.fisher.utils.AppUtil;
 import com.fisher.utils.ConsoleUtil;

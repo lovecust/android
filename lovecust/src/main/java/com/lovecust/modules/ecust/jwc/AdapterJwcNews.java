@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 import com.lovecust.app.R;
 import com.lovecust.entities.EcustJwcNews;
-import com.lovecust.app.BaseRecyclerViewAdapter;
-import com.lovecust.app.BaseRecyclerViewHolder;
+import com.fisher.utils.app.BaseRecyclerViewAdapter;
+import com.fisher.utils.app.BaseRecyclerViewHolder;
 import com.lovecust.app.Setting;
 import com.fisher.utils.ConsoleUtil;
 

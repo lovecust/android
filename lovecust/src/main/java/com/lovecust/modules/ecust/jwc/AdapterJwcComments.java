@@ -7,8 +7,8 @@ import android.widget.ImageView;
 
 import com.lovecust.app.R;
 import com.lovecust.entities.UtilComment;
-import com.lovecust.app.BaseRecyclerViewAdapter;
-import com.lovecust.app.BaseRecyclerViewHolder;
+import com.fisher.utils.app.BaseRecyclerViewAdapter;
+import com.fisher.utils.app.BaseRecyclerViewHolder;
 import com.fisher.utils.TimeUtil;
 import com.squareup.picasso.Picasso;
 
