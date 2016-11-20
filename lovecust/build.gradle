@@ -25,12 +25,12 @@ android {
             storePassword mKeystoreProperties['storePassword']
         }
     }
-    compileSdkVersion 23
-    buildToolsVersion '24.0.0 rc4'
+    compileSdkVersion 24
+    buildToolsVersion '24.0.2'
     defaultConfig {
         applicationId 'com.lovecust.default'
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 24
         versionName 'v0.0.0'
         signingConfig signingConfigs.SigingLovecust
         versionCode 0
@@ -57,7 +57,7 @@ android {
         LovecustDebug {
             minSdkVersion 15
             applicationId 'com.lovecust.debug'
-            targetSdkVersion 23
+            targetSdkVersion 24
             versionName 'v0.8.6'
             signingConfig signingConfigs.SigingLovecust
             versionCode 86
@@ -65,7 +65,7 @@ android {
         LovecustRelease {
             minSdkVersion 15
             applicationId 'com.lovecust.app'
-            targetSdkVersion 23
+            targetSdkVersion 24
             versionName 'v0.9.6'
             signingConfig signingConfigs.SigingLovecust
             versionCode 96
@@ -74,7 +74,7 @@ android {
             minSdkVersion 15
             applicationId 'com.lovecust.test'
             signingConfig signingConfigs.SigingLovecust
-            targetSdkVersion 23
+            targetSdkVersion 24
             versionCode 76
             versionName 'v0.7.6'
         }
@@ -86,10 +86,10 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile project(':FisherUtilsLib')
-    compile 'com.android.support:cardview-v7:23.4.0'
-    compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
     compile 'com.google.code.gson:gson:2.4'
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
