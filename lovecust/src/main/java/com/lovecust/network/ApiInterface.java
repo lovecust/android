@@ -24,42 +24,42 @@ import rx.Observable;
  */
 public interface ApiInterface {
 	/* ecust apis */
-	@POST( NetworkConstant.ECUST_LIBRARY_STATUS )
-	Observable< EcustLibraryStatus > ecustLibraryStatus ( );
+	@POST(NetworkConstant.ECUST_LIBRARY_STATUS)
+	Observable<EcustLibraryStatus> ecustLibraryStatus();
 
-	@POST( NetworkConstant.ECUST_JWC_LIST )
-	Observable< EcustJwcNews[] > ecustJwcList ( );
+	@POST(NetworkConstant.ECUST_JWC_LIST)
+	Observable<EcustJwcNews[]> ecustJwcList();
 
-	@POST( NetworkConstant.ECUST_JWC_COMMENT_CREATE )
-	Observable< Nothing > ecustJwcCommentCreate ( @Body UtilComment comment );
-
-	@FormUrlEncoded
-	@POST( NetworkConstant.ECUST_JWC_COMMENT_LIST )
-	Observable< UtilComment[] > ecustJwcCommentList ( @Field( "fid" ) String fid );
+	@POST(NetworkConstant.ECUST_JWC_COMMENT_CREATE)
+	Observable<Nothing> ecustJwcCommentCreate(@Body UtilComment comment);
 
 	@FormUrlEncoded
-	@POST( NetworkConstant.ECUST_JWC_FETCH )
-	Observable< EcustJwcNews > ecustJwcFetch ( @Field( "id" ) String md5 );
+	@POST(NetworkConstant.ECUST_JWC_COMMENT_LIST)
+	Observable<UtilComment[]> ecustJwcCommentList(@Field("fid") String fid);
+
+	@FormUrlEncoded
+	@POST(NetworkConstant.ECUST_JWC_FETCH)
+	Observable<EcustJwcNews> ecustJwcFetch(@Field("id") String md5);
 
 	/* app apis */
-	@POST( NetworkConstant.APP_UPDATE_STATUS )
-	Observable< AppUpdateStatus > appUpdateStatus ( );
+	@POST(NetworkConstant.APP_UPDATE_STATUS)
+	Observable<AppUpdateStatus> appUpdateStatus();
 
-	@POST( NetworkConstant.APP_PROFILE_UPDATE )
-	Observable< Nothing > appProfileUpdate ( @Body AppProfile profile );
+	@POST(NetworkConstant.APP_PROFILE_UPDATE)
+	Observable<Nothing> appProfileUpdate(@Body AppProfile profile);
 
 	@Multipart
-	@POST( NetworkConstant.APP_PROFILE_AVATAR )
-	Observable< AppProfileAvatar > appProfileAvatar ( @Part() MultipartBody.Part avatar );
+	@POST(NetworkConstant.APP_PROFILE_AVATAR)
+	Observable<AppProfileAvatar> appProfileAvatar(@Part() MultipartBody.Part avatar);
 
 	@FormUrlEncoded
-	@POST( NetworkConstant.APP_FEEDBACK_CREATE )
-	Observable< Nothing > appFeedbackCreate (
-			@Field( "nick" ) String nick
-			, @Field( "value" ) String value );
+	@POST(NetworkConstant.APP_FEEDBACK_CREATE)
+	Observable<Nothing> appFeedbackCreate(
+			@Field("nick") String nick
+			, @Field("value") String value);
 
-	@POST( NetworkConstant.APP_FEEDBACK_FETCH )
-	Observable< AppFeedback[] > appFeedbackFetch ( );
+	@POST(NetworkConstant.APP_FEEDBACK_FETCH)
+	Observable<AppFeedback[]> appFeedbackFetch();
 
 
 }
