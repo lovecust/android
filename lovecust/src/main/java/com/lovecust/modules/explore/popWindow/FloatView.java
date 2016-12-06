@@ -19,7 +19,10 @@ import com.fisher.utils.ConsoleUtil;
 import com.fisher.utils.DensityUtils;
 
 public class FloatView {
+
 	private final ServicePopWindowFisher context;
+	private final int mScreenWidth;
+	private final int mScreenHeight;
 
 	private WindowManager mWindowManager;
 	private WindowManager.LayoutParams wmParams;
@@ -32,6 +35,8 @@ public class FloatView {
 
 	public FloatView(ServicePopWindowFisher servicePopWindowFisher) {
 		this.context = servicePopWindowFisher;
+		mScreenWidth = DensityUtils.getScreenWidth(context);
+		mScreenHeight = DensityUtils.getScreenHeight(context);
 	}
 
 	public FloatView init() {
@@ -172,7 +177,7 @@ public class FloatView {
 		public void run() {
 			interval = System.currentTimeMillis() - this.time;
 			double temp = Math.pow((speedX * speedX + speedY * speedY), 0.5);
-			if (temp ==0){
+			if (temp == 0) {
 				log("the speed got is 0.0!");
 				return;
 			}
@@ -186,9 +191,9 @@ public class FloatView {
 
 			FloatViewImage image = FloatViewImage.getInstance();
 			int deviceBorderLeft = image.getWidth() / 2;
-			int deviceBorderRight = DensityUtils.mScreenWidth - image.getWidth() / 2;
+			int deviceBorderRight = mScreenWidth - image.getWidth() / 2;
 			int deviceBorderTop = image.getHeight() / 2;
-			int deviceBorderBottom = DensityUtils.mScreenHeight - image.getHeight() / 2;
+			int deviceBorderBottom = mScreenHeight - image.getHeight() / 2;
 			while (true) {
 				x += speedX * (interval);
 				y += speedY * (interval);
@@ -200,7 +205,7 @@ public class FloatView {
 					log("handler is null and exit now!");
 					return;
 				}
-					handler.sendEmptyMessage(200);
+				handler.sendEmptyMessage(200);
 
 				if (speedX > 0)
 					speedX -= forceX;
