@@ -1,0 +1,3 @@
+[submodule "FisherUtilsLib"]
+	path = FisherUtilsLib
+	url = git@github.com:fisher95/android-utils.git
