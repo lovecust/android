@@ -3,7 +3,7 @@ package com.lovecust.app;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lovecust.constants.NetworkConstant;
+import com.lovecust.network.NetworkConstant;
 import com.lovecust.modules.ecust.wifi.ActivityEcustWifiHome;
 import com.lovecust.modules.app.feedback.ActivityFeedbackHome;
 import com.lovecust.modules.app.launcher.grid.ActivityLauncherGridHome;

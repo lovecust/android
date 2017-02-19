@@ -14,31 +14,32 @@ import butterknife.ButterKnife;
 
 public abstract class BaseFragment extends Fragment {
 
-	public abstract int getLayoutID ( );
 
-	public abstract void init ( );
+	public abstract int getLayoutID();
+
+	public abstract void init();
 
 	@Nullable
 	@Override
-	public View onCreateView ( LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState ) {
-		View view = inflater.inflate( getLayoutID(), container, false );
-		ButterKnife.bind( this, view );
-		setHasOptionsMenu( true );
+	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+		View view = inflater.inflate(getLayoutID(), container, false);
+		ButterKnife.bind(this, view);
+		setHasOptionsMenu(true);
 		init();
 		return view;
 	}
 
 	@Override
-	public void onDestroyView ( ) {
+	public void onDestroyView() {
 		super.onDestroyView();
-		ButterKnife.unbind( this );
+		ButterKnife.unbind(this);
 	}
 
-	protected String toast ( int stringId ) {
-		return toast( getString( stringId ) );
+	protected String toast(int stringId) {
+		return toast(getString(stringId));
 	}
 
-	protected String toast ( String msg ) {
-		return ToastUtil.toastLong( getContext(), msg );
+	protected String toast(String msg) {
+		return ToastUtil.toastLong(getContext(), msg);
 	}
 }

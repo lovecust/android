@@ -1,6 +1,6 @@
 package com.lovecust.modules.ecust.wifi;
 
-import com.lovecust.network.ApiManager;
+import com.lovecust.utils.NetworkManager;
 import com.fisher.utils.ConsoleUtil;
 import com.fisher.utils.FileUtil;
 
@@ -37,8 +37,8 @@ public class APILib {
 		conn.setConnectTimeout( 15000 );
 		// set headers
 		// TODO trim headers
-		conn.addRequestProperty( "agent", ApiManager.getAgent() );
-		conn.addRequestProperty( "lovecust", ApiManager.getHeader() );
+		conn.addRequestProperty( "agent", NetworkManager.getAgent() );
+		conn.addRequestProperty( "lovecust", NetworkManager.getHeader() );
 		if ( null != params && !"".equals( params ) ) {
 			conn.setRequestMethod( "POST" );
 			conn.setDoOutput( true );

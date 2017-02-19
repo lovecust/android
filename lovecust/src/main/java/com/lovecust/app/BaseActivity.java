@@ -21,45 +21,45 @@ public abstract class BaseActivity extends SwipeBackActivity implements View.OnC
 	private boolean exit = true;
 	protected boolean isSwipeExit = true;
 
-	public abstract int getLayout ( );
+	public abstract int getLayout();
 
-	public abstract void init ( );
+	public abstract void init();
 
 	@Override
-	protected void onCreate ( @Nullable Bundle savedInstanceState ) {
-		super.onCreate( savedInstanceState );
-		setContentView( getLayout() );
-		ButterKnife.bind( this );
-		if ( isSwipeExit ) {
-			getSwipeBackLayout().setEdgeTrackingEnabled( SwipeBackLayout.EDGE_LEFT );
+	protected void onCreate(@Nullable Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(getLayout());
+		ButterKnife.bind(this);
+		if (isSwipeExit) {
+			getSwipeBackLayout().setEdgeTrackingEnabled(SwipeBackLayout.EDGE_LEFT);
 		} else {
-			getSwipeBackLayout().setEnableGesture( false );
+			getSwipeBackLayout().setEnableGesture(false);
 		}
 		init();
 	}
 
 	@Override
-	protected void onDestroy ( ) {
-		ButterKnife.unbind( this );
+	protected void onDestroy() {
+		ButterKnife.unbind(this);
 		super.onDestroy();
 	}
 
 	@Override
-	public void setTitle ( int id ) {
-		setTitle( getString( id ) );
+	public void setTitle(int id) {
+		setTitle(getString(id));
 	}
 
-	public BaseActivity setTitle ( String title ) {
-		TextView titleTextView = ( TextView ) findViewById( R.id.titleBarTitle );
-		if ( null == titleTextView ) {
-			BugsUtil.onFatalError( "BaseActivity.setTitle()-> not found the title text view!" );
+	public BaseActivity setTitle(String title) {
+		TextView titleTextView = (TextView) findViewById(R.id.titleBarTitle);
+		if (null == titleTextView) {
+			BugsUtil.onFatalError("BaseActivity.setTitle()-> not found the title text view!");
 			return this;
 		}
-		titleTextView.setText( title );
+		titleTextView.setText(title);
 		return this;
 	}
 
-	public BaseActivity setOnBackListener ( ) {
+	public BaseActivity setOnBackListener() {
 //		View left = findViewById( R.id.titleBarOptionLeft );
 //		if ( null != left ) {
 //			left.setOnClickListener( this );
@@ -67,64 +67,64 @@ public abstract class BaseActivity extends SwipeBackActivity implements View.OnC
 		return this;
 	}
 
-	public BaseActivity setOptionText ( String text ) {
-		TextView titleTextView = ( TextView ) findViewById( R.id.titleBarOptionRight );
-		if ( null == titleTextView ) {
-			BugsUtil.onFatalError( "BaseActivity.setTitle()-> not found the title text view!" );
+	public BaseActivity setOptionText(String text) {
+		TextView titleTextView = (TextView) findViewById(R.id.titleBarOptionRight);
+		if (null == titleTextView) {
+			BugsUtil.onFatalError("BaseActivity.setTitle()-> not found the title text view!");
 			return this;
 		}
-		titleTextView.setText( text );
+		titleTextView.setText(text);
 		return this;
 	}
 
 
-	protected String toast ( int stringId ) {
-		return toast( getString( stringId ) );
+	protected String toast(int stringId) {
+		return toast(getString(stringId));
 	}
 
-	protected String toast ( String msg ) {
-		return ToastUtil.toastLong( this, msg );
+	protected String toast(String msg) {
+		return ToastUtil.toastLong(this, msg);
 	}
 
 
-	protected String log ( Object obj ) {
-		return ConsoleUtil.console( obj );
+	protected String log(Object obj) {
+		return ConsoleUtil.console(obj);
 	}
 
-	protected String log ( String msg ) {
-		ConsoleUtil.console( msg );
+	protected String log(String msg) {
+		ConsoleUtil.console(msg);
 		return msg;
 	}
 
-	public boolean isExit ( ) {
+	public boolean isExit() {
 		return exit;
 	}
 
-	public BaseActivity setExit ( boolean exit ) {
+	public BaseActivity setExit(boolean exit) {
 		this.exit = exit;
 		return this;
 	}
 
 	@Override
-	public boolean onKeyDown ( int keyCode, KeyEvent event ) {
-		if ( !exit ) {
-			if ( keyCode == KeyEvent.KEYCODE_BACK ) {
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (!exit) {
+			if (keyCode == KeyEvent.KEYCODE_BACK) {
 				// on pressed the back button -> action hide not exit
 //			if ( drawerLayout.isDrawerOpen( menu ) ) {
 //				drawerLayout.closeDrawer( menu );
 //			}
 //			else if ( !Setting.getSetting().isExitAppOnBack() ) {
-				moveTaskToBack( false );
+				moveTaskToBack(false);
 //			}
 				return true;
 			}
 		}
-		return super.onKeyDown( keyCode, event );
+		return super.onKeyDown(keyCode, event);
 	}
 
 	@Override
-	public void onClick ( View v ) {
-		switch ( v.getId() ) {
+	public void onClick(View v) {
+		switch (v.getId()) {
 			case R.id.titleBarOptionLeft:
 				finish();
 				break;
@@ -133,14 +133,14 @@ public abstract class BaseActivity extends SwipeBackActivity implements View.OnC
 	}
 
 	@Nullable
-	@OnClick( R.id.titleBarOptionLeft )
-	void btnFinish ( ) {
+	@OnClick(R.id.titleBarOptionLeft)
+	void btnFinish() {
 		finish();
 	}
 
 	@Override
-	public void finish ( ) {
+	public void finish() {
 		super.finish();
-		overridePendingTransition( R.anim.activity_push_in_from_left, R.anim.activity_push_out_to_right );
+		overridePendingTransition(R.anim.activity_push_in_from_left, R.anim.activity_push_out_to_right);
 	}
 }

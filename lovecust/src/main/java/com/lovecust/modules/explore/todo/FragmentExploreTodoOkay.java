@@ -44,14 +44,14 @@ public class FragmentExploreTodoOkay extends BaseFragment {
 			todo = new DataTodo( tag, "(没发现悬浮图标？)小米等手机需要打开显示悬浮窗权限哦-.-" );
 			todo.saveThrows();
 			total = 4;
-			/* init the data done */
+			/* flushData the data done */
 			todo = new DataTodo( tag, "Items done will be here:-)" );
 			todo.saveThrows();
 			todo.fnDone();
 			todo = new DataTodo( tag, "完成的内容会在这里哦:-)" );
 			todo.saveThrows();
 			todo.fnDone();
-			/* init the data removed */
+			/* flushData the data removed */
 			todo = new DataTodo( tag, "Removed items will be here:-)" );
 			todo.saveThrows();
 			todo.fnRemove();

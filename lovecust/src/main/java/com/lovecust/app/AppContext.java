@@ -7,12 +7,11 @@ import android.net.ConnectivityManager;
 
 
 import com.lovecust.constants.AppConstant;
-import com.lovecust.network.ApiManager;
+import com.lovecust.utils.NetworkManager;
 import com.lovecust.tests.recorder.AppReceiver;
 import com.lovecust.tests.recorder.LogPasteboard;
 import com.fisher.utils.AppUtil;
 import com.fisher.utils.ConsoleUtil;
-import com.fisher.utils.DensityUtils;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
 
@@ -64,7 +63,7 @@ public class AppContext extends LitePalApplication {
 
 		LogLevel level = AppConstant.DEBUG ? LogLevel.FULL : LogLevel.NONE;
 		Logger
-				.init("Lovecust")                 // default PRETTYLOGGER or use just init()
+				.init("Lovecust")                 // default PRETTYLOGGER or use just flushData()
 				.methodCount(3)                 // default 2
 				.hideThreadInfo()               // default shown
 				.logLevel(level)        // default LogLevel.FULL; Use LogLevel.NONE for the release versions.
@@ -73,7 +72,7 @@ public class AppContext extends LitePalApplication {
 
 		AppSetting.getInstance().flushLanguageMode();
 		if (mDebug) {
-			ConsoleUtil.console("Fisher-Home App Initialising :@ " + ApiManager.getHeader());
+			ConsoleUtil.console("Fisher-Home App Initialising :@ " + NetworkManager.getHeader());
 			LogPasteboard.init();
 
 //			AppUtil.getPhoneId();

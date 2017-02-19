@@ -6,7 +6,7 @@ import android.text.Html;
 import android.widget.ImageView;
 
 import com.lovecust.app.R;
-import com.lovecust.entities.UtilComment;
+import com.lovecust.network.entities.UtilComment;
 import com.fisher.utils.app.BaseRecyclerViewAdapter;
 import com.fisher.utils.app.BaseRecyclerViewHolder;
 import com.fisher.utils.TimeUtil;

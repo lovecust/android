@@ -1,6 +1,6 @@
 [submodule "FisherUtilsLib"]
 	path = FisherUtilsLib
-	url = git@github.com:fisher95/android-utils.git
+	url = git@github.com:fisher95/AndroidUtilsLib.git
 [submodule "LovecustNetworkLib"]
 	path = LovecustNetworkLib
 	url = git@github.com:lovecust/LovecustNetworkLib.git

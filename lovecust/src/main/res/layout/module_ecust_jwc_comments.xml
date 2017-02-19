@@ -11,6 +11,7 @@
 		android:layout_height="match_parent"
 		android:hint="No comments yet. .."
 		android:minHeight="50dp"
+		android:nestedScrollingEnabled="false"
 		android:scrollbars="vertical"/>
 
 </LinearLayout>

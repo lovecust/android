@@ -20,7 +20,7 @@ public class FloatViewImage {
 				setting = new Gson().fromJson( json, FloatViewImage.class );
 			} catch ( JsonSyntaxException e ) {
 				e.printStackTrace();
-				BugsUtil.onFatalError( "SettingWifi.flush()-> json string format failed[ configure edited ]!" );
+				BugsUtil.onFatalError( "SettingWifi.renderViews()-> json string format failed[ configure edited ]!" );
 			}
 		}
 		if ( null == setting )

@@ -8,10 +8,11 @@ import android.widget.TextView;
 
 import com.lovecust.app.R;
 import com.lovecust.modules.ecust.morning.ActivityEcustMorningExercise;
-import com.lovecust.entities.AppProfile;
+import com.lovecust.network.entities.AppProfile;
 import com.lovecust.modules.explore.todo.ActivityExploreTodoHome;
 import com.lovecust.app.BaseFragment;
 import com.lovecust.app.AppSetting;
+import com.lovecust.utils.AppProfileHelper;
 
 import java.io.File;
 
@@ -60,15 +61,15 @@ public class FragmentLauncherPageHome extends BaseFragment {
 
 	private void btnStartActivity(Class activity) {
 		getActivity().startActivity(new Intent(getActivity(), activity));
-		getActivity().overridePendingTransition(R.anim.activity_push_in_from_right, R.anim.activity_push_out_to_left );
+		getActivity().overridePendingTransition(R.anim.activity_push_in_from_right, R.anim.activity_push_out_to_left);
 	}
 
 	@Override
 	public void onResume() {
-		String name = AppProfile.getInstance().getNick();
+		String name = AppProfileHelper.getInstance().getNick();
 		if (null != name && !"".equals(name))
 			nick.setText(name);
-		File temp = AppProfile.getInstance().getAvatarFile();
+		File temp = AppProfileHelper.getAvatarFile();
 		if (null != temp && temp.exists()) {
 			avatar.setImageURI(Uri.fromFile(temp));
 		} else {

@@ -12,12 +12,13 @@ import com.lovecust.modules.ecust.calendar.ActivityEcustCalendarHome;
 import com.lovecust.modules.ecust.classroom.ActivityEcustClassroomHome;
 import com.lovecust.modules.ecust.library.ActivityEcustLibraryHome;
 import com.lovecust.app.BaseActivity;
-import com.lovecust.entities.AppProfile;
+import com.lovecust.network.entities.AppProfile;
 import com.lovecust.modules.app.profile.ActivityProfileHome;
 import com.lovecust.app.R;
 import com.lovecust.modules.app.settings.ActivitySettingHome;
 import com.lovecust.modules.app.about.ActivityAboutHome;
 import com.lovecust.modules.app.feedback.ActivityFeedbackHome;
+import com.lovecust.utils.AppProfileHelper;
 
 import java.io.File;
 
@@ -41,42 +42,45 @@ public class ActivityLauncherSlideHome extends BaseActivity {
 	}
 
 	@Override
-	public void init () {
+	public void init() {
 		setTitle(R.string.app_name);
 	}
 
 	@Override
-	protected void onResume () {
-		nick.setText( AppProfile.getInstance().getNick() );
-		File temp = AppProfile.getInstance().getAvatarFile();
-		if ( null != temp && temp.exists() )
-			avatar.setImageURI( Uri.fromFile( temp ) );
+	protected void onResume() {
+		nick.setText(AppProfileHelper.getInstance().getNick());
+		File temp = AppProfileHelper.getAvatarFile();
+		if (null != temp && temp.exists())
+			avatar.setImageURI(Uri.fromFile(temp));
 		super.onResume();
 	}
 
 
-	public void btnProfile ( View view ) {
-		startActivity( new Intent( this, ActivityProfileHome.class ) );
+	public void btnProfile(View view) {
+		startActivity(new Intent(this, ActivityProfileHome.class));
 	}
 
-	public void btnEcustCalendar ( View view ) {
-		startActivity( new Intent( this, ActivityEcustCalendarHome.class ) );
-	}
-	public void btnEcustLibrary ( View view ) {
-		startActivity( new Intent( this, ActivityEcustLibraryHome.class ) );
-	}
-	public void btnEcustClassroom ( View view ) {
-		startActivity( new Intent( this, ActivityEcustClassroomHome.class ) );
-	}
-	public void btnFeedback ( View view ) {
-		startActivity( new Intent( this, ActivityFeedbackHome.class ) );
+	public void btnEcustCalendar(View view) {
+		startActivity(new Intent(this, ActivityEcustCalendarHome.class));
 	}
 
-	public void btnSetting ( View view ) {
-		startActivity( new Intent( this, ActivitySettingHome.class ) );
+	public void btnEcustLibrary(View view) {
+		startActivity(new Intent(this, ActivityEcustLibraryHome.class));
 	}
 
-	public void btnAbout ( View view ) {
-		startActivity( new Intent( this, ActivityAboutHome.class ) );
+	public void btnEcustClassroom(View view) {
+		startActivity(new Intent(this, ActivityEcustClassroomHome.class));
+	}
+
+	public void btnFeedback(View view) {
+		startActivity(new Intent(this, ActivityFeedbackHome.class));
+	}
+
+	public void btnSetting(View view) {
+		startActivity(new Intent(this, ActivitySettingHome.class));
+	}
+
+	public void btnAbout(View view) {
+		startActivity(new Intent(this, ActivityAboutHome.class));
 	}
 }

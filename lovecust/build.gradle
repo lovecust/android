@@ -34,6 +34,8 @@ android {
         versionName 'v0.0.0'
         signingConfig signingConfigs.SigingLovecust
         versionCode 0
+        // Enable multi dex to use more methods than 65535.
+        // multiDexEnabled true
     }
     buildTypes {
         release {
@@ -79,27 +81,37 @@ android {
             versionName 'v0.7.6'
         }
     }
-
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
+    // Use FisherUtilsLib library.
     compile project(':FisherUtilsLib')
+    // Use LovecustNetworkLib library.
+    compile project(':LovecustNetworkLib')
     compile 'com.android.support:cardview-v7:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
+
     compile 'com.google.code.gson:gson:2.4'
+
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
+
     compile 'com.trello:rxlifecycle:0.4.0'
     compile 'com.trello:rxlifecycle-components:0.4.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+
+    // Use retrofit to fetch internet resources.
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    // Use gson converter to convert json to object.
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    // Support rxJava for retrofit.
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
+
     compile 'org.litepal.android:core:1.3.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.jakewharton:butterknife:7.0.1'
