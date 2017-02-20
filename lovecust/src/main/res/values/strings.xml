@@ -178,8 +178,12 @@
 	<string name="explore_todo_done">已完成</string>
 	<string name="explore_todo_removed">已移除</string>
 	<string name="explore_todo_okay">便签</string>
-	<string name="notice_ecust_wifi_failed_to_login">Wifi 登录失败</string>
-	<string name="notice_ecust_wifi_server_error_with_code">"华理服务器错误, 错误码: "</string>
+	<string name="notice_ecust_wifi_failed_to_login">校园网认证失败</string>
+	<string name="notice_ecust_wifi_error_failed_to_get_redirected_url">"出错啦: 无法获取跳转地址."</string>
+	<string name="notice_ecust_wifi_error_failed_to_follow_redirection">"出错啦: 跟踪跳转地址失败."</string>
+	<string name="notice_ecust_wifi_error_failed_to_get_AC_ID">"出错啦: 未解析到 AC_ID 码."</string>
+	<string name="notice_ecust_wifi_error_request_error">"啊哦, 网络出现了问题."</string>
+	<string name="notice_ecust_wifi_error_client_error">"嗯，程序出错了."</string>
 	<string name="error_fatal_unhandled_click_event">未处理的点击事件!</string>
 	<string name="text_ecust_wifi_channel_title">登录通道(ac_id)</string>
 	<string name="hint_ecust_wifi_channel">16</string>

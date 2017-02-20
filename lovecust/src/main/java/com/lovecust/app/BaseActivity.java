@@ -78,22 +78,21 @@ public abstract class BaseActivity extends SwipeBackActivity implements View.OnC
 	}
 
 
-	protected String toast(int stringId) {
-		return toast(getString(stringId));
+	protected void toast(int stringId) {
+		toast(getString(stringId));
 	}
 
-	protected String toast(String msg) {
-		return ToastUtil.toastLong(this, msg);
+	protected void toast(String msg) {
+		ToastUtil.toastLong(this, msg);
 	}
 
 
-	protected String log(Object obj) {
-		return ConsoleUtil.console(obj);
+	protected void log(Object obj) {
+		ConsoleUtil.log(obj);
 	}
 
-	protected String log(String msg) {
-		ConsoleUtil.console(msg);
-		return msg;
+	protected void log(String msg) {
+		ConsoleUtil.log(msg);
 	}
 
 	public boolean isExit() {

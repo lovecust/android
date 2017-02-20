@@ -170,7 +170,11 @@
 	<string name="error_fatal_unhandled_click_event">Unhandled Click Event!</string>
 	<string name="hint_password">********</string>
 	<string name="text_ecust_wifi_channel_title">Channel(ac_id)</string>
-	<string name="notice_ecust_wifi_server_error_with_code">"Ecust server fatal error with code: "</string>
+	<string name="notice_ecust_wifi_error_failed_to_get_redirected_url">"Error: Failed to get redirected URL."</string>
+	<string name="notice_ecust_wifi_error_failed_to_follow_redirection">"Error: Failed to follow redirected URL."</string>
+	<string name="notice_ecust_wifi_error_failed_to_get_AC_ID">"Error: Failed to get AC_ID."</string>
+	<string name="notice_ecust_wifi_error_request_error">"Oops, failed to send a request!"</string>
+	<string name="notice_ecust_wifi_error_client_error">"Umm, errors happened!"</string>
 	<string name="hint_ecust_wifi_channel">16</string>
 	<string name="hint_ecust_wifi_auto_connect">Off</string>
 	<string name="text_home_nav_week_model">%dth</string>

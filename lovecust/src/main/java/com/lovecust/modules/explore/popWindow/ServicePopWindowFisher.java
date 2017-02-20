@@ -46,9 +46,4 @@ public class ServicePopWindowFisher extends BaseService {
 		floatView.flushImage();
 	}
 
-
-
-
-
-
 }

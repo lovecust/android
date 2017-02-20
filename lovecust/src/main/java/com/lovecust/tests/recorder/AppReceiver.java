@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 
+import com.lovecust.modules.ecust.wifi.SimpleWifiListener;
 import com.lovecust.modules.ecust.wifi.WifiConnector;
 import com.lovecust.app.AppContext;
 import com.lovecust.app.Setting;
@@ -16,16 +17,16 @@ public class AppReceiver extends BroadcastReceiver {
 
 
 	@Override
-	public void onReceive ( Context context, Intent intent ) {
-		switch ( intent.getAction() ) {
+	public void onReceive(Context context, Intent intent) {
+		switch (intent.getAction()) {
 			case ConnectivityManager.CONNECTIVITY_ACTION:
 			case Setting.ACTION_ECUST_WIFI_RECONNECT:
 				NetUtil.flush();
-				ConsoleUtil.console( NetUtil.toReadableString() );
-				WifiConnector.checkConnection();
+				ConsoleUtil.log(NetUtil.toReadableString());
+				WifiConnector.checkConnection(SimpleWifiListener.getInstance());
 				break;
 			case Intent.ACTION_BATTERY_CHANGED:
-				AppContext.mBatteryLevel = intent.getIntExtra( "scale", -1 );
+				AppContext.mBatteryLevel = intent.getIntExtra("scale", -1);
 				break;
 			case Intent.ACTION_TIME_TICK:
 				break;
@@ -43,10 +44,10 @@ public class AppReceiver extends BroadcastReceiver {
 				AppContext.mStateBatteryCharging = false;
 				break;
 			case Intent.ACTION_HEADSET_PLUG:
-				int state = intent.getIntExtra( "state", -1 );
-				if ( state == 0 ) {
+				int state = intent.getIntExtra("state", -1);
+				if (state == 0) {
 					AppContext.mStateMicroPhone = false;
-				} else if ( state == 1 ) {
+				} else if (state == 1) {
 					AppContext.mStateMicroPhone = true;
 				}
 				break;

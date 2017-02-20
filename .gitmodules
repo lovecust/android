@@ -4,3 +4,6 @@
 [submodule "LovecustNetworkLib"]
 	path = LovecustNetworkLib
 	url = git@github.com:lovecust/LovecustNetworkLib.git
+[submodule "EcustWifiLib"]
+	path = EcustWifiLib
+	url = https://github.com/lovecust/EcustWifiLib

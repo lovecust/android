@@ -265,12 +265,12 @@ public class ActivityDeviceHome extends AppCompatActivity {
 				case Intent.ACTION_BATTERY_CHANGED:
 					int rawlevel = intent.getIntExtra( "level", -1 );
 					int scale = intent.getIntExtra( "scale", -1 );
-					int status = intent.getIntExtra( "status", -1 );
+					int status = intent.getIntExtra( "internetStatus", -1 );
 					int health = intent.getIntExtra( "health", -1 );
 					sBattery = "Battery Info\n";
 					sBattery += "level: " + rawlevel + ";\n";
 					sBattery += "scale: " + scale + ";\n";
-					sBattery += "status: " + status + ";\n";
+					sBattery += "internetStatus: " + status + ";\n";
 					sBattery += "health: " + health + ";\n";
 					break;
 				case Intent.ACTION_SCREEN_ON:

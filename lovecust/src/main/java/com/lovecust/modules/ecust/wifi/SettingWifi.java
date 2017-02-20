@@ -11,7 +11,9 @@ import com.fisher.utils.FileUtil;
 
 import java.util.Calendar;
 
-
+/**
+ * `Created` by Fisher at 17:22 on 2017-02-19.
+ */
 public class SettingWifi {
 	// should be edited ?
 	private boolean autoConnect = false;
@@ -58,9 +60,9 @@ public class SettingWifi {
 
 	public String isAutoConnectText() {
 		if (isAutoConnect()) {
-			return AppUtil.getStringArray( R.array.dialog_switch )[0];
+			return AppUtil.getStringArray(R.array.dialog_switch)[0];
 		} else {
-			return AppUtil.getStringArray( R.array.dialog_switch )[1];
+			return AppUtil.getStringArray(R.array.dialog_switch)[1];
 		}
 	}
 
@@ -120,11 +122,11 @@ public class SettingWifi {
 		save();
 	}
 
-	public int getChannel ( ) {
+	public int getChannel() {
 		return channel;
 	}
 
-	public SettingWifi setChannel ( int channel ) {
+	public SettingWifi setChannel(int channel) {
 		this.channel = channel;
 		return this;
 	}

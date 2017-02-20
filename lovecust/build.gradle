@@ -61,24 +61,24 @@ android {
             applicationId 'com.lovecust.debug'
             targetSdkVersion 24
             versionName 'v0.8.6'
-            signingConfig signingConfigs.SigingLovecust
             versionCode 86
+            signingConfig signingConfigs.SigingLovecust
         }
         LovecustRelease {
             minSdkVersion 15
             applicationId 'com.lovecust.app'
             targetSdkVersion 24
             versionName 'v0.9.6'
-            signingConfig signingConfigs.SigingLovecust
             versionCode 96
+            signingConfig signingConfigs.SigingLovecust
         }
         LovecustTest {
             minSdkVersion 15
             applicationId 'com.lovecust.test'
-            signingConfig signingConfigs.SigingLovecust
             targetSdkVersion 24
-            versionCode 76
             versionName 'v0.7.6'
+            versionCode 76
+            signingConfig signingConfigs.SigingLovecust
         }
     }
 }
@@ -90,19 +90,17 @@ dependencies {
     compile project(':FisherUtilsLib')
     // Use LovecustNetworkLib library.
     compile project(':LovecustNetworkLib')
+    // Use EcustWifiLib module.
+    compile project(':EcustWifiLib')
     compile 'com.android.support:cardview-v7:24.2.1'
     compile 'com.android.support:recyclerview-v7:24.2.1'
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
-
     compile 'com.google.code.gson:gson:2.4'
-
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
-
     compile 'com.trello:rxlifecycle:0.4.0'
     compile 'com.trello:rxlifecycle-components:0.4.0'
-
     // Use retrofit to fetch internet resources.
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     // Use gson converter to convert json to object.
@@ -111,7 +109,6 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
-
     compile 'org.litepal.android:core:1.3.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.jakewharton:butterknife:7.0.1'
@@ -120,6 +117,7 @@ dependencies {
     compile 'org.jsoup:jsoup:1.8.2'
     compile 'cz.msebera.android:httpclient:4.4.1.2'
     // For debug usage; By Fisher at 2016-09-05 22:15;
-    // APK-Before-Size: 4,069,766B; APK-After-Size: 4,073,954B;
-    compile 'com.orhanobut:logger:1.15'
+    // Size: 4,188B; APK-Before-Size: 4,069,766B; APK-After-Size: 4,073,954B;
+    // Removed at 08:04 on 2017-02-20. Size: -2,936B; Before-APK-Size: 4,172,649B; After-APK-Size: 4,169,713B;
+    // compile 'com.orhanobut:logger:1.15'
 }

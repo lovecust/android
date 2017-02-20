@@ -14,7 +14,7 @@ It is targeting for making the complicated life more convenient, efficient, and 
 
 ---
 
-### lovecust.[v0.9.5](https://github.com/lovecust/lovecust-assets/raw/master/releases/lovecust.v0.9.5.apk).apk
+### Lovecust [Version 0.9.5][lovecust-v0.9.5]
 
 - name: Lovecust
 - ename: Lovecust
@@ -52,7 +52,7 @@ It is targeting for making the complicated life more convenient, efficient, and 
 
 ---
 
-### lovecust.[v0.9.4](https://github.com/lovecust/lovecust-assets/raw/master/releases/lovecust.v0.9.4.apk).apk
+### Lovecust [Version 0.9.4][lovecust-v0.9.4]
 
 - name: Lovecust
 - ename: Lovecust
@@ -88,7 +88,7 @@ It is targeting for making the complicated life more convenient, efficient, and 
 	- Ecust Calendar
 	- Ecust JWC news
 
-### lovecust.[v0.9.3](https://github.com/lovecust/lovecust-assets/raw/master/releases/lovecust.v0.9.3.apk).apk
+### Lovecust [Version 0.9.3][lovecust-v0.9.3]
 
 - name: Lovecust
 - date: *2016-05-13*
@@ -108,3 +108,10 @@ It is targeting for making the complicated life more convenient, efficient, and 
 	- swipe right to exit pages
 	- friendly notification during the wifi connection
 	- add developer mode in the app
+
+
+[lovecust-apk-v0.9.3]: https://github.com/lovecust/assets/raw/master/releases/lovecust.v0.9.3.apk "Lovecust Version 0.9.3"
+[lovecust-apk-v0.9.4]: https://github.com/lovecust/assets/raw/master/releases/lovecust.v0.9.4.apk "Lovecust Version 0.9.4"
+[lovecust-apk-v0.9.5]: https://github.com/lovecust/assets/raw/master/releases/lovecust.v0.9.5.apk "Lovecust Version 0.9.5"
+[lovecust-apk-v0.9.6]: https://github.com/lovecust/assets/raw/master/releases/lovecust.v0.9.6.apk "Lovecust Version 0.9.6"
+

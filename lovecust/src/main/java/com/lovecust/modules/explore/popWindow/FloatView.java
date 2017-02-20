@@ -249,7 +249,7 @@ public class FloatView {
 	}
 
 
-	public String log(String msg) {
-		return ConsoleUtil.console(msg);
+	public void log(String msg) {
+		ConsoleUtil.log(msg);
 	}
 }

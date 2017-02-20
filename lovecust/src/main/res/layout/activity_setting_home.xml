@@ -28,6 +28,7 @@
 
 		<RelativeLayout
 			android:id="@+id/btn_explore_todo"
+			android:visibility="gone"
 			style="@style/setting_item_holder">
 
 			<TextView

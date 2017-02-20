@@ -12,8 +12,6 @@ import com.lovecust.tests.recorder.AppReceiver;
 import com.lovecust.tests.recorder.LogPasteboard;
 import com.fisher.utils.AppUtil;
 import com.fisher.utils.ConsoleUtil;
-import com.orhanobut.logger.LogLevel;
-import com.orhanobut.logger.Logger;
 
 
 import org.litepal.LitePalApplication;
@@ -40,6 +38,9 @@ public class AppContext extends LitePalApplication {
 
 	private static AppContext context;
 	public static boolean mDebug = AppConstant.DEBUG;
+	/**
+	 * Swipe right to exit pages.
+	 */
 	public static boolean mIsHomeSwipeExit = true;
 
 	public static AppContext getContext() {
@@ -61,24 +62,15 @@ public class AppContext extends LitePalApplication {
 		AppUtil.init(this);
 		AppUtil.setDebug(true);
 
-		LogLevel level = AppConstant.DEBUG ? LogLevel.FULL : LogLevel.NONE;
-		Logger
-				.init("Lovecust")                 // default PRETTYLOGGER or use just flushData()
-				.methodCount(3)                 // default 2
-				.hideThreadInfo()               // default shown
-				.logLevel(level)        // default LogLevel.FULL; Use LogLevel.NONE for the release versions.
-				.methodOffset(2);                // default 0
-//				.logAdapter( new LogAdapter() ); //default AndroidLogAdapter
-
 		AppSetting.getInstance().flushLanguageMode();
 		if (mDebug) {
-			ConsoleUtil.console("Fisher-Home App Initialising :@ " + NetworkManager.getHeader());
+			ConsoleUtil.log("Fisher-Home App Initialising :@ " + NetworkManager.getHeader());
 			LogPasteboard.init();
 
 //			AppUtil.getPhoneId();
 			AppUtil.fnGetRunningApps();
 			// AppUtil.fnListInstalledAppInfo();
-			ConsoleUtil.console(AppUtil.getAndroidInfo());
+			ConsoleUtil.log(AppUtil.getAndroidInfo());
 		}
 		IntentFilter filter = new IntentFilter();
 		filter.addAction(Setting.ACTION_ECUST_WIFI_RECONNECT);
@@ -127,33 +119,33 @@ public class AppContext extends LitePalApplication {
 		super.onTerminate();
 	}
 
-
-	private int result;
-	private Intent intent;
-	private MediaProjectionManager mMediaProjectionManager;
-
-	public int getResult() {
-		return result;
-	}
-
-	public Intent getIntent() {
-		return intent;
-	}
-
-	public MediaProjectionManager getMediaProjectionManager() {
-		return mMediaProjectionManager;
-	}
-
-	public void setResult(int result1) {
-		this.result = result1;
-	}
-
-	public void setIntent(Intent intent1) {
-		this.intent = intent1;
-	}
-
-	public void setMediaProjectionManager(MediaProjectionManager mMediaProjectionManager) {
-		this.mMediaProjectionManager = mMediaProjectionManager;
-	}
+//  Saving Screenshot permission.
+//	private int result;
+//	private Intent intent;
+//	private MediaProjectionManager mMediaProjectionManager;
+//
+//	public int getResult() {
+//		return result;
+//	}
+//
+//	public Intent getIntent() {
+//		return intent;
+//	}
+//
+//	public MediaProjectionManager getMediaProjectionManager() {
+//		return mMediaProjectionManager;
+//	}
+//
+//	public void setResult(int result1) {
+//		this.result = result1;
+//	}
+//
+//	public void setIntent(Intent intent1) {
+//		this.intent = intent1;
+//	}
+//
+//	public void setMediaProjectionManager(MediaProjectionManager mMediaProjectionManager) {
+//		this.mMediaProjectionManager = mMediaProjectionManager;
+//	}
 
 }

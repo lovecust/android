@@ -92,13 +92,13 @@ public class AdapterTodo extends BaseRecyclerViewAdapter< DataTodo > {
 		} );
 
 		holder.get( R.id.iv_remove ).setOnClickListener( v -> {
-			ConsoleUtil.console( "will delete: " + ( todo ) );
+			ConsoleUtil.log( "will delete: " + ( todo ) );
 			todo.fnRemove();
 			todos.remove( todo );
 			notifyDataSetChanged();
 		} );
 		holder.get( R.id.iv_done ).setOnClickListener( v -> {
-			ConsoleUtil.console( "done: " + todo );
+			ConsoleUtil.log( "done: " + todo );
 			todo.fnDone();
 			todos.remove( todo );
 			notifyDataSetChanged();

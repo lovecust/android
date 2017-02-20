@@ -1,1 +1,1 @@
-include ':lovecust', ':FisherUtilsLib', ':LovecustNetworkLib'
+include ':lovecust', ':FisherUtilsLib', ':LovecustNetworkLib', ':EcustWifiLib'

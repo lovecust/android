@@ -35,11 +35,11 @@ public abstract class BaseFragment extends Fragment {
 		ButterKnife.unbind(this);
 	}
 
-	protected String toast(int stringId) {
-		return toast(getString(stringId));
+	protected void toast(int stringId) {
+		toast(getString(stringId));
 	}
 
-	protected String toast(String msg) {
-		return ToastUtil.toastLong(getContext(), msg);
+	protected void toast(String msg) {
+		ToastUtil.toastLong(getContext(), msg);
 	}
 }

@@ -9,14 +9,16 @@ import com.lovecust.app.BuildConfig;
  * Constants related to Application.
  */
 public class AppConstant {
+
 	/**
 	 * apk version
 	 */
 	public static final String APP_VERSION = BuildConfig.VERSION_NAME;
+
 	/**
 	 * api version
 	 */
-	public static final String API_VERSION = "v1.1";
+	public static final String API_VERSION = "v1.2";
 
 	/**
 	 * whether in debug mode

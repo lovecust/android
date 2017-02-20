@@ -177,7 +177,7 @@ public class AppProfileHelper extends AppProfile {
 		NetworkManager.getLovecustNetworkManager()
 				.updateProfile(profile)
 				.subscribe(response -> {
-					ConsoleUtil.console("AppProfile.sync()-> Succeeded sync profiles");
+					ConsoleUtil.log("AppProfile.sync()-> Succeeded sync profiles");
 				}, err -> {
 					err.printStackTrace();
 				});

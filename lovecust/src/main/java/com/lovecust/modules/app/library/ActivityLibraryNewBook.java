@@ -20,7 +20,7 @@ import java.util.List;
 //import retrofit.Callback;
 //import retrofit.RestAdapter;
 //import retrofit.RetrofitError;
-//import retrofit.client.Response;
+//import retrofit.client.HTTPResponse;
 
 
 public class ActivityLibraryNewBook extends BaseActivity {
@@ -65,7 +65,7 @@ public class ActivityLibraryNewBook extends BaseActivity {
 			if (books.size() > 1) {
 				BugsUtil.onFatalError("ActivityLibraryNewBook.onCLick()-> Got books size is more than 1!");
 			}
-			ConsoleUtil.console(books.get(0));
+			ConsoleUtil.log(books.get(0));
 			Intent intent = new Intent(ActivityLibraryNewBook.this, ActivityLibraryBookDetail.class).putExtra(Setting.INTENT_KEY_DEFAULT, books.get(0).getId());
 			startActivity(intent);
 			ActivityLibraryNewBook.this.finish();
@@ -73,10 +73,10 @@ public class ActivityLibraryNewBook extends BaseActivity {
 		}
 //		service.getBookInfo(isbn, new Callback<Book>() {
 //			@Override
-//			public void success(Book book, Response response) {
+//			public void success(Book book, HTTPResponse response) {
 //				try {
 //					book.saveThrows();
-//					ConsoleUtil.console(book);
+//					ConsoleUtil.log(book);
 //					Intent intent = new Intent(ActivityLibraryNewBook.this, ActivityLibraryBookDetail.class).putExtra(Setting.INTENT_KEY_DEFAULT, book.getId());
 //					startActivity(intent);
 //					ActivityLibraryNewBook.this.finish();
@@ -107,8 +107,8 @@ public class ActivityLibraryNewBook extends BaseActivity {
 			if (resultCode == RESULT_OK) {
 				String contents = intent.getStringExtra("SCAN_RESULT");
 				String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
-				ConsoleUtil.console("Got Intent: " + new Gson().toJson(intent.getExtras()));
-				ConsoleUtil.console("Content: " + contents + ";  format: " + format);
+				ConsoleUtil.log("Got Intent: " + new Gson().toJson(intent.getExtras()));
+				ConsoleUtil.log("Content: " + contents + ";  format: " + format);
 				// Handle successful scan
 			} else if (resultCode == RESULT_CANCELED) {
 				// Handle cancel

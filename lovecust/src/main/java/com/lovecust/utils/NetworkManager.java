@@ -53,7 +53,7 @@ public class NetworkManager {
 
 	public static String getAgent() {
 		String header = AppUtil.getAndroidInfo();
-		ConsoleUtil.console("header.agent: " + header);
+		ConsoleUtil.log("header.agent: " + header);
 		return header;
 	}
 
@@ -65,7 +65,7 @@ public class NetworkManager {
 				uid = AppContext.getContext().getString(R.string.hint_profile_uid);
 		}
 		String header = AppContext.mAppVersion + "&" + AppContext.mApiVersion + "&ap." + TextUtil.md5(NetUtil.mac) + "&" + uid;
-		ConsoleUtil.console("header.lovecust: " + header);
+		ConsoleUtil.log("header.lovecust: " + header);
 		return header;
 	}
 
