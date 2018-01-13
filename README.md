@@ -14,7 +14,7 @@ It is targeting for making the complicated life more convenient, efficient, and 
 
 ---
 
-### Lovecust [Version 0.9.5][lovecust-v0.9.5]
+### Lovecust [Version 0.9.5][lovecust-apk-v0.9.5]
 
 - name: Lovecust
 - ename: Lovecust
@@ -52,7 +52,7 @@ It is targeting for making the complicated life more convenient, efficient, and 
 
 ---
 
-### Lovecust [Version 0.9.4][lovecust-v0.9.4]
+### Lovecust [Version 0.9.4][lovecust-apk-v0.9.4]
 
 - name: Lovecust
 - ename: Lovecust
@@ -88,7 +88,7 @@ It is targeting for making the complicated life more convenient, efficient, and 
 	- Ecust Calendar
 	- Ecust JWC news
 
-### Lovecust [Version 0.9.3][lovecust-v0.9.3]
+### Lovecust [Version 0.9.3][lovecust-apk-v0.9.3]
 
 - name: Lovecust
 - date: *2016-05-13*
