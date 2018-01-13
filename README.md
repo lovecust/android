@@ -5,10 +5,10 @@ It is targeting for making the complicated life more convenient, efficient, and 
 
 *home:* [lovecust.com](http://lovecust.com/)
 
-<img src="https://raw.githubusercontent.com/lovecust/lovecust-assets/master/images/app-screenshot/lovecust-app-home-framed-min.png" alt="android screenshot samples" width="45%">
-<img src="https://raw.githubusercontent.com/lovecust/lovecust-assets/master/images/app-screenshot/lovecust-ecust-wifi-framed-min.png" alt="android screenshot samples" width="45%">
-<img src="https://raw.githubusercontent.com/lovecust/lovecust-assets/master/images/app-screenshot/lovecust-ecust-library-framed-min.png" alt="android screenshot samples" width="45%">
-<img src="https://raw.githubusercontent.com/lovecust/lovecust-assets/master/images/app-screenshot/lovecust-ecust-calendar-framed-min.png" alt="android screenshot samples" width="45%">
+<img src="https://raw.githubusercontent.com/lovecust/assets/master/images/app-screenshot/lovecust-app-home-framed-min.png" alt="android screenshot samples" width="45%">
+<img src="https://raw.githubusercontent.com/lovecust/assets/master/images/app-screenshot/lovecust-ecust-wifi-framed-min.png" alt="android screenshot samples" width="45%">
+<img src="https://raw.githubusercontent.com/lovecust/assets/master/images/app-screenshot/lovecust-ecust-library-framed-min.png" alt="android screenshot samples" width="45%">
+<img src="https://raw.githubusercontent.com/lovecust/assets/master/images/app-screenshot/lovecust-ecust-calendar-framed-min.png" alt="android screenshot samples" width="45%">
 
 ## Activities
 
@@ -20,7 +20,7 @@ It is targeting for making the complicated life more convenient, efficient, and 
 - ename: Lovecust
 - app: v0.9.5
 - api: v1.1
-- url: https://github.com/lovecust/lovecust-assets/raw/master/releases/lovecust.v0.9.5.apk
+- url: https://github.com/lovecust/assets/raw/master/releases/lovecust.v0.9.5.apk
 - md5: bc7d301d99d3c4fd20cf5a0485222049
 - sha1: 0ffaeef515cb25a380690dd64dd08b7260070b9f
 - size: 3.87 MB
@@ -58,7 +58,7 @@ It is targeting for making the complicated life more convenient, efficient, and 
 - ename: Lovecust
 - app: v0.9.4
 - api: v1.1
-- url: https://github.com/lovecust/lovecust-assets/raw/master/releases/lovecust.v0.9.4.apk
+- url: https://github.com/lovecust/assets/raw/master/releases/lovecust.v0.9.4.apk
 - md5: 5e8d99bf69f15bfc006b318916953879
 - sha1: a4950f82babb01b720f7436d1dbd348fb540f979
 - size: 3.86 MB
@@ -95,7 +95,7 @@ It is targeting for making the complicated life more convenient, efficient, and 
 - size: 3.40MB
 - md5: 7d3d877f506362527d8fea6d5430c43f
 - sha1: 008adde2501e4b89521364454a3b132d5642de9f
-- url: https://github.com/lovecust/lovecust-assets/raw/master/releases/lovecust.v0.9.3.apk
+- url: https://github.com/lovecust/assets/raw/master/releases/lovecust.v0.9.3.apk
 - note
 	- 学号支持字母
 	- 添加晨跑查询
